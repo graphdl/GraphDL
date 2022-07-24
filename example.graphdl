@@ -1,3 +1,15 @@
+schema
+  - API
+    type: WebAPI
+    props: 
+      name: Noun.name
+      icon: Symbol.symbol | Emoji.emoji | Icon.url 
+ - Noun
+   type: Thing
+   props:
+     name: identifier | name
+
+
 API.icon -> Emoji.⚙️
 API.name -> Noun.name
 API.type -> Noun.hasTypes
