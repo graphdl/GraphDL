@@ -34,3 +34,5 @@ The reverse edges are created automatically:
 ```
 AnotherThing.hasTypes <- Thing.relationshipType
 ```
+
+Using these schemas, Typescript Types, OpenAPI Specs, and GraphQL Schemas can be generated.
