@@ -20,7 +20,11 @@ type:
   type: Person
   props: 
     - id: identifier
-    - 
+    - firstName: givenName
+    - lastName: familyName
+    - email: email
+    - phone: telephone
+    - knows: User.email
 ```
 
 This allows much more flexibility by enabling types and props to any shape vs. rigid JSONLD objects with a @context of Schema.org, but has the ability to transform any object in this definition language into a valid Schema.org JSONLD Object.
