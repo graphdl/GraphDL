@@ -1,4 +1,4 @@
-# graphdl
+# GraphDL
 Graph Definition Language Specification
 
 
