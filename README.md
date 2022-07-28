@@ -46,3 +46,5 @@ This was built to manage the [Driv.ly](https://driv.ly) API which gets millions 
 We're building our entire infrastructure on Cloudflare Workers, Durable Objects, KV, R2, and PubSub.  If you're as passionate about these transformational technologies as we are, we'd love for you to join our rapidly-growing team.
 
 ![](https://github.com/drivly/driv.ly/raw/main/logo.png)
+
+![](https://github.com/drivly/driv.ly/raw/main/logo.svg)
