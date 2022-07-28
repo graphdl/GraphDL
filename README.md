@@ -6,7 +6,7 @@ Nodes are created with a schema definition using schemas and properties from Sch
 ```
 type: 
   name: User
-  type: Person
+  type: https://schema.org/Person
   props: 
     - id: identifier
     - firstName: givenName
