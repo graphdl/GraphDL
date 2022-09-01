@@ -23,6 +23,7 @@ type User: Person = {
   knows: 'User.knows'
   children: 'User.parents'
   parents: 'User.children'
+  tags: 'Tag.Users'
 }
 ```
 
