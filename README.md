@@ -12,6 +12,21 @@ Graph Definition Language Specification
 - Generates GraphQL Schemas & Automatic Resolvers
 - Has VSCode Plugin for Syntax Linting (and reverse edge creation)
 
+GraphDL is based on TypeScript
+```
+import { id, email, telephone, Person } from 'graphdl'
+
+type User: Person = {
+  id: id
+  firstName: string
+  lastName: string
+  email: email
+  phone: telephone
+  knows: User.email
+}
+```
+
+
 
 Nodes are created with a schema definition using schemas and properties from Schema.org:
 ```
