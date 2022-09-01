@@ -37,6 +37,21 @@ type Tag = {
 }
 ```
 
+Since the `Tag` type is just a regular object and not inheriting from `StrictType`, then an with additional properties could be stored, and any http hypermedia references will store both the outbound and inbound reverse edge for indexing.
+
+```
+{
+  "id": "grandparent",
+  "users": ["https://users.do/71d447fd-fae7-4f7a-969b-f2aaf1b68eda"]
+}
+```
+
+Then the stored indexes will be:
+```
+Tag.id.grandparent.users -> https://users.do/71d447fd-fae7-4f7a-969b-f2aaf1b68eda
+https://users.do/71d447fd-fae7-4f7a-969b-f2aaf1b68eda <- Tag.id.grandparent.users
+```
+
 
 
 ```
