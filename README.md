@@ -23,9 +23,18 @@ type User: Person = {
   knows: 'User.knows'
   children: 'User.parents'
   parents: 'User.children'
-  tags: 'Tag.Users'
+  tags: 'Tag.users'
 }
 ```
+
+Would auto generate a type with a reverse edge:
+```typescript
+type Tag = {
+  id: 'id'
+  users: 'User.tags'
+}
+```
+
 
 
 ```
