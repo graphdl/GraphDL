@@ -20,7 +20,9 @@ type User: Person = {
   lastName: 'string'
   email: 'email'
   phone: 'telephone'
-  knows: 'User.email'
+  knows: 'User.knows'
+  children: 'User.parents'
+  parents: 'User.children'
 }
 ```
 
