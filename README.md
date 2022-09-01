@@ -1,6 +1,17 @@
 # GraphDL
 Graph Definition Language Specification
 
+## Features
+
+- Supports both Strong and Dynamic Types
+- Automatically Generates Reverse Edges
+- Supports Option Cascading Updates & Deletes
+- Generates Types & Interfaces for all languages including Typescript
+- Generates Hypermedia-Driven (HATEOAS) RESTful APIs
+- Generates OpenAPI Specification documents
+- Generates GraphQL Schemas & Automatic Resolvers
+- Has VSCode Plugin for Syntax Linting (and reverse edge creation)
+
 
 Nodes are created with a schema definition using schemas and properties from Schema.org:
 ```
