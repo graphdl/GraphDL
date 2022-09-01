@@ -49,8 +49,9 @@ Since the `Tag` type is just a regular object and not inheriting from `StrictTyp
 Then the stored indexes will be:
 ```
 {
-  "Tag.id.grandparent.users -> https://users.do/71d447fd-fae7-4f7a-969b-f2aaf1b68eda": "https://tags.do/grandparent",
-  "https://users.do/71d447fd-fae7-4f7a-969b-f2aaf1b68eda <- Tag.id.grandparent.users": "https://tags.do/grandparent"
+  "Tag.id:grandparent.users -> https://users.do/71d447fd-fae7-4f7a-969b-f2aaf1b68eda": "https://tags.do/grandparent",
+  "https://users.do/71d447fd-fae7-4f7a-969b-f2aaf1b68eda <- Tag.id:grandparent.users": "https://tags.do/grandparent"
+}
 ```
 
 
