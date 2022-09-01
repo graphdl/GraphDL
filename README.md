@@ -14,6 +14,18 @@ Graph Definition Language Specification
 
 GraphDL is based on TypeScript
 ```
+type User: Person = {
+  id: 'id'
+  firstName: 'string'
+  lastName: 'string'
+  email: 'email'
+  phone: 'telephone'
+  knows: 'User.email'
+}
+```
+
+
+```
 import { id, email, telephone, Person } from 'graphdl'
 
 type User: Person = {
