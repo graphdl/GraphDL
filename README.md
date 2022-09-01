@@ -14,7 +14,9 @@ Graph Definition Language Specification
 
 GraphDL is based on TypeScript
 ```typescript
-type User: Person = {
+import { StrictType } from 'graphdl'
+
+type User: StrictType = {
   id: 'id'
   firstName: 'string'
   lastName: 'string'
