@@ -13,7 +13,7 @@ Graph Definition Language Specification
 - Has VSCode Plugin for Syntax Linting (and reverse edge creation)
 
 GraphDL is based on TypeScript
-```
+```typescript
 type User: Person = {
   id: 'id'
   firstName: 'string'
