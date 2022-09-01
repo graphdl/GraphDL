@@ -42,7 +42,11 @@ Since the `Tag` type is just a regular object and not inheriting from `StrictTyp
 ```
 {
   "id": "grandparent",
-  "users": ["https://users.do/71d447fd-fae7-4f7a-969b-f2aaf1b68eda"]
+  "users": [
+    "https://users.do/71d447fd-fae7-4f7a-969b-f2aaf1b68eda",
+    "https://users.do/63ec5fd3-6960-473e-a977-1f8825db2dd9",
+    "https://users.do/f45a105b-72d7-4956-9c05-339b89646f68",
+    ]
 }
 ```
 
