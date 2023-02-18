@@ -114,5 +114,5 @@ Vehicle:
 Make:
  _id: slugify(name)
  name: string
- logo: https://cdn.driv.ly/logos/${id}.png
+ logo: https://cdn.driv.ly/logos/:id.png
 ```
