@@ -4,29 +4,51 @@
 
 ```yaml
 User:
- Name:  String
- Email: Email
- Image: URL
- Posts: [Post.Author]
+ name:  string
+ email: email
+ image: url
+ posts: [Post.Author]
  
 Post:
  _id:         slugify(Title)
- Title:       string
- Description: string
- Tags:        [string]
- Content:     markdown
- CreatedAt:   createdAt()
- CreatedBy:   createdBy()
- Author:      User.Email
+ title:       string
+ description: string
+ tags:        [string]
+ content:     markdown
+ createdAt:   createdAt()
+ createdBy:   createdBy()
+ author:      User.Email
 ```
 
 
 ```yaml
+_visibility: public
+
 Country:
  _plural: Countries
  _source: https://json.fyi/countries.json
  _id:     cca2
  borders: [Country.cca3]
+ 
+Colo:
+ _id:     iata
+ _source: https://speed.cloudflare.com/locations
+ cca2:    Country.cca2
+ region:  Continent._id
+ iata:    Airport.iata
+ 
+Airport:
+ _source: https://json.fyi/airports.json
+ _id:     icao
+ tz:      TimeZone._id
+ country: Country.cca2
+ 
+Request:
+ _id:          ${headers.cf-ray}-${headers.cf-ray}
+ cf.colo:      Colo.iata
+ cf.longitude: GeoPoint(longitude)
+ cf.latitude:  GeoPoint(latitude)
+ cf.timezone:  TimeZone._id
 ```
 
 
