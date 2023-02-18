@@ -10,12 +10,13 @@ User:
  Posts: [Post.Author]
  
 Post:
- Title:       String
- Description: String
- Tags:        [String]
- Content:     Markdown
- CreatedAt:   CreatedAt()
- CreatedBy:   CreatedBy()
+ _id:         slugify(Title)
+ Title:       string
+ Description: string
+ Tags:        [string]
+ Content:     markdown
+ CreatedAt:   createdAt()
+ CreatedBy:   createdBy()
  Author:      User.Email
 ```
 
