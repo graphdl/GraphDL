@@ -65,10 +65,12 @@ Employee:
  _name: ${firstname} ${lastname}, ${title}
 
 EmployeeTerritory:
+ _name: territoryCode
  employeeId: Employee
  territoryCode: Territory.territoryCode
  
 OrderDetail:
+ _name: ${quantity} ${productId->name}
  orderId:   Order
  productId: Product
  
