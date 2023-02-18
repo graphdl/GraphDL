@@ -1,7 +1,6 @@
 # GraphDL - Graph Definition Language
 
 
-
 ```yaml
 User:
  name:  string
@@ -19,7 +18,6 @@ Post:
  createdBy:   createdBy()
  author:      User.Email
 ```
-
 
 ```yaml
 _visibility: public
