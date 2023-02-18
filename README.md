@@ -51,7 +51,7 @@ Request:
 ```
 
 ```yaml
-_source: https://json.fyi/northwind.json
+_seed: https://json.fyi/northwind.json
 _id: entityId
 _constraints: true
 
