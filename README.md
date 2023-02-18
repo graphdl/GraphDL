@@ -101,3 +101,18 @@ Territory:
  regionId: Region
 ```
 
+```yaml
+Vehicle:
+ _id: vin
+ vin: string.length(17)
+ year: Year
+ make: Make
+ model: Model
+ trim: Trim
+ style: Style
+ 
+Make:
+ _id: slugify(name)
+ name: string
+ logo: https://cdn.driv.ly/logos/${id}.png
+```
