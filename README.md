@@ -50,5 +50,29 @@ Request:
  cf.timezone:  TimeZone._id
 ```
 
+```yaml
+_source: https://json.fyi/northwind.json
+_id: entityId
+_constraints: true
 
+EmployeeTerritory:
+ employeeId: Employee
+ territoryCode: Territory.territoryCode
+ 
+OrderDetail:
+ orderId:   Order
+ productId: Product
+ 
+Product: 
+ categoryId: Category
+ supplierId: Supplier
+ 
+SalesOrder:
+ customerId: Customer
+ employeeId: Employee
+ shipperId:  Shipper
+ 
+Territory:
+ regionId: Region.entityId
+```
 
