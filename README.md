@@ -87,6 +87,12 @@ SalesOrder:
  customerId: Customer
  employeeId: Employee
  shipperId:  Shipper
+
+Shipper:
+ _name: companyName
+ 
+Supplier:
+ _name: companyName
  
 Region:
  _name: regiondescription
