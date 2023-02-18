@@ -26,11 +26,13 @@ Country:
  _plural: Countries
  _source: https://json.fyi/countries.json
  _id:     cca2
+ _name:   name.common
  borders: [Country.cca3]
  
 Colo:
  _id:     iata
  _source: https://speed.cloudflare.com/locations
+ _name:   ${iata} - ${city}, ${cca2->name.common}, ${region}
  cca2:    Country.cca2
  region:  Continent._id
  iata:    Airport.iata
@@ -43,7 +45,7 @@ Airport:
  
 Request:
  _id:          ${headers.cf-ray}-${headers.cf-ray}
- _name:        ${method} ${url} ${ip} ${cf.city} ${cf.region} ${cf.region} ${cf.country->name} ${cf.asOrganization}
+ _name:        ${method} ${url} ${ip} ${cf.city} ${cf.region} ${cf.region} ${cf.country->name.common} ${cf.asOrganization}
  cf.colo:      Colo.iata
  cf.country:   Country.cca2
  coordinates:  GeoPoint(cf.latitude,cf.longitude)
