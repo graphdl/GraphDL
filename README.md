@@ -55,6 +55,9 @@ _seed: https://json.fyi/northwind.json
 _id: entityId
 _constraints: true
 
+Category:
+ _name: ${categoryName} - ${description}
+
 EmployeeTerritory:
  employeeId: Employee
  territoryCode: Territory.territoryCode
