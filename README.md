@@ -58,6 +58,12 @@ _constraints: true
 Category:
  _name: ${categoryName} - ${description}
 
+Customer:
+ _name: companyName
+ 
+Employee:
+ _name: ${firstname} ${lastname}, ${title}
+
 EmployeeTerritory:
  employeeId: Employee
  territoryCode: Territory.territoryCode
