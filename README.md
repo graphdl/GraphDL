@@ -73,6 +73,6 @@ SalesOrder:
  shipperId:  Shipper
  
 Territory:
- regionId: Region.entityId
+ regionId: Region
 ```
 
