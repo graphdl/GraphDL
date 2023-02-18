@@ -77,14 +77,19 @@ OrderDetail:
  orderId:   Order
  productId: Product
  
-Product: 
+Product:
+ _name:      productName
  categoryId: Category
  supplierId: Supplier
  
 SalesOrder:
+ _name: ${date(orderDate)} - ${count(<-OrderDetail)} Items
  customerId: Customer
  employeeId: Employee
  shipperId:  Shipper
+ 
+Region:
+ _name: regiondescription
  
 Territory:
  regionId: Region
