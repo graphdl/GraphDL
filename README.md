@@ -45,9 +45,10 @@ Airport:
  
 Request:
  _id:          ${headers.cf-ray}-${headers.cf-ray}
+ _name:        ${headers.cf-ray}-${headers.cf-ray} ${method} ${url} ${cf.city} ${cf.region} ${cf.region} ${cf.country->name} ${cf.asOrganization}
  cf.colo:      Colo.iata
- cf.longitude: GeoPoint(longitude)
- cf.latitude:  GeoPoint(latitude)
+ cf.country:   Country.cca2
+ coordinates:  GeoPoint(cf.latitude,cf.longitude)
  cf.timezone:  TimeZone._id
 ```
 
