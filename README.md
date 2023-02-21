@@ -4,6 +4,7 @@
 ```yaml
 User:
  _name: ${name} <${email}>
+ _icon: 🧑
  name:  string
  email: email
  image: url
@@ -30,12 +31,14 @@ Country:
  _source: https://json.fyi/countries.json
  _id:     cca2
  _name:   name.common
+ _icon:   🌎
  borders: [Country.cca3]
  
 Colo:
  _id:     iata
  _source: https://speed.cloudflare.com/locations
  _name:   ${iata} - ${city}, ${cca2->name.common}, ${region}
+ _icon:   ☁️
  cca2:    Country.cca2
  region:  Continent._id
  iata:    Airport.iata
@@ -43,12 +46,14 @@ Colo:
 Airport:
  _source: https://json.fyi/airports.json
  _id:     icao
+ _icon:   ✈️
  tz:      TimeZone._id
  country: Country.cca2
  
 Request:
  _id:          ${headers.cf-ray}-${headers.cf-ray}
  _name:        ${method} ${url} ${ip} ${cf.city} ${cf.region} ${cf.country->name.common} ${cf.asOrganization}
+ _icon:        🧑‍💻
  cf.colo:      Colo.iata
  cf.country:   Country.cca2
  coordinates:  GeoPoint(cf.latitude,cf.longitude)
@@ -56,8 +61,8 @@ Request:
 ```
 
 ```yaml
-_seed: https://json.fyi/northwind.json
-_id: entityId
+_seed:        https://json.fyi/northwind.json
+_id:          entityId
 _constraints: true
 
 Category:
@@ -65,6 +70,7 @@ Category:
 
 Customer:
  _name: companyName
+ _icon: 
  
 Employee:
  _name: ${firstname} ${lastname}, ${title}
