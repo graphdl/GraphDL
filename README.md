@@ -12,6 +12,7 @@ User:
 Post:
  _id:         slugify(Title)
  _name:       title
+ _icon:       📋
  title:       string
  description: string
  tags:        [string]
