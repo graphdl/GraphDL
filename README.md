@@ -3,6 +3,7 @@
 
 ```yaml
 User:
+ _id:   email
  _name: ${name} <${email}>
  _icon: 🧑
  name:  string
