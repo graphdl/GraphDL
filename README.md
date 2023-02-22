@@ -9,7 +9,7 @@ User:
  name:  string
  email: email
  image: url
- posts: [Post.Author]
+ posts: [Post.author]
  
 Post:
  _id:         slugify(Title)
