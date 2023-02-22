@@ -55,6 +55,7 @@ Request:
  _id:          ${headers.cf-ray}-${headers.cf-ray}
  _name:        ${method} ${url} ${ip} ${cf.city} ${cf.region} ${cf.country->name.common} ${cf.asOrganization}
  _icon:        🧑‍💻
+ _visibility:  admin
  cf.colo:      Colo.iata
  cf.country:   Country.cca2
  coordinates:  GeoPoint(cf.latitude,cf.longitude)
