@@ -193,12 +193,17 @@ Services:
   💸 Financing
   ☂️ Insurance
   ⚖️ Arbitration
-  🗄️ Back Office & Contracting
-  🧾 Title & Registration
+  🗄️ Backoffice
+  📑 Contracting
+  🧾 Title
+  🏛️ Registration
   💧 Body & Paint
-  🧼 Wash & Detail
-  🚛 Transport & Delivery
-  🛠️ Scheduled Maintenance
+  🧼 Wash
+  🧽 Detail
+  🚛 Transport
+  🎉 Delivery
+  🚙 Valet
+  🛠️ Maintenance
 
  
 Commerce:
