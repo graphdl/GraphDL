@@ -192,12 +192,18 @@ Services:
   ⚙️ Mechanical
   💸 Financing
   ☂️ Insurance
+  💰 Auction
+  🏦 Lending
+  ☑️ Lien
   ⚖️ Arbitration
   🗄️ Backoffice
   📑 Contracting
+  ✍️ eSign
+  🙋 Notary
   🧾 Title
   🏛️ Registration
-  💧 Body & Paint
+  🔨 Body
+  💧 Paint
   🧼 Wash
   🧽 Detail
   🚛 Transport
