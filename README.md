@@ -172,7 +172,13 @@ Style:
 _id:    apis.vin
 _graph: 
  Affiliate.monetizes: Transaction
+ Developer.facilitates: Transaction
  Partner.createsVirtual: Dealer
+ Dealer.sells: Vehicle
+ Consumer.buys: Vehicle
+ Consumer.trades: Vehicle
+ Consumer.finances: Vehicle
+ Lender.liens: Vehicle
 
 Data:
  _items:
