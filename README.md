@@ -165,3 +165,58 @@ Style:
  trim:   string
  style:  string
 ```
+
+```yaml
+_id: apis.vin
+
+Data:
+ _items:
+  🚘 Vehicle
+  🏭 Manufacturer
+  🏬 Dealer
+  🚙 Listing
+  💰 Auction
+  💸 Tax & Fee
+  🧾 Transaction
+  🏛️ Registration
+  📈 Market
+
+
+Services:
+ _items:
+  🧑‍💼 Concierge
+  ✅ Inspection
+  ✨ Reconditioning
+  ⚙️ Mechanical Repair
+  💸 Finance & Insurance
+  🗄️ Back Office & Contracting
+  🧾 Title & Registration
+  💧 Body & Paint
+  🧼 Wash & Detail
+  🚛 Transport & Delivery
+  🛠️ Scheduled Maintenance
+
+ 
+Commerce:
+ _items:
+  ✍️ Buy
+  💰 Sell
+  🚙 Trade
+  🏢 Broker
+  🚚 Dropship
+
+User:
+ _items:
+  💸 Affiliate
+  🏢 Partner
+  🧑‍💻 Developer
+  🧑 Consumer
+  🏬 Dealer
+  🏦 Lender
+  ☂️ Insurer
+  💰 Auction
+  🏭 Manufacturer
+  🚀 Startup
+
+```
+
