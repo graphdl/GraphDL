@@ -166,6 +166,8 @@ Style:
  style:  string
 ```
 
+`_items` are parsed as `${_name}` `${_icon} ${_name}` and `_id` is `slugify(_name)`
+
 ```yaml
 _id: apis.vin
 
