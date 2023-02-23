@@ -189,8 +189,10 @@ Services:
   🧑‍💼 Concierge
   ✅ Inspection
   ✨ Reconditioning
-  ⚙️ Mechanical Repair
-  💸 Finance & Insurance
+  ⚙️ Mechanical
+  💸 Financing
+  ☂️ Insurance
+  ⚖️ Arbitration
   🗄️ Back Office & Contracting
   🧾 Title & Registration
   💧 Body & Paint
