@@ -63,8 +63,9 @@ Request:
 ```
 
 ```yaml
+_name:        Northwind
 _seed:        https://json.fyi/northwind.json
-_id:          entityId
+_defaultId:   entityId
 _constraints: true
 
 Category:
@@ -112,17 +113,55 @@ Territory:
 ```
 
 ```yaml
+_id:   data.vin
+_name: 📖 Vehicle Data
+
 Vehicle:
- _id: vin
- vin: string.length(17)
- year: Year
- make: Make
- model: Model
- trim: Trim
- style: Style
+ _id:   vin
+ _icon: 🚘
+ vin:   vin
+ year:  ModelYear.year
+ make:  Make.make
+ model: Model.model
+ trim:  Trim.trim
+ style: Style.style
  
 Make:
- _id: slugify(name)
- name: string
- logo: https://cdn.driv.ly/logos/:id.png
+ _id:    slugify(make)
+ _name:  make
+ make:   string
+ logo: https://cdn.driv.ly/logos/${slugify(make)}.png
+ blurb:  markdown
+ years:  [ModelYear.year]
+ models: [Model.name]
+ 
+Model:
+ _id:    slugify(${make}-${model})
+ _name:  ${make} ${model}
+ make:   string
+ model:  string
+ 
+ModelYear:
+ _id:    slugify(${year}-${make}-${model})
+ _name:  ${year} ${make} ${model}
+ year:   integer
+ make:   string
+ model:  string
+ 
+Trim:
+ _id:    slugify(${year}-${make}-${model}-${trim})
+ _name:  ${year} ${make} ${model} ${trim}
+ year:   integer
+ make:   string
+ model:  string
+ trim:   string
+ 
+Style:
+ _id:    slugify(${year}-${make}-${model}-${trim}-${style})
+ _name:  ${year} ${make} ${model} ${trim} ${style}
+ year:   integer
+ make:   string
+ model:  string
+ trim:   string
+ style:  string
 ```
