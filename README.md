@@ -169,7 +169,10 @@ Style:
 `_items` are parsed as `${_name}` `${_icon} ${_name}` and `_id` is `slugify(_name)`
 
 ```yaml
-_id: apis.vin
+_id:    apis.vin
+_graph: 
+ Affiliate.monetizes: Transaction
+ Partner.createsVirtual: Dealer
 
 Data:
  _items:
