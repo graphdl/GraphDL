@@ -178,9 +178,8 @@ Data:
   🏬 Dealer
   🚙 Listing
   💰 Auction
-  💸 Tax & Fee
+  🏛️ Tax
   🧾 Transaction
-  🏛️ Registration
   📈 Market
 
 
@@ -220,7 +219,7 @@ Commerce:
   🏢 Broker
   🚚 Dropship
 
-User:
+Role:
  _items:
   💸 Affiliate
   🏢 Partner
