@@ -185,8 +185,8 @@ Data:
 
 Services:
  _items:
-  🧑‍💼 Concierge
-  ✅ Inspection
+  🧑‍💼 Concierge:
+  ✅ Inspection:
   ✨ Reconditioning
   ⚙️ Mechanical
   💸 Financing
