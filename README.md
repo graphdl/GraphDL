@@ -240,6 +240,19 @@ Role:
   💰 Auction
   🏭 Manufacturer
   🚀 Startup
+  
+  
+ Noun:
+  
+ _items:
+  Vehicle
+  Transaction
+  Buyer
+  Seller
+  Dealer
+  Auction
+  Manufacturer
+  
 
 ```
 
