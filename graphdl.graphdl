@@ -1,0 +1,92 @@
+_icon:        ∵
+_name:        GraphDL
+_description: GraphDL is a graph-based data language for describing data models and data relationships.
+
+Graph:
+  _id:          slugify(string)
+  _icon:        ∵
+  _name:        string
+  _description: markdown
+  nouns:        [Noun]
+  verbs:        [Verb]
+  roles:        [Role]
+
+Noun:
+  _id:          slugify(string)
+  _icon:        ■
+  _name:        string
+  _description: markdown
+  resources:    [Resource]
+
+Verb:
+  _id:          slugify(string)
+  _icon:        ●
+  _name:        string
+  _description: markdown
+  actions:      [Action]
+
+Persona:
+  _id:          slugify(string)
+  _icon:        ▼
+  _name:        string
+  _description: markdown
+  _type:        Noun
+  users:        [User]
+
+Resource:
+  _id:          slugify(string)
+  _icon:        □
+  _name:        string
+  _description: markdown
+  _instance:    Noun
+  _visibility:  anonymous | public | private | tenant | user | admin
+  _access:      read | write | readWrite
+  data:         json
+  created:      timestamp
+  updated:      timestamp
+  createdBy:    User
+  updatedBy:    User
+  tenant:       createdBy.tenant
+
+Action:
+  _id:          slugify(string)
+  _icon:        ○
+  _name:        string
+  _description: markdown
+  events:       [Event]
+
+Event:
+  _id:          slugify(string)
+  _icon:        ○
+  _name:        string
+  _description: markdown
+  _instance:    Verb
+  data:         json
+  time:         timestamp
+  by:           User
+  tenant:       by.tenant
+
+User:
+  _id:          slugify(string)
+  _icon:        ▽
+  _name:        string
+  _description: markdown
+  _instance:    Persona
+  email:        string
+  created:      timestamp
+  referredBy:   User
+  tenant:       [Tenant.users]
+  adminOf:      [Tenant.admins]
+
+Tenant:
+  _id:          slugify(string)
+  _icon:        ∷
+  _name:        string
+  _description: markdown
+  created:      timestamp
+  updated:      timestamp
+  createdBy:    User
+  updatedBy:    User
+  admins:       [User]
+  users:        [User]
+
