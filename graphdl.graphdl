@@ -40,7 +40,7 @@ Resource:
   _description: markdown
   _instance:    Noun
   _visibility:  anonymous | public | private | tenant | user | admin
-  _access:      read | write | readWrite
+  _access:      [read | write]
   data:         json
   created:      timestamp
   updated:      timestamp
