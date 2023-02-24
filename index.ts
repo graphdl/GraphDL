@@ -19,6 +19,11 @@ export Type PropertyTypes = 'string' | 'date' |  'datetime' | 'timestamp' | 'mar
 export Type Property = PropertyTypes | `[${PropertyTypes}]` | `${PropertyTypes}!` 
 
 export const database = init => {
-  const _id = init._id ?? init._name ? slugify(init._name) : Math.random().toString(36).substring(2,7)
-  const { _name, _icon = '■' } = init
+  const { _id, _name, _icon = '■', ...collections } = init
+  return {
+    id: _id ?? init._name ? slugify(init._name) : Math.random().toString(36).substring(2,7),
+    name,
+    icon,
+    collections
+  }
 }
