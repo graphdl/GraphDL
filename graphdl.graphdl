@@ -3,7 +3,7 @@ _name:        GraphDL
 _description: GraphDL is a graph-based data language for describing data models and data relationships.
 
 Graph:
-  _id:          slugify(string)
+  _id:          slugify(_name)
   _icon:        ∵
   _name:        string
   _description: markdown
@@ -12,21 +12,21 @@ Graph:
   roles:        [Role]
 
 Noun:
-  _id:          slugify(string)
+  _id:          slugify(_name)
   _icon:        ■
   _name:        string
   _description: markdown
   resources:    [Resource]
 
 Verb:
-  _id:          slugify(string)
+  _id:          slugify(_name)
   _icon:        ●
   _name:        string
   _description: markdown
   actions:      [Action]
 
 Persona:
-  _id:          slugify(string)
+  _id:          slugify(_name)
   _icon:        ▼
   _name:        string
   _description: markdown
@@ -34,7 +34,7 @@ Persona:
   users:        [User]
 
 Resource:
-  _id:          slugify(string)
+  _id:          slugify(_name)
   _icon:        □
   _name:        string
   _description: markdown
@@ -49,25 +49,31 @@ Resource:
   tenant:       createdBy.tenant
 
 Action:
-  _id:          slugify(string)
+  _id:          slugify(_name)
   _icon:        ○
   _name:        string
   _description: markdown
+  user:         User
+  verb:         Verb
+  object:       Resource
   events:       [Event]
 
 Event:
-  _id:          slugify(string)
-  _icon:        ○
+  _id:          slugify(_name)
+  _icon:        ⚡️
   _name:        string
   _description: markdown
   _instance:    Verb
-  data:         json
+  action:       Action
   time:         timestamp
-  by:           User
-  tenant:       by.tenant
+  user:         action.user
+  verb:         action.verb
+  object:       action.object
+  context:      json
+  tenant:       user.tenant
 
 User:
-  _id:          slugify(string)
+  _id:          slugify(_name)
   _icon:        ▽
   _name:        string
   _description: markdown
@@ -79,7 +85,7 @@ User:
   adminOf:      [Tenant.admins]
 
 Tenant:
-  _id:          slugify(string)
+  _id:          slugify(_name)
   _icon:        ∷
   _name:        string
   _description: markdown

@@ -1,0 +1,46 @@
+
+
+API:
+  _id:          slugify(_name)
+  _icon:        ❴❵
+  _name:        string
+  _description: markdown
+  _instance:    Noun
+  _visibility:  anonymous | public | private | tenant | user | admin
+  _access:      read | write | readWrite
+  data:         json
+  created:      timestamp
+  updated:      timestamp
+  createdBy:    User
+  updatedBy:    User
+  tenant:       createdBy.tenant
+  
+Function:
+  _id:          slugify(_name)
+  _icon:        ❪❫
+  _name:        string
+  _description: markdown
+  _instance:    Noun
+  _visibility:  anonymous | public | private | tenant | user | admin
+  _access:      read | write | readWrite
+  data:         json
+  created:      timestamp
+  updated:      timestamp
+  createdBy:    User
+  updatedBy:    User
+  tenant:       createdBy.tenant
+
+UI:
+  _id:          slugify(_name)
+  _icon:        ❮❯
+  _name:        string
+  _description: markdown
+  _instance:    Noun
+  _visibility:  anonymous | public | private | tenant | user | admin
+  _access:      read | write | readWrite
+  data:         json
+  created:      timestamp
+  updated:      timestamp
+  createdBy:    User
+  updatedBy:    User
+  tenant:       createdBy.tenant
