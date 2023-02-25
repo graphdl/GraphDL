@@ -1,5 +1,6 @@
 # GraphDL - Graph Definition Language
 
+GraphDL is a graph-based data language for describing data models and data relationships.
 
 ```yaml
 User:
