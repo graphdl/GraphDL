@@ -4,9 +4,11 @@
   _project:       string = slugify(_name)
   _database:      string = slugify(_name)
   _domain:        string = https://${_project}.${env.BASE_DOMAIN}
+  _requests:      [Request.graph]
 
 ■ Noun:
   _resources:     [Resource]
+  _requests:      [Request.noun]
 
 □ Resource:
   _type:          Noun
@@ -27,8 +29,53 @@
   deletedBy:      deleted->user
   tenant:         created->tenant
 
-
 ▼ Role:
   _seed:        anonymous | public | tenant | user | admin | owner
-  graph:        Graph.roles
   resources:    [Resource] 
+  users:        [User.roles]
+  requests:     [Request.role]
+
+▽ User:
+  roles:        [Role.users]
+  tenants:      [Tenant.users]
+  ownerOf:      [Tenant.owners]
+  adminOf:      [Tenant.admins]
+  requests:     [Request.user]
+
+△ Tenant:
+  users:        [User.tenants]
+  owners:       [User.ownerOf]
+  admins:       [User.adminOf]
+  requests:     [Request.tenant]
+
+⟢ Request:
+  graph:        Graph.requests
+  noun:         Noun.requests
+  resource:     Resource.requests
+  user:         User.requests
+  role:         Role.requests
+  tenant:       Tenant.requests
+  timestamp:    timestamp
+  type:         list | search | get | create | update | delete
+  body:         json
+  query:        json
+  headers:      json
+  url:          url
+  colo:         string
+  ip:           string
+  isp:          string
+  city:         string
+  region:       string
+  country:      string
+  continent:    string
+  latitude:     latitude
+  longitude:    longitude
+  response:     Response.request
+
+⟣ Response:
+  request:      Request.response
+  success:      boolean
+  status:       200 | 201 | 204 | 400 | 401 | 403 | 404 | 409 | 500
+  data:         json
+  html:         html
+  error:        json

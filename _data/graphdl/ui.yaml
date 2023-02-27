@@ -1,6 +1,19 @@
-∵ GraphDL: It is possible to embed UI components in a GraphDL schema with Markdown, HTML, Liquid, Handlebars, MDX and/or JSX syntax.
+∵ GraphDL: It is possible to embed UI components in a GraphDL schema with Markdown, HTML, MDX and/or JSX syntax.
+
+import: { Admin, LandingPage } from 'https://pkg.do/@graphdl/ui'
 
 🜉 Graph:
-  nouns:        [Noun.graph]
+  _adminLayout:         JSX = props => <Admin {...props} />
+  _landingPageLayout:   MDX = |
+<Header>
+<Hero/>
+<Benefits/>
+<Features/>
+<Pricing/>
+<FAQ/>
+<Footer/>
 
 ■ Noun:
+
+
+∷ Properties:     string | markdown | url | email | phone | date | time | datetime | timestamp | number | integer | currency | boolean | object
