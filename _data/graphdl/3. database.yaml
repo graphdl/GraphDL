@@ -36,6 +36,9 @@
   requests:     [Request.role]
 
 ▽ User:
+  name:         string
+  email:        email
+  image:        url
   roles:        [Role.users]
   tenants:      [Tenant.users]
   ownerOf:      [Tenant.owners]
