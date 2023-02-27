@@ -1,6 +1,6 @@
 ∵ GraphDL: By default, validation is provided by 
 
-import: { object, string, number, date, InferType } from 'yup'
+import: yup from 'yup'
 
 # Validate:     
 #   string:   string()
