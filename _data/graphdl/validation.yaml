@@ -2,18 +2,18 @@
 
 import: { object, string, number, date, InferType } from 'yup'
 
-Validate:     
-  string:   string()
-  markdown: 
-  url: 
-  email: 
-  phone: 
-  date: 
-  time: 
-  datetime: 
-  timestamp: 
-  number: 
-  integer: 
-  currency: 
-  boolean: 
-  object:
+# Validate:     
+#   string:   string()
+#   markdown: 
+#   url: 
+#   email: 
+#   phone: 
+#   date: 
+#   time: 
+#   datetime: 
+#   timestamp: 
+#   number: 
+#   integer: 
+#   currency: 
+#   boolean: 
+#   object:
