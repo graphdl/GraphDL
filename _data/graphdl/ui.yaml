@@ -4,14 +4,7 @@ import: UI from 'https://pkg.do/@graphdl/ui'
 
 🜉 Graph:
   _adminLayout:     url | jsx = props => <Admin {...props}/>
-  _websiteLayout:   url | mdx = |
-<UI.Header>
-<UI.Hero/>
-<UI.Benefits/>
-<UI.Features/>
-<UI.Pricing/>
-<UI.FAQ/>
-<UI.Footer/>
+  _websiteLayout:   url | mdx = https://pkg.do/@graphdl/ui/website.mdx
 
 ■ Noun:
   _list:            simple | list | table | cards | grid | dashboard | calendar | map | code | json | yaml | single
