@@ -1,0 +1,18 @@
+∵ GraphDL: Javascript Functions are supported as a native property type in GraphDL.
+
+🜉 Graph:
+  _onInitialize:  function
+  _onError:       function = (err, ctx) => fetch(`https://err.do/${ctx.graph}/${err.message}/${err.stack}`)
+
+■ Noun:
+  _beforeCreate:  function
+  _beforeUpdate:  function
+  _beforeDelete:  function
+  _onCreate:      function = (obj, ctx) => obj.created = ctx.req.id && obj.updated = ctx.req.id
+  _onUpdate:      function = (obj, ctx) => obj.updated = ctx.req.id
+  _onDelete:      function = (obj, ctx) => obj.deleted = ctx.req.id
+  _afterCreate:   function
+  _afterUpdate:   function
+  _afterDelete:   function
+
+∷ Properties:     function

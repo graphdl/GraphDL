@@ -1,5 +1,10 @@
 ∵ GraphDL: A concrete implementation of GraphDL can function as a Database with Resources as instances of Nouns
 
+🜉 Graph:
+  _project:       string = slugify(_name)
+  _database:      string = slugify(_name)
+  _domain:        string = https://${_project}.${env.BASE_DOMAIN}
+
 ■ Noun:
   _resources:     [Resource]
 
@@ -21,3 +26,9 @@
   deletedAt:      deleted->timestamp
   deletedBy:      deleted->user
   tenant:         created->tenant
+
+
+▼ Role:
+  _seed:        anonymous | public | tenant | user | admin | owner
+  graph:        Graph.roles
+  resources:    [Resource] 

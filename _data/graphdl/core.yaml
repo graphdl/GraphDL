@@ -1,15 +1,18 @@
 ∵ GraphDL: GraphDL is a graph-based data language for describing data models and data relationships.
 
 🜉 Graph:
-  nouns:        [Noun.graph]
+  nouns:          [Noun.graph]
 
 ■ Noun:
-  _id:          string = slugify(_name)
-  _icon:        string | url = ■
-  _name:        string = titleCase(_id)
-  _type:        string = Noun
-  _description: markdown | html
-  _source:      url | Items
-  _seed:        url | Items
-  _visibility:  anonymous | public | tenant | user | admin = tenant
-  _graph:       Graph.nouns
+  _id:            string = slugify(_name)
+  _icon:          string | url = ■
+  _name:          string = titleCase(_id)
+  _type:          string = Noun
+  _description:   markdown | html
+  _source:        url | [string] | [object]
+  _seed:          url | [string] | [object]
+  _visibility:    anonymous | public | tenant | user | admin = tenant
+  _graph:         Graph.nouns
+  ${property}:    Properties | `[${Properties}]` | `${Properties}!`
+
+∷ Properties:     string | markdown | url | email | phone | date | time | datetime | timestamp | number | integer | currency | boolean | object

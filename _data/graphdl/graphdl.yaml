@@ -56,9 +56,5 @@ _description: GraphDL is a graph-based data language for describing data models 
   verb:         Verb.active
   object:       Resource.objectOf
 
-▼ Role:
-  _seed:        anonymous | public | tenant | user | admin | owner
-  graph:        Graph.roles
-  resources:    [Resource] 
 
 ● Verb:
