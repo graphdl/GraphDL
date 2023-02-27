@@ -13,6 +13,6 @@
   _seed:          url | [string] | [object]
   _visibility:    anonymous | public | tenant | user | admin = tenant
   _graph:         Graph.nouns
-  ${property}:    Properties | `[${Properties}]` | `${Properties}!`
+  ${property}:    Properties | `[${Properties}]` | `${Properties}!` | `${Nouns}` | `[${Nouns}]` | `${Nouns}.${property}` | `[${Nouns}.${property}]`
 
 ∷ Properties:     string | markdown | url | email | phone | date | time | datetime | timestamp | number | integer | currency | boolean | object

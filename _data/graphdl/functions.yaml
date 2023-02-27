@@ -1,5 +1,7 @@
 ∵ GraphDL: Javascript Functions are supported as a native property type in GraphDL.
 
+import: string | [string] = graphdl from 'https://pkg.do/graphdl'
+
 🜉 Graph:
   _onInitialize:  function
   _onError:       function = (err, ctx) => fetch(`https://err.do/${ctx.graph}/${err.message}/${err.stack}`)
