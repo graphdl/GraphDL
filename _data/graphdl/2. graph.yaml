@@ -1,6 +1,7 @@
 ∵ GraphDL: The language is composable and extensible, and can be used to describe Nodes & Edges through Nouns & Verbs.
 
 🜉 Graph:
+  _description:   A [Graph] consists of [Noun]s and the [Verb]s that connect them.
   nouns:          [Noun.graph]
   verbs:          [Verb]
 
