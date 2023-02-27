@@ -1,10 +1,10 @@
 ∵ GraphDL: It is possible to embed UI components in a GraphDL schema with Markdown, HTML, MDX and/or JSX syntax.
 
-import: { Admin, LandingPage } from 'https://pkg.do/@graphdl/ui'
+import: { Admin, Website, ListViews, DetailViews, EditViews } from 'https://pkg.do/@graphdl/ui'
 
 🜉 Graph:
-  _adminLayout:         JSX = props => <Admin {...props} />
-  _landingPageLayout:   MDX = |
+  _adminLayout:     url | jsx = props => <Admin {...props}/>
+  _websiteLayout:   url | mdx = |
 <Header>
 <Hero/>
 <Benefits/>
@@ -14,6 +14,12 @@ import: { Admin, LandingPage } from 'https://pkg.do/@graphdl/ui'
 <Footer/>
 
 ■ Noun:
+  _list:            simple | list | table | cards | grid | dashboard | calendar | map | code | json | yaml | single
+  _detail:          simple | tabbed | accordion | code | json | yaml
+  _listView:        url | jsx = props => <Admin {...props}><ListViews[props._list] {...props}/><Admin/>
+  _detailView:      url | jsx = props => <Admin {...props}><DetailViews[props._list] {...props}/><Admin/>
+  _createView:      url | jsx = props => <Admin {...props}><EditViews[props._list] {...props}/><Admin/>
+  _updateView:      url | jsx = props => <Admin {...props}><EditViews[props._list] {...props}/><Admin/>
 
 
-∷ Properties:     string | markdown | url | email | phone | date | time | datetime | timestamp | number | integer | currency | boolean | object
+∷ Properties:       html | mdx | jsx
