@@ -1,6 +1,6 @@
-∵ GraphDL: By default, validation is provided by 
+∵ GraphDL: By default, validation is provided by `yup`
 
-import: yup from 'yup'
+import: yup from 'https://pkg.do/yup'
 
 # Validate:     
 #   string:   string()

@@ -2,6 +2,7 @@
   "name": "graphdl.js",
   "description": "GraphDL Reference Implementation",
   "version": "0.1.0",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/graphdl/graphdl.git"
@@ -9,5 +10,8 @@
   "keywords": [],
   "author": "Driv.ly",
   "license": "MIT",
-  "homepage": "https://graphdl.org"
+  "homepage": "https://graphdl.org",
+  "devDependencies": {
+    "node-fetch": "^3.3.0"
+  }
 }

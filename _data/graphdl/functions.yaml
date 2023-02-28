@@ -1,4 +1,5 @@
 ∵ GraphDL: Javascript Functions are supported as a native property type in GraphDL.
+_priority: 3
 
 import: string | [string] = graphdl from 'https://pkg.do/graphdl'
 

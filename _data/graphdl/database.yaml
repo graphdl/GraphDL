@@ -1,4 +1,5 @@
 ∵ GraphDL: A concrete implementation of GraphDL can function as a Database with Resources as instances of Nouns
+_priority: 4
 
 🜉 Graph:
   _project:       string = slugify(_name)
