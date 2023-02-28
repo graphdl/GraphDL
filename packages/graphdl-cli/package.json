@@ -1,6 +1,6 @@
 {
-  "name": "graphdl.js",
-  "description": "GraphDL Reference Implementation",
+  "name": "graphdl-cli",
+  "description": "GraphDL CLI",
   "version": "0.1.0",
   "type": "module",
   "repository": {

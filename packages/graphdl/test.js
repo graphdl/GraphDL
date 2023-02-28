@@ -1,7 +1,7 @@
 import { mock, test } from 'node:test'
 import assert from 'node:assert'
 
-import { init, generateJavascript } from './core.js'
+import { compose, init, generateJavascript } from './core.js'
 
 
 
@@ -12,6 +12,7 @@ test('confirm schema', async (t) => {
 
   console.log(schema)
 
+  compose(schema.graphdl)
   
   assert.strictEqual(schema, schema)
 })
