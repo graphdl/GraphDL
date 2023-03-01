@@ -17,5 +17,6 @@ import: string | [string] = graphdl from 'https://pkg.do/graphdl'
   _afterCreate:   function
   _afterUpdate:   function
   _afterDelete:   function
+  _validate:      function
 
 ∷ Properties:     function
