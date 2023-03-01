@@ -278,14 +278,19 @@ erDiagram
   has: [DeliveryAddress]
   places: [Order]
   liableFor: [Invoice]
+
 🏘️ DeliveryAddress:
   receives: [Order]
+
 🧾 Invoice:
   covers: [Order]
+
 💸 Order:
   includes: [OrderItem]
+
 🚥 ProductCategory:
   contains: [Product]
+
 📦 Product:
   orderedIn: [OrderItem]
 ```
