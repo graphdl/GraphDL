@@ -275,17 +275,48 @@ erDiagram
 
 ```yaml
 🧑 Customer:
-  has: DeliveryAddress
-  places: Order
-  liableFor: Invoice
+  has: [DeliveryAddress]
+  places: [Order]
+  liableFor: [Invoice]
 🏘️ DeliveryAddress:
-  receives: Order
+  receives: [Order]
 🧾 Invoice:
-  covers: Order
+  covers: [Order]
 💸 Order:
-  includes: OrderItem
+  includes: [OrderItem]
 🚥 ProductCategory:
-  contains: Product
+  contains: [Product]
 📦 Product:
-  orderedIn: OrderItem
+  orderedIn: [OrderItem]
+```
+
+
+```mermaid
+erDiagram
+    CAR ||--o{ NAMED-DRIVER : allows
+    CAR {
+        string registrationNumber
+        string make
+        string model
+    }
+    PERSON ||--o{ NAMED-DRIVER : is
+    PERSON {
+        string firstName
+        string lastName
+        int age
+    }
+```
+
+```yaml
+🚘 Car:
+  allows: [NamedDriver]
+  registrationNumber: string
+  make: string
+  model: string
+
+🧑 Person:
+  is: [NamedDriver]
+  firstName: string
+  lastName: string
+  age: integer
 ```
