@@ -17,7 +17,12 @@
 
 // ∷ Properties:     string | markdown | url | email | phone | date | time | datetime | timestamp | number | integer | currency | boolean | object
 
-// export type Nouns = 'Noun' | 'Graph' | 'Properties'
+
+export type Graph = Noun & {
+  nouns: {
+    [noun: string]: Noun
+  }
+}
 
 export type Noun = {
   _id: string
@@ -25,12 +30,17 @@ export type Noun = {
   _name: string
   _type: string
   _description: string
-  _source: string | string[] | object[]
-  _seed: string | string[] | object[]
-  _visibility: 'string' | 'public' | 'tenant' | 'user' | 'admin'
+  _source: URL | string[] | object[]
+  _seed: URL | string[] | object[]
+  _visibility: Visibility
   _graph: string
-  // [property: string]: Properties | `[${Properties}]` | `${Properties}!` | `${Nouns}` | `[${Nouns}]` | `${Nouns}.${property}` | `[${Nouns}.${property}]`
+} & NounProperties
+
+export type NounProperties = {
+  [property: string]: Properties | `[${Properties}]` | `${Properties}!` | `${keyof Graph['nouns']}` | `[${keyof Graph['nouns']}]` | `${keyof Graph['nouns']}.${string}` | `[${keyof Graph['nouns']}.${string}]`  // TODO: Figure out how to validate keyof `Noun.property` 
 }
 
 export type Properties = 'string' | 'markdown' | 'url' | 'email' | 'phone' | 'date' | 'time' | 'datetime' | 'timestamp' | 'number' | 'integer' | 'currency' | 'boolean' | 'object'
+export type Visibility = 'anonymous' | 'public' | 'tenant' | 'user' | 'admin'
 
+export type URL = `https://${string}.${string}`
