@@ -25,6 +25,8 @@ Post:
  author:      User.Email
 ```
 
+![GraphDL](./GraphDL.png)
+
 ```yaml
 _visibility: public
 
@@ -257,4 +259,33 @@ Role:
 
 ```
 
-![GraphDL](./GraphDL.png)
+
+
+```mermaid
+erDiagram
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : has
+    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER ||--o{ INVOICE : "liable for"
+    DELIVERY-ADDRESS ||--o{ ORDER : receives
+    INVOICE ||--|{ ORDER : covers
+    ORDER ||--|{ ORDER-ITEM : includes
+    PRODUCT-CATEGORY ||--|{ PRODUCT : contains
+    PRODUCT ||--o{ ORDER-ITEM : "ordered in"
+```
+
+```yaml
+🧑 Customer:
+  has: DeliveryAddress
+  places: Order
+  liableFor: Invoice
+🏘️ DeliveryAddress:
+  receives: Order
+🧾 Invoice:
+  covers: Order
+💸 Order:
+  includes: OrderItem
+🚥 ProductCategory:
+  contains: Product
+📦 Product:
+  orderedIn: OrderItem
+```
