@@ -10,9 +10,9 @@ import: UI from 'https://pkg.do/@graphdl/ui'
   _list:            simple | list | table | cards | grid | dashboard | calendar | map | code | json | yaml | single
   _detail:          simple | tabbed | accordion | code | json | yaml
   _listView:        url | jsx = props => <UI.Admin {...props}><UI.ListViews[props._list] {...props}/><UI.Admin/>
-  _detailView:      url | jsx = props => <UI.Admin {...props}><UI.DetailViews[props._list] {...props}/><UI.Admin/>
-  _createView:      url | jsx = props => <UI.Admin {...props}><UI.EditViews[props._list] {...props}/><UI.Admin/>
-  _updateView:      url | jsx = props => <UI.Admin {...props}><UI.EditViews[props._list] {...props}/><UI.Admin/>
+  _detailView:      url | jsx = props => <UI.Admin {...props}><UI.DetailViews[props._detail] {...props}/><UI.Admin/>
+  _createView:      url | jsx = props => <UI.Admin {...props}><UI.EditView {...props}/><UI.Admin/>
+  _updateView:      url | jsx = props => <UI.Admin {...props}><UI.EditView {...props}/><UI.Admin/>
 
 
 ∷ Properties:       html | mdx | jsx
