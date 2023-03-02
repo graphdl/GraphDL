@@ -7,7 +7,8 @@ User:
  _id:   email
  _name: ${name} <${email}>
  _icon: 🧑
- name:  string
+ _sameAs: https://schema.org/Person
+ name:  name
  email: email
  image: url
  posts: [Post.author]
@@ -16,12 +17,13 @@ Post:
  _id:         slugify(Title)
  _name:       title
  _icon:       📋
- title:       string
- description: string
+ _sameAs:     https://schema.org/BlogPosting
+ title:       name
+ description: description
  tags:        [string]
- content:     markdown
- createdAt:   createdAt()
- createdBy:   createdBy()
+ content:     articleBody
+ createdAt:   dateCreated
+ createdBy:   creator
  author:      User.Email
 ```
 
