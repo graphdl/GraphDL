@@ -2,6 +2,7 @@
 _priority: 4
 
 🜉 Graph:
+  _tenant:        [Tenant.graph]
   _project:       string = slugify(_name)
   _database:      string = slugify(_name)
   _domain:        string = https://${_project}.${env.BASE_DOMAIN}
