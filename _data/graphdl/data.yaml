@@ -13,9 +13,8 @@ _priority: 4
   _requests:      [Request.noun]
 
 □ Resource:
-  _type:          Noun
+  _type:          Noun.resources
   _description:   A Resource is a specific instance of a Noun
-  instance:       Noun.resources
   data:           json
   subjectOf:      [Action.subject]
   objectOf:       [Action.object]
