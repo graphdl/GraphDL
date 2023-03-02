@@ -9,7 +9,6 @@ _priority: 2
   _description:   A [Noun] is a person, place, thing, or idea.
   _subjectOf:     [Verb._subject]
   _objectOf:      [Verb._object]
-  _graph:         [Graph.nouns]
 
 □ Resource:
   _description:   A [Resource] is a specific instance of a [Noun]
