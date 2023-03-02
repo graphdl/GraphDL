@@ -4,7 +4,7 @@
   nouns:          [Noun.graph]
 
 ■ Noun:
-  _id:            string = slugify(_name)
+  _id:            string = _name ? slugify(_name) : base62(8)
   _icon:          string | url = ■
   _name:          string = titleCase(_id)
   _type:          string = Noun
