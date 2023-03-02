@@ -9,7 +9,8 @@ _priority: 4
   _requests:      [Request.graph]
 
 ■ Noun:
-  _resources:     [Resource]
+  _tenant:        [Tenant.noun]
+  _resources:     [Resource.noun]
   _requests:      [Request.noun]
 
 □ Resource:
