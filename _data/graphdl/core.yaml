@@ -1,8 +1,8 @@
-∵ GraphDL: GraphDL is a graph-based data language for describing data models and data relationships.
+🜉 GraphDL: GraphDL is a graph-based data language for describing data models and data relationships.
 
 import: @graph from https://schema.org/version/latest/schemaorg-current-https.jsonld
 
-🜉 Graph:   
+∵ Graph:   
   _description:   A [Graph] consists of the [Noun]s in it's domain space.
   nouns:          [Noun.graph]
 
