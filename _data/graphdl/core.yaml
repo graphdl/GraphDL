@@ -9,7 +9,7 @@
   _icon:          string | url = ■
   _name:          string = titleCase(_id)
   _type:          string = Noun
-  _description:   markdown | html
+  _description:   markdown | html = A [Noun] is a person, place, thing, or idea.
   _source:        url | [string] | [object]
   _seed:          url | [string] | [object]
   _visibility:    anonymous | public | tenant | user | admin = tenant
