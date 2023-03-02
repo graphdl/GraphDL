@@ -2,6 +2,7 @@
 _priority: 2
 
 🜉 Graph:
+  _description:   A [Graph] consists of [Noun]s and the [Verb]s that connect them.
   verbs:          [Verb]
 
 ■ Noun:
