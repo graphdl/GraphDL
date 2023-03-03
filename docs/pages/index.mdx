@@ -1,6 +1,31 @@
-# Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+# ■●■ GraphDL - Graph Definition Language
+
+GraphDL is a graph-based data language for describing data models and data relationships.
+
+```yaml
+🧑 Customer:
+  has: [DeliveryAddress]
+  places: [Order]
+  liableFor: [Invoice]
+
+🏘️ DeliveryAddress:
+  receives: [Order]
+
+🧾 Invoice:
+  covers: [Order]
+
+💸 Order:
+  includes: [OrderItem]
+
+🚥 ProductCategory:
+  contains: [Product]
+
+📦 Product:
+  orderedIn: [OrderItem]
+```
+
+## ■ Noun - A Person, Place, Thing or Idea
+
 
 ## What is Nextra?
 
