@@ -4,8 +4,13 @@
   "nouns": "■ Nouns",
   "verbs": "● Verbs",
   "properties": "∷ Properties",
-  "data": "∷ Properties",
-  "functions": "∷ Properties",
-  "ui": "∷ Properties",
-  "relationships": "→ Relationships"
+  "data": "❴❵ Data",
+  "functions": "❪❫ Functions",
+  "ui": "❮❯ UI",
+  "relationships": "→ Relationships",
+  "playground": {
+    "title": "Playground ↗",
+    "type": "page",
+    "newWindow": true
+  }
 }

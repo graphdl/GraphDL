@@ -4,26 +4,44 @@ import { Tab, Tabs } from 'nextra-theme-docs'
 
 GraphDL is a language for describing data models and relationships.
 
-<Tabs items={['ToDos', 'npm', 'yarn']}>
+<Tabs items={['ToDos', 'Vehicles', 'APIs', 'SaaS', 'Northwind']}>
   <Tab>
-    ```yaml filename="graphdl.yaml" copy
-    ✅ ToDo:
-      title: string
-      description: string
-      status: todo | doing | done
-      assignedTo: [User]
+```yaml filename="graphdl.yaml" copy
+✅ ToDo:
+  title: string
+  description: string
+  status: todo | doing | done
+  assignedTo: [User]
 
-    🧑‍💻 User:
-      name: string
-      email: email
-      has: [ToDo]
-    ```
+🧑‍💻 User:
+  name: string
+  email: email
+  has: [ToDo]
+```
   </Tab>
   <Tab>
-    **npm** is a package manager for the JavaScript programming language.
+```yaml filename="saas.graphdl" copy
+```
   </Tab>
   <Tab>
-    **Yarn** is a software packaging system.
+```yaml filename="saas.graphdl" copy
+```
+  </Tab>
+  <Tab>
+```yaml filename="saas.graphdl" copy
+```
+  </Tab>
+  <Tab>
+```yaml filename="saas.graphdl" copy
+```
+  </Tab>
+  <Tab>
+```yaml filename="saas.graphdl" copy
+```
+  </Tab>
+  <Tab>
+```yaml filename="saas.graphdl" copy
+```
   </Tab>
 </Tabs>
 
@@ -33,8 +51,10 @@ GraphDL is a language for describing data models and relationships.
 as well as optionally [JSON Schema], [OpenAPI Spec], [GraphQL Schema], and a [React Admin UI].
 
 The generated [Javascript] and [Typescript] code includes the base data models, as well as [Validation] logic, 
-[List], [Search], [Create], [Update], & [Delete] logic for client and/or server side use, including APIs, that can be deployed 
-anywhere including [Cloudflare Workers] or [Deno Deploy], as well as in containers on [AWS], [Azure], [GCP], or [Fly.io].
+[List], [Search], [Create], [Update], & [Delete] logic for client and/or server side use, including APIs, 
+
+That can be deployed anywhere including [Cloudflare Workers], [Deno Deploy], [Fly.io], [AWS], [Azure], [GCP] 
+or with self-hosted containers
 
 ## ■● Graph
 
@@ -126,6 +146,26 @@ An [Action] happens when an instance of a [Noun] (i.e. [Resource]) does a [Verb]
 
 For example, in `User/john.subscribes: App/ToDos` the verb `subscribes` connects the [Subject Resource] `User/john` to the [Object Resource] `App/ToDos`.
 
+## ◆ Trigger
+
+A [Trigger] invokes an [Action] on a [Schedule], when a [Resource] is created, modified, or deleted, or when an [Action] happens.
+
+## ◇ Event
+
+An [Event] happens whenever a [Trigger] happening at a specific point in time, and can occur at scheduled times, whenever a [Resource] is created, updated, or deleted, or whenever an [Action] happens.
+
+## ⧆ Query
+
+A [Query] is the input criteria for a [Search] in a [Graph] that may or may not be constrained to a specific [Noun] or [Verb]
+
+## ⊛ Search
+
+A [Search] is as [Action] that returns a list of [Resources] that match a specific [Query].
+
+## 入 API
+
+An [API] is a [Function] that can be passed [Data] via a [Request] and returns [Data] in a [Response].
+
 ## ❴❵ Data
 
 [Data] is the information that is stored in a [Resource] in a JSON format.
@@ -138,26 +178,10 @@ A [Function] is Javascript code that can be placed on a [Verb] is executed when 
 
 A [UI] is JSX code that can be placed on a [Noun] and is executed when a [Resource] is rendered.
 
-## ◆ Trigger
+## ☶ Site
 
-A [Trigger] invokes an [Action] on a [Schedule], when a [Resource] is created, modified, or deleted, or when an [Action] happens.
+A [Site] is a publicly-accesible [UI] and can be deployed to the cloud, and run in the cloud, at the edge, or in a browser
 
-## ◇ Event
+## ⧉ App
 
-An [Event] happens whenever a [Trigger] happening at a specific point in time, and can occur at scheduled times, whenever a [Resource] is created, updated, or deleted, or whenever an [Action] happens.
-
-## ⊛ Query
-
-A [Query] is the input criteria for a [Search] in a [Graph] that may or may not be constrained to a specific [Noun] or [Verb]
-
-## ⊙ Search
-
-A [Search] is a [Function] that returns a list of [Resources] that match a specific [Query].
-
-## ⟢ Request
-
-A [Request] inherits from the [Request Interface](https://developer.mozilla.org/en-US/docs/Web/API/Request) on the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) in [Javascript] 
-
-## ⟣ Response
-
-A [Response] inherits from the [Response Interface](https://developer.mozilla.org/en-US/docs/Web/API/Response) on the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) in [Javascript]
+An [App] is an composition of [UI] powered by [APIs] with [Users] and [Tenants], and that can be deployed to the cloud, and run in the cloud, at the edge, in a browser, or on a device.
