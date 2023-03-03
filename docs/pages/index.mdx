@@ -18,6 +18,10 @@ GraphDL is a language for describing data models and relationships.
 [GraphDL.js] translates the [GraphDL Schema] into a [Javascript ES6 Module] with [Typescript Types], 
 as well as optionally [JSON Schema], [OpenAPI Spec], [GraphQL Schema], and a [React Admin UI].
 
+The generated [Javascript] and [Typescript] code includes the base data models, as well as [Validation] logic, 
+[List], [Search], [Create], [Update], & [Delete] logic for client and/or server side use, including APIs, that can be deployed 
+anywhere including [Cloudflare Workers] or [Deno Deploy], as well as in containers on [AWS], [Azure], [GCP], or [Fly.io].
+
 ## ■ Noun
 
 A [Noun] is a person, place, thing, or idea.
@@ -88,21 +92,25 @@ Schema.org was created by Google, Microsoft, and other search engines as way to 
 🧑‍💻 User: Person
 ```
 
-## □ Resource
-
-A [Resource] is a specific instance of a [Noun]
-
 ## ● Verb
 
 A [Verb] connects a [Noun] to a different [Noun], and is expressed as `[Subject].[Verb]: [Object]`.
 
 For example, in `User.subscribes: App` the verb `subscribes` connects the [Subject] `User` to the [Object] `App`.
 
+## □ Resource
+
+A [Resource] is a specific instance of a [Noun]
+
 ## ○ Action
 
 An [Action] happens when an instance of a [Noun] (i.e. [Resource]) does a [Verb] to a different [Resource].
 
 For example, in `User/john.subscribes: App/ToDos` the verb `subscribes` connects the [Subject Resource] `User/john` to the [Object Resource] `App/ToDos`.
+
+## ⟡ Event
+
+An [Event] is an [Action] happening at a specific point in time, and can occur at scheduled times, whenever a [Resource] is created, updated, or deleted, or whenever an [Action] happens.
 
 ## ❴❵ Data
 
@@ -115,7 +123,3 @@ A [Function] is Javascript code that can be placed on a [Verb] is executed when 
 ## ❮❯ UI
 
 A [UI] is JSX code that can be placed on a [Noun] and is executed when a [Resource] is rendered.
-
-## ⟡ Trigger
-
-A [Trigger] is an [Event] that is executed when a [Resource] is created, updated, or deleted.
