@@ -1,0 +1,21 @@
+export const GraphDLTab = () => (
+<Tab>
+```yaml filename="graphdl.yaml" copy
+✅ ToDo:
+    title:       string!
+    description: string
+    status:      To Do | In Progress | Blocked | Done = To Do
+    subtasks:    [ToDo->partOf]
+    partOf:      ToDo.subtasks
+    assignedTo:  User.assigned = createdBy()
+    createdBy:   User.created = createdBy()
+
+🧑‍💻 User:
+    _sameAs:     https://schema.org/Person
+    name:        string
+    email:       email!
+    toDos:       [ToDo->assignedTo]
+    created:     [ToDo->createdBy]
+```
+</Tab>
+)

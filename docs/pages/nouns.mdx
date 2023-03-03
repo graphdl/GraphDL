@@ -1,0 +1,69 @@
+# ■ Noun
+
+A [Noun] is a person, place, thing, or idea.
+
+```yaml
+🧑‍💻 User:
+  name: string
+  email: email
+  has: [ToDo]
+```
+
+Additionally, every [Noun] has internal properties that are prefixed with an underscore like `_icon` and `_description`.
+
+```yaml
+User:
+  _icon: 🧑‍💻
+  _description: The User of an App
+  name: string
+  email: email
+  has: [ToDo]
+```
+
+Every [Noun] in GraphDL is a [Thing] in Schema.org, and a noun can specify the Schema.org type it represents 
+with the `sameAs` property:
+
+```yaml
+🧑‍💻 User:
+  _sameAs: https://schema.org/Person
+  name: string
+  email: email
+  has: [ToDo]
+```
+
+GraphDL also supports a shorthand for specifying the `_icon`, `_name`, `_description` and `_sameAs` properties:
+
+```yaml
+'{_icon} {_name}': '{_description} ({_sameAs})'
+```
+
+For example, this code:
+
+```yaml
+🧑‍💻 User: The User of an App (Person)
+```
+
+is equivalent to this code:
+
+```yaml
+user:
+  _id: user
+  _icon: 🧑‍💻
+  _name: User
+  _description: The User of an App
+  _sameAs: https://schema.org/Person
+```
+
+```yaml
+🧑‍💻 User:
+  _sameAs: Person
+  name: string
+  email: email
+  has: [ToDo]
+```
+
+Schema.org was created by Google, Microsoft, and other search engines as way to standardize the way that data is structured on the web.
+
+```yaml
+🧑‍💻 User: Person
+```

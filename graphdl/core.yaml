@@ -11,6 +11,7 @@ import: @graph from https://schema.org/version/latest/schemaorg-current-https.js
   _icon:          string | url = ■
   _name:          string = titleCase(_id)
   _type:          string = Noun
+  _plural:        string = pluralize(_name)
   _sameAs:        url = https://schema.org/Thing
   _description:   markdown | html = A [Noun] is a person, place, thing, or idea.
   _source:        url | [string] | [object]
