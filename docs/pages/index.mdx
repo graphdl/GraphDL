@@ -17,12 +17,21 @@ GraphDL is a language for describing data models and relationships.
 
 ## ■ Noun
 
-A Noun is a [Person](/Person), Place, Thing or Idea
+A [Noun] is a person, place, thing, or idea.
 
-## What is Nextra?
+## □ Resource
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+A [Resource] is a specific instance of a [Noun]
 
-## Documentation
+## ● Verb
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+A [Verb] connects a [Noun] to a different [Noun], and is expressed as `[Subject].[Verb]: [Object]`.
+
+For example, in `User.subscribes: App` the verb `subscribes` connects the [Subject] `User` to the [Object] `App`.
+
+## ○ Action
+
+An [Action] happens when an instance of a [Noun] (i.e. [Resource]) does a [Verb] to a different [Resource].
+
+For example, in `User/john.subscribes: App/ToDos` the verb `subscribes` connects the [Subject Resource] `User/john` to the [Object Resource] `App/ToDos`.
+
