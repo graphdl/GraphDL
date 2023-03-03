@@ -1,0 +1,216 @@
+{
+  "validation": {
+    "∵ GraphDL": "By default, validation is provided by `yup`",
+    "import": "yup from 'https://pkg.do/yup'"
+  },
+  "ui": {
+    "∵ GraphDL": "It is possible to embed UI components in a GraphDL schema with Markdown, HTML, MDX and/or JSX syntax.",
+    "import": "UI from 'https://pkg.do/@graphdl/ui'",
+    "🜉 Graph": {
+      "_adminLayout": "url | jsx = props => <Admin {...props}/>",
+      "_websiteLayout": "url | mdx = https://pkg.do/@graphdl/ui/website.mdx"
+    },
+    "■ Noun": {
+      "_list": "simple | list | table | cards | grid | dashboard | calendar | map | code | json | yaml | single",
+      "_detail": "simple | tabbed | accordion | code | json | yaml",
+      "_listView": "url | jsx = props => <UI.Admin {...props}><UI.ListViews[props._list] {...props}/><UI.Admin/>",
+      "_detailView": "url | jsx = props => <UI.Admin {...props}><UI.DetailViews[props._detail] {...props}/><UI.Admin/>",
+      "_createView": "url | jsx = props => <UI.Admin {...props}><UI.EditView {...props}/><UI.Admin/>",
+      "_updateView": "url | jsx = props => <UI.Admin {...props}><UI.EditView {...props}/><UI.Admin/>"
+    },
+    "∷ Properties": "html | mdx | jsx"
+  },
+  "graph": {
+    "∵ GraphDL": "The language is composable and extensible, and can be used to describe Nodes & Edges through Nouns & Verbs.",
+    "_priority": 2,
+    "🜉 Graph": {
+      "_description": "A [Graph] consists of [Noun]s and the [Verb]s that connect them.",
+      "verbs": [
+        "Verb"
+      ]
+    },
+    "■ Noun": {
+      "_description": "A [Noun] is a person, place, thing, or idea.",
+      "_subjectOf": [
+        "Verb._subject"
+      ],
+      "_objectOf": [
+        "Verb._object"
+      ]
+    },
+    "□ Resource": {
+      "_description": "A [Resource] is a specific instance of a [Noun]",
+      "subjectOf": [
+        "Action.subject"
+      ],
+      "objectOf": [
+        "Action.object"
+      ]
+    },
+    "● Verb": {
+      "_description": "A [Verb] connects a [Noun] to a different [Noun], and is expressed as \"[Subject] [Verb] [Object]\".",
+      "_subject": "Noun._subjectOf",
+      "_verb": "string = _name",
+      "_verbPast": "string = _name + 'ed'",
+      "_verbActive": "string = _name + 's'",
+      "_verbGerund": "string = _name + 'ing'",
+      "_object": "Noun._objectOf",
+      "_graph": [
+        "Graph.verbs"
+      ]
+    },
+    "○ Action": {
+      "_description": "An [Action] happens when an instance of a [Noun] (i.e. [Resource]) does a [Verb] to a different [Resource].",
+      "subject": "Resource.subjectOf",
+      "verb": "Verb.active",
+      "object": "Resource.objectOf"
+    }
+  },
+  "functions": {
+    "∵ GraphDL": "Javascript Functions are supported as a native property type in GraphDL.",
+    "_priority": 3,
+    "import": "string | [string] = graphdl from 'https://pkg.do/graphdl.js'",
+    "🜉 Graph": {
+      "_onInitialize": "function",
+      "_onError": "function = (err, ctx) => fetch(`https://err.do/${ctx.graph}/${ctx.requestId}/${err.message}/${err.stack}`)"
+    },
+    "■ Noun": {
+      "_beforeCreate": "function",
+      "_beforeUpdate": "function",
+      "_beforeDelete": "function",
+      "_onCreate": "function = (obj, ctx) => obj.created = ctx.req.id && obj.updated = ctx.req.id",
+      "_onUpdate": "function = (obj, ctx) => obj.updated = ctx.req.id",
+      "_onDelete": "function = (obj, ctx) => obj.deleted = ctx.req.id",
+      "_afterCreate": "function",
+      "_afterUpdate": "function",
+      "_afterDelete": "function",
+      "_validate": "function"
+    },
+    "∷ Properties": "function"
+  },
+  "data": {
+    "∵ GraphDL": "A concrete implementation of GraphDL can function as a Database with Resources as instances of Nouns",
+    "_priority": 4,
+    "🜉 Graph": {
+      "_tenant": [
+        "Tenant.graph"
+      ],
+      "_project": "string = slugify(_name)",
+      "_database": "string = slugify(_name)",
+      "_domain": "string = https://${_project}.${env.BASE_DOMAIN}",
+      "_requests": [
+        "Request.graph"
+      ]
+    },
+    "■ Noun": {
+      "_resources": [
+        "Resource.noun"
+      ],
+      "_requests": [
+        "Request.noun"
+      ]
+    },
+    "□ Resource": {
+      "_type": "Noun.resources",
+      "_description": "A Resource is a specific instance of a Noun",
+      "data": "json",
+      "subjectOf": [
+        "Action.subject"
+      ],
+      "objectOf": [
+        "Action.object"
+      ],
+      "requests": [
+        "Request.resource"
+      ],
+      "created": "Request.create",
+      "createdAt": "created->timestamp",
+      "createdBy": "created->user",
+      "updated": "Request.update",
+      "updatedAt": "updated->timestamp",
+      "updatedBy": "updated->user",
+      "deleted": "Request.delete",
+      "deletedAt": "deleted->timestamp",
+      "deletedBy": "deleted->user",
+      "tenant": "created->tenant"
+    },
+    "▼ Role": {
+      "_seed": "anonymous | public | tenant | user | admin | owner",
+      "resources": [
+        "Resource"
+      ],
+      "users": [
+        "User.roles"
+      ],
+      "requests": [
+        "Request.role"
+      ]
+    },
+    "▽ User": {
+      "name": "string",
+      "email": "email",
+      "image": "url",
+      "roles": [
+        "Role.users"
+      ],
+      "tenants": [
+        "Tenant.users"
+      ],
+      "ownerOf": [
+        "Tenant.owners"
+      ],
+      "adminOf": [
+        "Tenant.admins"
+      ],
+      "requests": [
+        "Request->user"
+      ]
+    },
+    "△ Tenant": {
+      "users": [
+        "User->tenants"
+      ],
+      "owners": [
+        "User->ownerOf"
+      ],
+      "admins": [
+        "User->adminOf"
+      ],
+      "requests": [
+        "Request->tenant"
+      ]
+    },
+    "⟢ Request": {
+      "graph": "Graph.requests",
+      "noun": "Noun.requests",
+      "resource": "Resource.requests",
+      "user": "User.requests",
+      "role": "Role.requests",
+      "tenant": "Tenant.requests",
+      "timestamp": "timestamp",
+      "type": "list | search | get | create | update | delete",
+      "body": "json",
+      "query": "json",
+      "headers": "json",
+      "url": "url",
+      "colo": "string",
+      "ip": "string",
+      "isp": "string",
+      "city": "string",
+      "region": "string",
+      "country": "string",
+      "continent": "string",
+      "latitude": "latitude",
+      "longitude": "longitude",
+      "response": "Response.request"
+    },
+    "⟣ Response": {
+      "request": "Request.response",
+      "success": "boolean",
+      "status": "200 | 201 | 204 | 400 | 401 | 403 | 404 | 409 | 500",
+      "data": "json",
+      "html": "html",
+      "error": "json"
+    }
+  }
+}
