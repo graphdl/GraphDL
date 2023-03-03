@@ -2,7 +2,7 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>■●■ GraphDL</span>,
+  logo: <span>■●■ Graph<span className='bold'>DL</span></span>,
   project: {
     link: 'https://github.com/graphdl/graphdl',
   },
@@ -11,7 +11,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/graphdl/graphdl/tree/master/docs',
   footer: {
-    text: 'GraphDL.org',
+    text: `Copyright ${new Date().getFullYear()} GraphDL.org`,
   },
 }
 

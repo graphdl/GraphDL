@@ -1,19 +1,33 @@
+import { Tab, Tabs } from 'nextra-theme-docs'
+ 
 # ■●■ GraphDL - Graph Definition Language
 
 GraphDL is a language for describing data models and relationships.
 
-```yaml filename="graphdl.yaml" copy
-✅ ToDo:
-  title: string
-  description: string
-  status: todo | doing | done
-  assignedTo: [User]
+<Tabs items={['ToDos', 'npm', 'yarn']}>
+  <Tab>
+    ```yaml filename="graphdl.yaml" copy
+    ✅ ToDo:
+      title: string
+      description: string
+      status: todo | doing | done
+      assignedTo: [User]
 
-🧑‍💻 User:
-  name: string
-  email: email
-  has: [ToDo]
-```
+    🧑‍💻 User:
+      name: string
+      email: email
+      has: [ToDo]
+    ```
+  </Tab>
+  <Tab>
+    **npm** is a package manager for the JavaScript programming language.
+  </Tab>
+  <Tab>
+    **Yarn** is a software packaging system.
+  </Tab>
+</Tabs>
+
+
 
 [GraphDL.js] translates the [GraphDL Schema] into a [Javascript ES6 Module] with [Typescript Types], 
 as well as optionally [JSON Schema], [OpenAPI Spec], [GraphQL Schema], and a [React Admin UI].
@@ -21,6 +35,10 @@ as well as optionally [JSON Schema], [OpenAPI Spec], [GraphQL Schema], and a [Re
 The generated [Javascript] and [Typescript] code includes the base data models, as well as [Validation] logic, 
 [List], [Search], [Create], [Update], & [Delete] logic for client and/or server side use, including APIs, that can be deployed 
 anywhere including [Cloudflare Workers] or [Deno Deploy], as well as in containers on [AWS], [Azure], [GCP], or [Fly.io].
+
+## ■● Graph
+
+A [Graph] is a collection of [Nouns] and [Verbs] that describe the relationships between [Nouns].
 
 ## ■ Noun
 
@@ -108,14 +126,6 @@ An [Action] happens when an instance of a [Noun] (i.e. [Resource]) does a [Verb]
 
 For example, in `User/john.subscribes: App/ToDos` the verb `subscribes` connects the [Subject Resource] `User/john` to the [Object Resource] `App/ToDos`.
 
-## ◆ Trigger
-
-A [Trigger] invokes an [Action] on a [Schedule], when a [Resource] is created, modified, or deleted, or when an [Action] happens.
-
-## ◇ Event
-
-An [Event] happens whenever a [Trigger] happening at a specific point in time, and can occur at scheduled times, whenever a [Resource] is created, updated, or deleted, or whenever an [Action] happens.
-
 ## ❴❵ Data
 
 [Data] is the information that is stored in a [Resource] in a JSON format.
@@ -127,6 +137,22 @@ A [Function] is Javascript code that can be placed on a [Verb] is executed when 
 ## ❮❯ UI
 
 A [UI] is JSX code that can be placed on a [Noun] and is executed when a [Resource] is rendered.
+
+## ◆ Trigger
+
+A [Trigger] invokes an [Action] on a [Schedule], when a [Resource] is created, modified, or deleted, or when an [Action] happens.
+
+## ◇ Event
+
+An [Event] happens whenever a [Trigger] happening at a specific point in time, and can occur at scheduled times, whenever a [Resource] is created, updated, or deleted, or whenever an [Action] happens.
+
+## ⊛ Query
+
+A [Query] is the input criteria for a [Search] in a [Graph] that may or may not be constrained to a specific [Noun] or [Verb]
+
+## ⊙ Search
+
+A [Search] is a [Function] that returns a list of [Resources] that match a specific [Query].
 
 ## ⟢ Request
 

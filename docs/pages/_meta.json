@@ -1,5 +1,11 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)"
+  "gettingStarted": "Getting Started",
+  "nouns": "■ Nouns",
+  "verbs": "● Verbs",
+  "properties": "∷ Properties",
+  "data": "∷ Properties",
+  "functions": "∷ Properties",
+  "ui": "∷ Properties",
+  "relationships": "→ Relationships"
 }
