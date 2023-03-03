@@ -3,14 +3,12 @@ _priority: 2
 
 🜉 Graph:
   _description:   A [Graph] consists of [Noun]s and the [Verb]s that connect them.
-  nouns:          [Noun.graph]
   verbs:          [Verb]
 
 ■ Noun:
   _description:   A [Noun] is a person, place, thing, or idea.
   _subjectOf:     [Verb._subject]
   _objectOf:      [Verb._object]
-  _graph:         [Graph.nouns]
 
 □ Resource:
   _description:   A [Resource] is a specific instance of a [Noun]

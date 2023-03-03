@@ -2,19 +2,19 @@
 _priority: 4
 
 🜉 Graph:
+  _tenant:        [Tenant.graph]
   _project:       string = slugify(_name)
   _database:      string = slugify(_name)
   _domain:        string = https://${_project}.${env.BASE_DOMAIN}
   _requests:      [Request.graph]
 
 ■ Noun:
-  _resources:     [Resource]
+  _resources:     [Resource.noun]
   _requests:      [Request.noun]
 
 □ Resource:
-  _type:          Noun
+  _type:          Noun.resources
   _description:   A Resource is a specific instance of a Noun
-  instance:       Noun.resources
   data:           json
   subjectOf:      [Action.subject]
   objectOf:       [Action.object]
@@ -44,13 +44,13 @@ _priority: 4
   tenants:      [Tenant.users]
   ownerOf:      [Tenant.owners]
   adminOf:      [Tenant.admins]
-  requests:     [Request.user]
+  requests:     [Request->user]
 
 △ Tenant:
-  users:        [User.tenants]
-  owners:       [User.ownerOf]
-  admins:       [User.adminOf]
-  requests:     [Request.tenant]
+  users:        [User->tenants]
+  owners:       [User->ownerOf]
+  admins:       [User->adminOf]
+  requests:     [Request->tenant]
 
 ⟢ Request:
   graph:        Graph.requests

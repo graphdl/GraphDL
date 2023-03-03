@@ -1,13 +1,14 @@
 # GraphDL - Graph Definition Language
 
-GraphDL is a graph-based data language for describing data models and data relationships.
+GraphDL is a graph-based data language for describing data models and data relationships.  It was designed as a full-stack declarative language for a post-ChatGPT world.
 
 ```yaml
 User:
  _id:   email
  _name: ${name} <${email}>
  _icon: 🧑
- name:  string
+ _sameAs: https://schema.org/Person
+ name:  name
  email: email
  image: url
  posts: [Post.author]
@@ -16,12 +17,13 @@ Post:
  _id:         slugify(Title)
  _name:       title
  _icon:       📋
- title:       string
- description: string
+ _sameAs:     https://schema.org/BlogPosting
+ title:       name
+ description: description
  tags:        [string]
- content:     markdown
- createdAt:   createdAt()
- createdBy:   createdBy()
+ content:     articleBody
+ createdAt:   dateCreated
+ createdBy:   creator
  author:      User.Email
 ```
 
