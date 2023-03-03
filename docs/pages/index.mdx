@@ -1,33 +1,21 @@
 # ■●■ GraphDL - Graph Definition Language
 
-GraphDL is a graph-based data language for describing data models and data relationships.
+GraphDL is a language for describing data models and relationships.
 
 ```yaml filename='graphdl.yaml' copy
-🧑 Customer:
-  has: [DeliveryAddress]
-  places: [Order]
-  liableFor: [Invoice]
+✅ ToDo:
+  title: string
+  description: string
+  status: todo | doing | done
+  assignedTo: [User]
 
-🏘️ DeliveryAddress:
-  receives: [Order]
-
-🧾 Invoice:
-  covers: [Order]
-
-💸 Order:
-  includes: [OrderItem]
-
-🚥 ProductCategory:
-  contains: [Product]
-
-📦 Product:
-  orderedIn: [OrderItem]
+🧑‍💻 User:
+  has: [ToDo]
 ```
 
 ## ■ Noun
 
 A Noun is a [Person](/Person), Place, Thing or Idea
-
 
 ## What is Nextra?
 
