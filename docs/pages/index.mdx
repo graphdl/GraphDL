@@ -15,9 +15,78 @@ GraphDL is a language for describing data models and relationships.
   has: [ToDo]
 ```
 
+[GraphDL.js] translates the [GraphDL Schema] into a [Javascript ES6 Module] with [Typescript Types], 
+as well as optionally [JSON Schema], [OpenAPI Spec], [GraphQL Schema], and a [React Admin UI].
+
 ## ■ Noun
 
 A [Noun] is a person, place, thing, or idea.
+
+```yaml
+🧑‍💻 User:
+  name: string
+  email: email
+  has: [ToDo]
+```
+
+Additionally, every [Noun] has internal properties that are prefixed with an underscore like `_icon` and `_description`.
+
+```yaml
+User:
+  _icon: 🧑‍💻
+  _description: The User of an App
+  name: string
+  email: email
+  has: [ToDo]
+```
+
+Every [Noun] in GraphDL is a [Thing] in Schema.org, and a noun can specify the Schema.org type it represents 
+with the `sameAs` property:
+
+```yaml
+🧑‍💻 User:
+  _sameAs: https://schema.org/Person
+  name: string
+  email: email
+  has: [ToDo]
+```
+
+GraphDL also supports a shorthand for specifying the `_icon`, `_name`, `_description` and `_sameAs` properties:
+
+```yaml
+'{_icon} {_name}': '{_description} ({_sameAs})'
+```
+
+For example, this code:
+
+```yaml
+🧑‍💻 User: The User of an App (Person)
+```
+
+is equivalent to this code:
+
+```yaml
+user:
+  _id: user
+  _icon: 🧑‍💻
+  _name: User
+  _description: The User of an App
+  _sameAs: https://schema.org/Person
+```
+
+```yaml
+🧑‍💻 User:
+  _sameAs: Person
+  name: string
+  email: email
+  has: [ToDo]
+```
+
+Schema.org was created by Google, Microsoft, and other search engines as way to standardize the way that data is structured on the web.
+
+```yaml
+🧑‍💻 User: Person
+```
 
 ## □ Resource
 
@@ -35,15 +104,15 @@ An [Action] happens when an instance of a [Noun] (i.e. [Resource]) does a [Verb]
 
 For example, in `User/john.subscribes: App/ToDos` the verb `subscribes` connects the [Subject Resource] `User/john` to the [Object Resource] `App/ToDos`.
 
-## {} Data
+## ❴❵ Data
 
 [Data] is the information that is stored in a [Resource] in a JSON format.
 
-## () Function
+## ❪❫ Function
 
 A [Function] is Javascript code that can be placed on a [Verb] is executed when an [Action] happens.
 
-## <> UI
+## ❮❯ UI
 
 A [UI] is JSX code that can be placed on a [Noun] and is executed when a [Resource] is rendered.
 
