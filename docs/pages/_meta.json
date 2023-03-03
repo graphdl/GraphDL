@@ -1,13 +1,5 @@
 {
   "index": "Introduction",
-  "getting-started": "Getting Started",
-  "nouns": "Nouns",
-  "verbs": "Verbs",
-  "properties": "Properties",
-  "data": "Data",
-  "functions": "Functions",
-  "ui": "UI",
-  "relationships": "Relationships",
   "playground": {
     "title": "Playground ↗",
     "type": "page",
