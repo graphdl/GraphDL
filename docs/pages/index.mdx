@@ -8,15 +8,18 @@ GraphDL is a language for describing data models and relationships and full-stac
   <Tab>
 ```yaml filename="graphdl.yaml" copy
 ✅ ToDo:
-  title: string
-  description: string
-  status: todo | doing | done
-  assignedTo: [User]
+     title:       string
+     description: string
+     status:      To Do | In Progress | Blocked | Done
+     assignedTo:  [User.assigned]
+     createdBy:   User.created
 
 🧑‍💻 User:
-  name: string
-  email: email
-  has: [ToDo]
+     sameAs:  https://schema.org/Person
+     name:    string
+     email:   email
+     todos:   [ToDo->assignedTo]
+     created: [ToDo->createdBy]
 ```
   </Tab>
   <Tab>
