@@ -1,0 +1,16 @@
+# ▼ Role
+
+```yaml
+Role:
+  _icon: ▼
+  _name: Role
+  _plural: Roles
+  _description: A role is a set of permissions that can be assigned to a user.
+  default: allow | deny
+  permissions: [Permission]
+
+Permission:
+  noun: string
+  verb: string | array
+  auth: allow | deny
+```
