@@ -1,6 +1,6 @@
 import graph from '../../data/schema.org.types.json'
 import Link from 'next/link'
-//import * as fs from 'fs'
+import * as fs from 'fs'
 // import Chip from '../../components/Chip'
 
 
@@ -16,9 +16,9 @@ export const getStaticProps = () => {
                      .map(item => item?.replace('Action', ''))
 
 
-  //const meta = { }
-  //verbs.map(verb => meta[verb] = verb)
-  //fs.writeFileSync('pages/Verbs/Schema.org/_meta.json', JSON.stringify(meta, null, 2))
+  const meta = { }
+  verbs.map(verb => meta[verb] = verb)
+  fs.writeFileSync('pages/Verbs/Schema.org/_meta.json', JSON.stringify(meta, null, 2))
 
 
 
