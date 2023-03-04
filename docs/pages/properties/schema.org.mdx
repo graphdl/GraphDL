@@ -1,2 +1,8 @@
-# name
+import graph from '../../data/schema.org.properties.json'
+import Link from 'next/link'
 
+# Schema.org
+
+<ul>
+{graph.map((schema) => <li><Link href={'/Properties/' + schema.label}>{schema.label}</Link></li> )}
+</ul>

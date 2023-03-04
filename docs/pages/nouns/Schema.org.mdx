@@ -1,8 +1,26 @@
 import graph from '../../data/schema.org.types.json'
 import Link from 'next/link'
+// import Chip from '../../components/Chip'
+
+
+export const Chip = ({text, href}) => (
+  <span className='nx-whitespace-nowrap nx-transition-colors nx-min-w-[24px] nx-overflow-hidden nx-text-ellipsis hover:nx-text-gray-900 dark:hover:nx-text-gray-200'>
+    <Link href={href ?? text}>{text}</Link>
+  </span>
+)
+
+export const getStaticProps = () => {
+  const nouns = graph.map((schema) => schema.label)
+  return {
+    props: {
+      nouns
+    }
+  }
+}
 
 # Schema.org
 
+{/* {props.nouns.map(noun => <Chip text={noun}/> )} */}
 <ul>
-{graph.map((schema) => <li><Link href={'/Nouns/Schema.org/' + schema.label}>{schema.label}</Link></li> )}
+{props.nouns.map(noun => <li><Link href={'/Nouns/' + noun}>{noun}</Link></li> )}
 </ul>

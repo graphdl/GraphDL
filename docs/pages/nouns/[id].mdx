@@ -1,4 +1,5 @@
-import graph from '../../../data/schema.org.types.json'
+import graph from '../../data/schema.org.types.json'
+import Link from 'next/link'
 
 export const getStaticProps = async ({params}) => {
 
@@ -28,4 +29,16 @@ export const getStaticPaths = async () => {
 # {props.schema.label}
 
 {props.schema.comment}
+
+## Properties
+
+<ul>
+{props.schema.properties.split(', ').map(property => (
+  <li>
+    <Link href={`/Properties/${property.replace('https://schema.org/','')}`}>{property.replace('https://schema.org/','')}</Link>
+  </li>
+))}
+</ul>
+
+{JSON.stringify(props.schema, null, 2)}
 
