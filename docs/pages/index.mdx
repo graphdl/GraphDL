@@ -150,7 +150,9 @@ Territory:
 </Tab>
 <Tab>
 ```yaml filename="graphdl.yaml" copy
-🚘 Car:
+import: Vehicle from https://graphdl.org/Providers/Drivly
+
+🚘 Vehicle:
   allows: [NamedDriver]
   registrationNumber: string
   make: string
