@@ -5,7 +5,9 @@ export const getStaticProps = async ({params}) => {
 
   const { id } = params
 
-  const schema = graph.find(item => `${item.label}Action` === id)
+  const schema = graph.find(item => item.label == `${id}Action` )
+
+  console.log(schema)
 
   return {
     props: {
@@ -16,11 +18,13 @@ export const getStaticProps = async ({params}) => {
 
 export const getStaticPaths = async () => {
 
-  const ids = graph.map(schema => schema.label)
-  const paths = ids.filter(item => item.match(/.+Action/))
-                   .map(item => ({ params: { id: item === 'Action' ? item : item.replace('Action', '') } }))
+  const verbs = ['Create','Delete','Search','Update','View']
 
-  console.log(paths)
+  const ids = graph.map(schema => schema.label)
+  const paths = ids.filter(item => item.match(/.+Action$/))
+                   .map(item => item === 'Action' ? item : item.replace('Action', '')) 
+                   .filter(item => !verbs.includes(item))   
+                   .map(item => ({ params: { id: item } }))
 
   return {
     paths,

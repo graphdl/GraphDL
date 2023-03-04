@@ -17,7 +17,7 @@ export const getStaticProps = async ({params}) => {
 export const getStaticPaths = async () => {
 
   const ids = graph.map(schema => schema.label)
-                     .filter(item => !item?.match(/..+Action/))
+                     .filter(item => !item?.match(/..+Action$/))
 
   const paths = ids.map(id => ({ params: { id: id.toString() } }))
 
