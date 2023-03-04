@@ -1,0 +1,20 @@
+{
+  "name": "create-graphdl",
+  "description": "Create & Bootstrap a GraphDL Project",
+  "version": "0.1.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/graphdl/graphdl.git"
+  },
+  "keywords": [],
+  "author": "Nathan Clevenger",
+  "license": "MIT",
+  "homepage": "https://graphdl.org",
+  "devDependencies": {
+    "node-fetch": "^3.3.0"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  }
+}
