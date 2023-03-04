@@ -1,0 +1,8 @@
+import graph from '../../data/schema.org.types.json'
+import Link from 'next/link'
+
+# Schema.org
+
+<ul>
+{graph.map((schema) => <li><Link href={'/Nouns/Schema.org/' + schema.label}>{schema.label}</Link></li> )}
+</ul>

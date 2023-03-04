@@ -1,0 +1,31 @@
+import graph from '../../../data/schema.org.types.json'
+
+export const getStaticProps = async ({params}) => {
+
+  const { id } = params
+
+  const schema = graph.find(item => item.label === id)
+
+  return {
+    props: {
+      schema
+    }
+  }
+}
+
+export const getStaticPaths = async () => {
+
+  const ids = graph.map(schema => schema.label)
+  const paths = ids.map(id => ({ params: { id: id.toString() } }))
+
+  return {
+    paths,
+    fallback: false
+  }
+}
+
+
+# {props.schema.label}
+
+{props.schema.comment}
+
