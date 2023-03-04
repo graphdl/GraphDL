@@ -1,6 +1,6 @@
 import graph from '../../data/schema.org.types.json'
 import Link from 'next/link'
-import * as fs from 'fs'
+//import * as fs from 'fs'
 // import Chip from '../../components/Chip'
 
 
@@ -11,16 +11,20 @@ export const Chip = ({text, href}) => (
 )
 
 export const getStaticProps = () => {
-  const nouns = graph.map((schema) => schema.label)
-                     .filter(item => !item?.match(/..+Action/))
-  
-  const meta = { }
-  nouns.map(noun => meta[noun] = noun)
-  fs.writeFileSync('pages/Nouns/Schema.org/_meta.json', JSON.stringify(meta, null, 2))
+  const verbs = graph.map(schema => schema.label)
+                     .filter(item => item?.match(/..+Action/))
+                     .map(item => item?.replace('Action', ''))
+
+
+  //const meta = { }
+  //verbs.map(verb => meta[verb] = verb)
+  //fs.writeFileSync('pages/Verbs/Schema.org/_meta.json', JSON.stringify(meta, null, 2))
+
+
 
   return {
     props: {
-      nouns
+      verbs
     }
   }
 }
@@ -29,5 +33,5 @@ export const getStaticProps = () => {
 
 {/* {props.nouns.map(noun => <Chip text={noun}/> )} */}
 <ul>
-{props.nouns.map(noun => <li><Link href={'/Nouns/' + noun}>{noun}</Link></li> )}
+{props.verbs.map(verb => <li><Link href={'/Verbs/' + verb}>{verb}</Link></li> )}
 </ul>

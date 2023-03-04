@@ -1,8 +1,24 @@
 import graph from '../../data/schema.org.properties.json'
 import Link from 'next/link'
+//import * as fs from 'fs'
 
 # Schema.org
 
 <ul>
-{graph.map((schema) => <li><Link href={'/Properties/' + schema.label}>{schema.label}</Link></li> )}
+{props.properties.map(property => <li><Link href={'/Properties/' + property}>{property}</Link></li> )}
 </ul>
+
+export const getStaticProps = () => {
+  const properties = graph.map((schema) => schema.label)
+                     .filter(item => !item?.match(/..+Action/))
+  
+  //const meta = { }
+  //properties.map(property => meta[property] = property)
+  //fs.writeFileSync('pages/Properties/Schema.org/_meta.json', JSON.stringify(meta, null, 2))
+
+  return {
+    props: {
+      properties
+    }
+  }
+}
