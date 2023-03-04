@@ -1,6 +1,6 @@
 {
   "index": "Overview",
-  "getting-started": "Getting Started",
+  "GettingStarted": "Getting Started",
   "Graph": "■● Graphs",
   "Nouns": "■ Nouns",
   "Verbs": "● Verbs",
@@ -8,7 +8,7 @@
   "Resources": "□ Resource",
   "Actions": "○ Actions",
   "Triggers": "◆ Triggers",
-  "Evenst": "◇ Events",
+  "Events": "◇ Events",
   "Queries": "⧆ Queries",
   "Searches": "⊛ Searches",
   "APIs": "入 APIs",
@@ -19,6 +19,7 @@
   "UI": "❮❯ UI",
   "Sites": "☶ Sites",
   "Apps": "⧉ Apps",
+  "Docs": "☱ Docs",
   "Roles": "▼ Roles",
   "Users": "▽ Users",
   "Tenants": "△ Tenants"
