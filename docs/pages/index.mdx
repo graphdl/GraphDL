@@ -313,9 +313,9 @@ A [Verb](/verbs/verb) connects a [Noun](/nouns/noun) to a different [Noun](/#Nou
 
 For example, in `User.subscribes: App` the verb `subscribes` connects the [Subject](/#) `User` to the [Object](/#) `App`.
 
-## ∷ Properties
+## ∷ Property
 
-[Properties](/nouns/properties) are the attributes that describe a [Noun](/nouns/noun) or [Verb](/verbs/verb). 
+A [Property](/Properties/Property) are the attributes that describe a [Noun](/nouns/noun) or [Verb](/verbs/verb). 
 [Properties](/nouns/properties) that start with and underscore (`_`) like [`_type`](/properties/_type), 
 [`_sameAs`](/properties/_sameAs), or [`_icon`](/properties/_icon) or mean that they are internal properties that
 that describe the [Noun](/nouns/noun) or [Verb](/verbs/verb) and cannot be changed on any given 
@@ -382,3 +382,23 @@ A [Site] is a publicly-accesible [UI] and can be deployed to the cloud, and run 
 ## ⧉ App
 
 An [App] is an composition of [UI] powered by [APIs] with [Users] and [Tenants], and that can be deployed to the cloud, and run in the cloud, at the edge, in a browser, or on a device.
+
+## ▼ Role
+
+A [Role] describes the relationship between a [User] and a [Tenant] with specific [Permissions] relating to [Resources] and [Actions] on a [Graph].
+
+## ▽ User
+
+A [User] is a person who has a [Role] in a [Tenant] and can access [Resources] and perform [Actions] in a [Graph].
+
+## △ Tenant
+
+A [Tenant] is a business or organization that has a [Role] in a [Graph] and can access [Resources] and perform [Actions] in a [Graph].
+
+## ⟢ Request
+
+A [Request] is a message sent from a [Client] to a [Server] containing [Data] and [Headers].
+
+## ⟣ Response
+
+A [Response] is a message sent from a [Server] to a [Client] containing [Data] and [Headers].

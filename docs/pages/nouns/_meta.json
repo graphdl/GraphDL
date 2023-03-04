@@ -1,7 +1,23 @@
-{
-  "Noun": "■ Noun",
-  "User": "■ User",
-  "Tenant": "■ Tenant",
+{  
+  "Graph": "■● Graph",
+  "Noun": "■ Nouns",
+  "Verb": "● Verbs",
+  "Properties": "∷ Property",
+  "Resource": "□ Resource",
+  "Action": "○ Actions",
+  "Trigger": "◆ Trigger",
+  "Event": "◇ Event",
+  "Query": "⧆ Query",
+  "Search": "⊛ Search",
+  "API": "入 API",
+  "Data": "❴❵ Data",
+  "Function": "❪❫ Function",
+  "UI": "❮❯ UI",
+  "Site": "☶ Site",
+  "App": "⧉ App",
+  "Role": "▼ Role",
+  "User": "▽ User",
+  "Tenant": "△ Tenant",
   "Request": "⟢ Request",
   "Response": "⟣ Response"
 }
