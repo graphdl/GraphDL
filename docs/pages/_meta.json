@@ -1,12 +1,18 @@
 {
   "index": "Overview",
+  "getting-started": "Getting Started",
   "graph": "■● Graph",
   "nouns": "■ Nouns",
-  "verb": "● Verbs",
+  "verbs": "● Verbs",
   "api": "入 API",
   "data": "❴❵ Data",
   "function": "❪❫ Function",
   "ui": "❮❯ UI",
   "site": "☶ Site",
-  "app": "⧉ App"
+  "app": "⧉ App",
+  "playground": {
+    "title": "Playground",
+    "type": "Page",
+    "newWindow": true
+  }
 }

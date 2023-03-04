@@ -10,6 +10,9 @@ const config: DocsThemeConfig = {
     link: 'https://discord.gg/NhYuABP9',
   },
   docsRepositoryBase: 'https://github.com/graphdl/graphdl/tree/master/docs',
+  sidebar: {
+    defaultMenuCollapseLevel: 1,
+  },
   footer: {
     text: `Copyright ${new Date().getFullYear()} GraphDL.org`,
   },

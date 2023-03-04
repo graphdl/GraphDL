@@ -4,10 +4,175 @@ import { Tab, Tabs } from 'nextra-theme-docs'
 
 GraphDL is a language for describing data models and relationships and full-stack functionality.
 
-JavaScript code is a native part of GraphDL, and GraphDL Schema is transpiled into a 
-[JavaScript Module](/nouns) with full [TypeScript](/nouns) support.  
+## Examples
 
-Additionally, [JSON Schema](/nouns), [OpenAPI](/nouns), [GraphQL](/nouns), a [Website](/nouns), 
+<Tabs items={['ToDos', 'Schema.org', 'Directory', 'Analytics']}>
+<Tab>
+```yaml filename="graphdl.yaml" copy
+User:
+ _id:   email
+ _name: ${name} <${email}>
+ _icon: 🧑
+ _sameAs: https://schema.org/Person
+ name:  name
+ email: email
+ image: url
+ posts: [Post.author]
+ 
+Post:
+ _id:         slugify(Title)
+ _name:       title
+ _icon:       📋
+ _sameAs:     https://schema.org/BlogPosting
+ title:       name
+ description: description
+ tags:        [string]
+ content:     articleBody
+ createdAt:   dateCreated
+ createdBy:   creator
+ author:      User.Email
+```
+</Tab>
+<Tab>
+```yaml filename="graphdl.yaml" copy
+_visibility: public
+
+Country:
+ _plural: Countries
+ _source: https://json.fyi/countries.json
+ _id:     cca2
+ _name:   name.common
+ _icon:   🌎
+ borders: [Country.cca3]
+ requests: [Request->cf.country]
+ 
+Colo:
+ _id:     iata
+ _source: https://speed.cloudflare.com/locations
+ _name:   ${iata} - ${city}, ${cca2->name.common}, ${region}
+ _icon:   ☁️
+ cca2:    Country.cca2
+ region:  Continent._id
+ iata:    Airport.iata
+ requests: [Request->cf.colo]
+ 
+Airport:
+ _source: https://json.fyi/airports.json
+ _id:     icao
+ _icon:   ✈️
+ tz:      TimeZone._id
+ country: Country.cca2
+ 
+Request:
+ _id:          ${headers.cf-ray}-${headers.cf-ray}
+ _name:        ${method} ${url} ${ip} ${cf.city} ${cf.region} ${cf.country->name.common} ${cf.asOrganization}
+ _icon:        🧑‍💻
+ _visibility:  admin
+ cf.colo:      Colo.iata
+ cf.country:   Country.cca2
+ coordinates:  GeoPoint(cf.latitude,cf.longitude)
+ cf.timezone:  TimeZone._id
+```
+</Tab>
+<Tab>
+```yaml filename="graphdl.yaml" copy
+_name:        Northwind
+_seed:        https://json.fyi/northwind.json
+_defaultId:   entityId
+_constraints: true
+
+Category:
+ _name: ${categoryName} - ${description}
+
+Customer:
+ _name: companyName
+ _icon: 
+ 
+Employee:
+ _name: ${firstname} ${lastname}, ${title}
+
+EmployeeTerritory:
+ _name: territoryCode
+ employeeId: Employee
+ territoryCode: Territory.territoryCode
+ 
+OrderDetail:
+ _name: ${quantity} ${productId->name}
+ orderId:   Order
+ productId: Product
+ 
+Product:
+ _name:      productName
+ categoryId: Category
+ supplierId: Supplier
+ 
+SalesOrder:
+ _name: ${date(orderDate)} - ${count(<-OrderDetail)} Items
+ customerId: Customer
+ employeeId: Employee
+ shipperId:  Shipper
+
+Shipper:
+ _name: companyName
+ 
+Supplier:
+ _name: companyName
+ 
+Region:
+ _name: regiondescription
+ 
+Territory:
+ regionId: Region
+```
+</Tab>
+<Tab>
+```yaml filename="graphdl.yaml" copy
+🧑 Customer:
+  has: [DeliveryAddress]
+  places: [Order]
+  liableFor: [Invoice]
+
+🏘️ DeliveryAddress:
+  receives: [Order]
+
+🧾 Invoice:
+  covers: [Order]
+
+💸 Order:
+  includes: [OrderItem]
+
+🚥 ProductCategory:
+  contains: [Product]
+
+📦 Product:
+  orderedIn: [OrderItem]
+```
+</Tab>
+<Tab>
+```yaml filename="graphdl.yaml" copy
+🚘 Car:
+  allows: [NamedDriver]
+  registrationNumber: string
+  make: string
+  model: string
+
+🧑 Person:
+  is: [NamedDriver]
+  firstName: string
+  lastName: string
+  age: integer
+```
+```
+</Tab>
+<Tab>
+```yaml filename="graphdl.yaml" copy
+```
+</Tab>
+</Tabs>
+
+JavaScript code is a native part of GraphDL, and GraphDL Schema is transpiled into a 
+[JavaScript Module](/nouns) with full [TypeScript](/nouns) support. 
+[JSON Schema](/nouns), [OpenAPI](/nouns), [GraphQL](/nouns), a [Website](/nouns), 
 a [React Admin App](/nouns), and [Documentation](/nouns) can also be optionally generated.
 
 <Tabs items={['GraphDL', 'TypeScript', 'JavaScript', 'API', 'JSON Schema', 'GraphQL', 'Website', 'App', 'App']}>
@@ -132,17 +297,45 @@ A [Graph](/#Graph) is a collection of [Nouns](/#Noun) and [Verbs](/#Verb) that d
 
 ## ■ Noun
 
-A [Noun](/#Noun) is a person, place, thing, or idea.
+A [Noun](/#Noun) is a person, place, thing, or idea and has [Properties](/#Properties) that describe it.
+
+```yaml
+Customer
+  name: string
+  email: email
+  phone: phone
+  notes: markdown
+```
 
 ## ● Verb
 
-A [Verb](/#Verb) connects a [Noun](/#Noun) to a different [Noun](/#Noun), and is expressed as `[Subject].[Verb]: [Object]`.
+A [Verb](/verbs/verb) connects a [Noun](/nouns/noun) to a different [Noun](/#Noun), and is expressed as `[Subject].[Verb]: [Object]`.
 
 For example, in `User.subscribes: App` the verb `subscribes` connects the [Subject](/#) `User` to the [Object](/#) `App`.
 
+## ∷ Properties
+
+[Properties](/nouns/properties) are the attributes that describe a [Noun](/nouns/noun) or [Verb](/verbs/verb). 
+[Properties](/nouns/properties) that start with and underscore (`_`) like [`_type`](/properties/_type), 
+[`_sameAs`](/properties/_sameAs), or [`_icon`](/properties/_icon) or mean that they are internal properties that
+that describe the [Noun](/nouns/noun) or [Verb](/verbs/verb) and cannot be changed on any given 
+[Resource](/nouns/resource) with the exception of `_id` which must be unique for every [Resource](/nouns/resource).
+
 ## □ Resource
 
-A [Resource](/#) is a specific instance of a [Noun](/#Noun)
+A [Resource](/nouns/resource) is a specific instance of a [Noun](/nouns/noun) and can be stored or
+transmitted in JSON as [Data](/nouns/data)
+
+For example, in `User/john` the [Resource](/nouns/resource) is `john` and the [Noun](/nouns/noun) is `User`.
+
+```json
+{
+  "_type": "User",
+  "_id": "john",
+  "name": "John Doe",
+  "email": "john@example.com"
+}
+```
 
 ## ○ Action
 
