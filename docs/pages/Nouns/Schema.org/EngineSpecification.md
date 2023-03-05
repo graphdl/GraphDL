@@ -1,0 +1,28 @@
+import Link from 'next/link'
+# EngineSpecification
+
+undefined
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [ alternateName](/Properties/Schema.org/ alternateName)
+,* [ description](/Properties/Schema.org/ description)
+,* [ disambiguatingDescription](/Properties/Schema.org/ disambiguatingDescription)
+,* [ engineDisplacement](/Properties/Schema.org/ engineDisplacement)
+,* [ enginePower](/Properties/Schema.org/ enginePower)
+,* [ engineType](/Properties/Schema.org/ engineType)
+,* [ fuelType](/Properties/Schema.org/ fuelType)
+,* [ identifier](/Properties/Schema.org/ identifier)
+,* [ image](/Properties/Schema.org/ image)
+,* [ mainEntityOfPage](/Properties/Schema.org/ mainEntityOfPage)
+,* [ name](/Properties/Schema.org/ name)
+,* [ potentialAction](/Properties/Schema.org/ potentialAction)
+,* [ sameAs](/Properties/Schema.org/ sameAs)
+,* [ subjectOf](/Properties/Schema.org/ subjectOf)
+,* [ torque](/Properties/Schema.org/ torque)
+,* [ url](/Properties/Schema.org/ url)
+
+</Grid>
+

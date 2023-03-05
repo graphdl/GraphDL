@@ -1,0 +1,29 @@
+import Link from 'next/link'
+# HowToSupply
+
+undefined
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [ alternateName](/Properties/Schema.org/ alternateName)
+,* [ description](/Properties/Schema.org/ description)
+,* [ disambiguatingDescription](/Properties/Schema.org/ disambiguatingDescription)
+,* [ estimatedCost](/Properties/Schema.org/ estimatedCost)
+,* [ identifier](/Properties/Schema.org/ identifier)
+,* [ image](/Properties/Schema.org/ image)
+,* [ item](/Properties/Schema.org/ item)
+,* [ mainEntityOfPage](/Properties/Schema.org/ mainEntityOfPage)
+,* [ name](/Properties/Schema.org/ name)
+,* [ nextItem](/Properties/Schema.org/ nextItem)
+,* [ position](/Properties/Schema.org/ position)
+,* [ potentialAction](/Properties/Schema.org/ potentialAction)
+,* [ previousItem](/Properties/Schema.org/ previousItem)
+,* [ requiredQuantity](/Properties/Schema.org/ requiredQuantity)
+,* [ sameAs](/Properties/Schema.org/ sameAs)
+,* [ subjectOf](/Properties/Schema.org/ subjectOf)
+,* [ url](/Properties/Schema.org/ url)
+
+</Grid>
+

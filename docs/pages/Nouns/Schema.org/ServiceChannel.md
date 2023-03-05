@@ -1,0 +1,31 @@
+import Link from 'next/link'
+# ServiceChannel
+
+undefined
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [ alternateName](/Properties/Schema.org/ alternateName)
+,* [ availableLanguage](/Properties/Schema.org/ availableLanguage)
+,* [ description](/Properties/Schema.org/ description)
+,* [ disambiguatingDescription](/Properties/Schema.org/ disambiguatingDescription)
+,* [ identifier](/Properties/Schema.org/ identifier)
+,* [ image](/Properties/Schema.org/ image)
+,* [ mainEntityOfPage](/Properties/Schema.org/ mainEntityOfPage)
+,* [ name](/Properties/Schema.org/ name)
+,* [ potentialAction](/Properties/Schema.org/ potentialAction)
+,* [ processingTime](/Properties/Schema.org/ processingTime)
+,* [ providesService](/Properties/Schema.org/ providesService)
+,* [ sameAs](/Properties/Schema.org/ sameAs)
+,* [ serviceLocation](/Properties/Schema.org/ serviceLocation)
+,* [ servicePhone](/Properties/Schema.org/ servicePhone)
+,* [ servicePostalAddress](/Properties/Schema.org/ servicePostalAddress)
+,* [ serviceSmsNumber](/Properties/Schema.org/ serviceSmsNumber)
+,* [ serviceUrl](/Properties/Schema.org/ serviceUrl)
+,* [ subjectOf](/Properties/Schema.org/ subjectOf)
+,* [ url](/Properties/Schema.org/ url)
+
+</Grid>
+

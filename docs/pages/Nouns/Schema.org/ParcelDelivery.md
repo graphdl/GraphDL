@@ -1,0 +1,35 @@
+import Link from 'next/link'
+# ParcelDelivery
+
+undefined
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [ alternateName](/Properties/Schema.org/ alternateName)
+,* [ carrier](/Properties/Schema.org/ carrier)
+,* [ deliveryAddress](/Properties/Schema.org/ deliveryAddress)
+,* [ deliveryStatus](/Properties/Schema.org/ deliveryStatus)
+,* [ description](/Properties/Schema.org/ description)
+,* [ disambiguatingDescription](/Properties/Schema.org/ disambiguatingDescription)
+,* [ expectedArrivalFrom](/Properties/Schema.org/ expectedArrivalFrom)
+,* [ expectedArrivalUntil](/Properties/Schema.org/ expectedArrivalUntil)
+,* [ hasDeliveryMethod](/Properties/Schema.org/ hasDeliveryMethod)
+,* [ identifier](/Properties/Schema.org/ identifier)
+,* [ image](/Properties/Schema.org/ image)
+,* [ itemShipped](/Properties/Schema.org/ itemShipped)
+,* [ mainEntityOfPage](/Properties/Schema.org/ mainEntityOfPage)
+,* [ name](/Properties/Schema.org/ name)
+,* [ originAddress](/Properties/Schema.org/ originAddress)
+,* [ partOfOrder](/Properties/Schema.org/ partOfOrder)
+,* [ potentialAction](/Properties/Schema.org/ potentialAction)
+,* [ provider](/Properties/Schema.org/ provider)
+,* [ sameAs](/Properties/Schema.org/ sameAs)
+,* [ subjectOf](/Properties/Schema.org/ subjectOf)
+,* [ trackingNumber](/Properties/Schema.org/ trackingNumber)
+,* [ trackingUrl](/Properties/Schema.org/ trackingUrl)
+,* [ url](/Properties/Schema.org/ url)
+
+</Grid>
+

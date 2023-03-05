@@ -1,6 +1,9 @@
 {
   "index": "Overview",
   "GettingStarted": "Getting Started",
+  "---": {
+    "type": "separator"
+  },
   "Graphs": "■● Graphs",
   "Nouns": "■ Nouns",
   "Resources": "□ Resource",

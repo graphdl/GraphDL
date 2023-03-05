@@ -1,0 +1,27 @@
+import Link from 'next/link'
+# ShippingDeliveryTime
+
+undefined
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [ alternateName](/Properties/Schema.org/ alternateName)
+,* [ businessDays](/Properties/Schema.org/ businessDays)
+,* [ cutoffTime](/Properties/Schema.org/ cutoffTime)
+,* [ description](/Properties/Schema.org/ description)
+,* [ disambiguatingDescription](/Properties/Schema.org/ disambiguatingDescription)
+,* [ handlingTime](/Properties/Schema.org/ handlingTime)
+,* [ identifier](/Properties/Schema.org/ identifier)
+,* [ image](/Properties/Schema.org/ image)
+,* [ mainEntityOfPage](/Properties/Schema.org/ mainEntityOfPage)
+,* [ name](/Properties/Schema.org/ name)
+,* [ potentialAction](/Properties/Schema.org/ potentialAction)
+,* [ sameAs](/Properties/Schema.org/ sameAs)
+,* [ subjectOf](/Properties/Schema.org/ subjectOf)
+,* [ transitTime](/Properties/Schema.org/ transitTime)
+,* [ url](/Properties/Schema.org/ url)
+
+</Grid>
+

@@ -1,0 +1,60 @@
+import Link from 'next/link'
+# JobPosting
+
+undefined
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [ alternateName](/Properties/Schema.org/ alternateName)
+,* [ applicantLocationRequirements](/Properties/Schema.org/ applicantLocationRequirements)
+,* [ applicationContact](/Properties/Schema.org/ applicationContact)
+,* [ baseSalary](/Properties/Schema.org/ baseSalary)
+,* [ benefits](/Properties/Schema.org/ benefits)
+,* [ datePosted](/Properties/Schema.org/ datePosted)
+,* [ description](/Properties/Schema.org/ description)
+,* [ directApply](/Properties/Schema.org/ directApply)
+,* [ disambiguatingDescription](/Properties/Schema.org/ disambiguatingDescription)
+,* [ educationRequirements](/Properties/Schema.org/ educationRequirements)
+,* [ eligibilityToWorkRequirement](/Properties/Schema.org/ eligibilityToWorkRequirement)
+,* [ employerOverview](/Properties/Schema.org/ employerOverview)
+,* [ employmentType](/Properties/Schema.org/ employmentType)
+,* [ employmentUnit](/Properties/Schema.org/ employmentUnit)
+,* [ estimatedSalary](/Properties/Schema.org/ estimatedSalary)
+,* [ experienceInPlaceOfEducation](/Properties/Schema.org/ experienceInPlaceOfEducation)
+,* [ experienceRequirements](/Properties/Schema.org/ experienceRequirements)
+,* [ hiringOrganization](/Properties/Schema.org/ hiringOrganization)
+,* [ identifier](/Properties/Schema.org/ identifier)
+,* [ image](/Properties/Schema.org/ image)
+,* [ incentiveCompensation](/Properties/Schema.org/ incentiveCompensation)
+,* [ incentives](/Properties/Schema.org/ incentives)
+,* [ industry](/Properties/Schema.org/ industry)
+,* [ jobBenefits](/Properties/Schema.org/ jobBenefits)
+,* [ jobImmediateStart](/Properties/Schema.org/ jobImmediateStart)
+,* [ jobLocation](/Properties/Schema.org/ jobLocation)
+,* [ jobLocationType](/Properties/Schema.org/ jobLocationType)
+,* [ jobStartDate](/Properties/Schema.org/ jobStartDate)
+,* [ mainEntityOfPage](/Properties/Schema.org/ mainEntityOfPage)
+,* [ name](/Properties/Schema.org/ name)
+,* [ occupationalCategory](/Properties/Schema.org/ occupationalCategory)
+,* [ physicalRequirement](/Properties/Schema.org/ physicalRequirement)
+,* [ potentialAction](/Properties/Schema.org/ potentialAction)
+,* [ qualifications](/Properties/Schema.org/ qualifications)
+,* [ relevantOccupation](/Properties/Schema.org/ relevantOccupation)
+,* [ responsibilities](/Properties/Schema.org/ responsibilities)
+,* [ salaryCurrency](/Properties/Schema.org/ salaryCurrency)
+,* [ sameAs](/Properties/Schema.org/ sameAs)
+,* [ securityClearanceRequirement](/Properties/Schema.org/ securityClearanceRequirement)
+,* [ sensoryRequirement](/Properties/Schema.org/ sensoryRequirement)
+,* [ skills](/Properties/Schema.org/ skills)
+,* [ specialCommitments](/Properties/Schema.org/ specialCommitments)
+,* [ subjectOf](/Properties/Schema.org/ subjectOf)
+,* [ title](/Properties/Schema.org/ title)
+,* [ totalJobOpenings](/Properties/Schema.org/ totalJobOpenings)
+,* [ url](/Properties/Schema.org/ url)
+,* [ validThrough](/Properties/Schema.org/ validThrough)
+,* [ workHours](/Properties/Schema.org/ workHours)
+
+</Grid>
+

@@ -1,0 +1,28 @@
+import Link from 'next/link'
+# OrderItem
+
+undefined
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [ alternateName](/Properties/Schema.org/ alternateName)
+,* [ description](/Properties/Schema.org/ description)
+,* [ disambiguatingDescription](/Properties/Schema.org/ disambiguatingDescription)
+,* [ identifier](/Properties/Schema.org/ identifier)
+,* [ image](/Properties/Schema.org/ image)
+,* [ mainEntityOfPage](/Properties/Schema.org/ mainEntityOfPage)
+,* [ name](/Properties/Schema.org/ name)
+,* [ orderDelivery](/Properties/Schema.org/ orderDelivery)
+,* [ orderItemNumber](/Properties/Schema.org/ orderItemNumber)
+,* [ orderItemStatus](/Properties/Schema.org/ orderItemStatus)
+,* [ orderQuantity](/Properties/Schema.org/ orderQuantity)
+,* [ orderedItem](/Properties/Schema.org/ orderedItem)
+,* [ potentialAction](/Properties/Schema.org/ potentialAction)
+,* [ sameAs](/Properties/Schema.org/ sameAs)
+,* [ subjectOf](/Properties/Schema.org/ subjectOf)
+,* [ url](/Properties/Schema.org/ url)
+
+</Grid>
+

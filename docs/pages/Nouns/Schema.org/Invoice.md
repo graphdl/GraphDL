@@ -1,0 +1,39 @@
+import Link from 'next/link'
+# Invoice
+
+undefined
+
+## Properties
+
+<Grid>
+* [accountId](/Properties/Schema.org/accountId)
+,* [ additionalType](/Properties/Schema.org/ additionalType)
+,* [ alternateName](/Properties/Schema.org/ alternateName)
+,* [ billingPeriod](/Properties/Schema.org/ billingPeriod)
+,* [ broker](/Properties/Schema.org/ broker)
+,* [ category](/Properties/Schema.org/ category)
+,* [ confirmationNumber](/Properties/Schema.org/ confirmationNumber)
+,* [ customer](/Properties/Schema.org/ customer)
+,* [ description](/Properties/Schema.org/ description)
+,* [ disambiguatingDescription](/Properties/Schema.org/ disambiguatingDescription)
+,* [ identifier](/Properties/Schema.org/ identifier)
+,* [ image](/Properties/Schema.org/ image)
+,* [ mainEntityOfPage](/Properties/Schema.org/ mainEntityOfPage)
+,* [ minimumPaymentDue](/Properties/Schema.org/ minimumPaymentDue)
+,* [ name](/Properties/Schema.org/ name)
+,* [ paymentDue](/Properties/Schema.org/ paymentDue)
+,* [ paymentDueDate](/Properties/Schema.org/ paymentDueDate)
+,* [ paymentMethod](/Properties/Schema.org/ paymentMethod)
+,* [ paymentMethodId](/Properties/Schema.org/ paymentMethodId)
+,* [ paymentStatus](/Properties/Schema.org/ paymentStatus)
+,* [ potentialAction](/Properties/Schema.org/ potentialAction)
+,* [ provider](/Properties/Schema.org/ provider)
+,* [ referencesOrder](/Properties/Schema.org/ referencesOrder)
+,* [ sameAs](/Properties/Schema.org/ sameAs)
+,* [ scheduledPaymentDate](/Properties/Schema.org/ scheduledPaymentDate)
+,* [ subjectOf](/Properties/Schema.org/ subjectOf)
+,* [ totalPaymentDue](/Properties/Schema.org/ totalPaymentDue)
+,* [ url](/Properties/Schema.org/ url)
+
+</Grid>
+

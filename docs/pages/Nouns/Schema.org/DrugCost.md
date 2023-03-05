@@ -1,0 +1,37 @@
+import Link from 'next/link'
+# DrugCost
+
+undefined
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [ alternateName](/Properties/Schema.org/ alternateName)
+,* [ applicableLocation](/Properties/Schema.org/ applicableLocation)
+,* [ code](/Properties/Schema.org/ code)
+,* [ costCategory](/Properties/Schema.org/ costCategory)
+,* [ costCurrency](/Properties/Schema.org/ costCurrency)
+,* [ costOrigin](/Properties/Schema.org/ costOrigin)
+,* [ costPerUnit](/Properties/Schema.org/ costPerUnit)
+,* [ description](/Properties/Schema.org/ description)
+,* [ disambiguatingDescription](/Properties/Schema.org/ disambiguatingDescription)
+,* [ drugUnit](/Properties/Schema.org/ drugUnit)
+,* [ funding](/Properties/Schema.org/ funding)
+,* [ guideline](/Properties/Schema.org/ guideline)
+,* [ identifier](/Properties/Schema.org/ identifier)
+,* [ image](/Properties/Schema.org/ image)
+,* [ legalStatus](/Properties/Schema.org/ legalStatus)
+,* [ mainEntityOfPage](/Properties/Schema.org/ mainEntityOfPage)
+,* [ medicineSystem](/Properties/Schema.org/ medicineSystem)
+,* [ name](/Properties/Schema.org/ name)
+,* [ potentialAction](/Properties/Schema.org/ potentialAction)
+,* [ recognizingAuthority](/Properties/Schema.org/ recognizingAuthority)
+,* [ relevantSpecialty](/Properties/Schema.org/ relevantSpecialty)
+,* [ sameAs](/Properties/Schema.org/ sameAs)
+,* [ study](/Properties/Schema.org/ study)
+,* [ subjectOf](/Properties/Schema.org/ subjectOf)
+,* [ url](/Properties/Schema.org/ url)
+
+</Grid>
+

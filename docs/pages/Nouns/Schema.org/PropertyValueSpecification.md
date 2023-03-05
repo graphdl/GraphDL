@@ -1,0 +1,34 @@
+import Link from 'next/link'
+# PropertyValueSpecification
+
+undefined
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [ alternateName](/Properties/Schema.org/ alternateName)
+,* [ defaultValue](/Properties/Schema.org/ defaultValue)
+,* [ description](/Properties/Schema.org/ description)
+,* [ disambiguatingDescription](/Properties/Schema.org/ disambiguatingDescription)
+,* [ identifier](/Properties/Schema.org/ identifier)
+,* [ image](/Properties/Schema.org/ image)
+,* [ mainEntityOfPage](/Properties/Schema.org/ mainEntityOfPage)
+,* [ maxValue](/Properties/Schema.org/ maxValue)
+,* [ minValue](/Properties/Schema.org/ minValue)
+,* [ multipleValues](/Properties/Schema.org/ multipleValues)
+,* [ name](/Properties/Schema.org/ name)
+,* [ potentialAction](/Properties/Schema.org/ potentialAction)
+,* [ readonlyValue](/Properties/Schema.org/ readonlyValue)
+,* [ sameAs](/Properties/Schema.org/ sameAs)
+,* [ stepValue](/Properties/Schema.org/ stepValue)
+,* [ subjectOf](/Properties/Schema.org/ subjectOf)
+,* [ url](/Properties/Schema.org/ url)
+,* [ valueMaxLength](/Properties/Schema.org/ valueMaxLength)
+,* [ valueMinLength](/Properties/Schema.org/ valueMinLength)
+,* [ valueName](/Properties/Schema.org/ valueName)
+,* [ valuePattern](/Properties/Schema.org/ valuePattern)
+,* [ valueRequired](/Properties/Schema.org/ valueRequired)
+
+</Grid>
+

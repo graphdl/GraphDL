@@ -1,0 +1,37 @@
+import Link from 'next/link'
+# MedicalDevice
+
+undefined
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [ adverseOutcome](/Properties/Schema.org/ adverseOutcome)
+,* [ alternateName](/Properties/Schema.org/ alternateName)
+,* [ code](/Properties/Schema.org/ code)
+,* [ contraindication](/Properties/Schema.org/ contraindication)
+,* [ description](/Properties/Schema.org/ description)
+,* [ disambiguatingDescription](/Properties/Schema.org/ disambiguatingDescription)
+,* [ funding](/Properties/Schema.org/ funding)
+,* [ guideline](/Properties/Schema.org/ guideline)
+,* [ identifier](/Properties/Schema.org/ identifier)
+,* [ image](/Properties/Schema.org/ image)
+,* [ legalStatus](/Properties/Schema.org/ legalStatus)
+,* [ mainEntityOfPage](/Properties/Schema.org/ mainEntityOfPage)
+,* [ medicineSystem](/Properties/Schema.org/ medicineSystem)
+,* [ name](/Properties/Schema.org/ name)
+,* [ postOp](/Properties/Schema.org/ postOp)
+,* [ potentialAction](/Properties/Schema.org/ potentialAction)
+,* [ preOp](/Properties/Schema.org/ preOp)
+,* [ procedure](/Properties/Schema.org/ procedure)
+,* [ recognizingAuthority](/Properties/Schema.org/ recognizingAuthority)
+,* [ relevantSpecialty](/Properties/Schema.org/ relevantSpecialty)
+,* [ sameAs](/Properties/Schema.org/ sameAs)
+,* [ seriousAdverseOutcome](/Properties/Schema.org/ seriousAdverseOutcome)
+,* [ study](/Properties/Schema.org/ study)
+,* [ subjectOf](/Properties/Schema.org/ subjectOf)
+,* [ url](/Properties/Schema.org/ url)
+
+</Grid>
+
