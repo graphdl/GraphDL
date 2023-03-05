@@ -308,20 +308,6 @@ Customer
   notes: markdown
 ```
 
-## ● Verb
-
-A [Verb](/verbs/verb) connects a [Noun](/nouns/noun) to a different [Noun](/#Noun), and is expressed as `[Subject].[Verb]: [Object]`.
-
-For example, in `User.subscribes: App` the verb `subscribes` connects the [Subject](/#) `User` to the [Object](/#) `App`.
-
-## ∷ Property
-
-A [Property](/Properties/Property) are the attributes that describe a [Noun](/nouns/noun) or [Verb](/verbs/verb). 
-[Properties](/nouns/properties) that start with and underscore (`_`) like [`_type`](/properties/_type), 
-[`_sameAs`](/properties/_sameAs), or [`_icon`](/properties/_icon) or mean that they are internal properties that
-that describe the [Noun](/nouns/noun) or [Verb](/verbs/verb) and cannot be changed on any given 
-[Resource](/nouns/resource) with the exception of `_id` which must be unique for every [Resource](/nouns/resource).
-
 ## □ Resource
 
 A [Resource](/nouns/resource) is a specific instance of a [Noun](/nouns/noun) and can be stored or
@@ -337,6 +323,20 @@ For example, in `User/john` the [Resource](/nouns/resource) is `john` and the [N
   "email": "john@example.com"
 }
 ```
+
+## ∷ Property
+
+A [Property](/Properties/Property) are the attributes that describe a [Noun](/nouns/noun) or [Verb](/verbs/verb). 
+[Properties](/nouns/properties) that start with and underscore (`_`) like [`_type`](/properties/_type), 
+[`_sameAs`](/properties/_sameAs), or [`_icon`](/properties/_icon) or mean that they are internal properties that
+that describe the [Noun](/nouns/noun) or [Verb](/verbs/verb) and cannot be changed on any given 
+[Resource](/nouns/resource) with the exception of `_id` which must be unique for every [Resource](/nouns/resource).
+
+## ● Verb
+
+A [Verb](/verbs/verb) connects a [Noun](/nouns/noun) to a different [Noun](/#Noun), and is expressed as `[Subject].[Verb]: [Object]`.
+
+For example, in `User.subscribes: App` the verb `subscribes` connects the [Subject](/#) `User` to the [Object](/#) `App`.
 
 ## ○ Action
 
