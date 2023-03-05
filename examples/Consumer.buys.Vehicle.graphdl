@@ -1,0 +1,13 @@
+import: Dealer, Transaction, Vehicle from https://registry.graphdl.org/drivly@0.1.0
+
+Consumer:
+  buys: Vehicle
+
+Transaction:
+  _subject: buyer
+  _verb: buys
+  _object: vehicle
+  _inverse: sells
+  buyer: Consumer | Dealer
+  seller: Consumer | Dealer
+  vehicle: Vehicle
