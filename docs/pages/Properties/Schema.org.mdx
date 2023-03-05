@@ -1,6 +1,6 @@
 import graph from '../../data/schema.org.properties.json'
 import Link from 'next/link'
-import * as fs from 'fs'
+//import * as fs from 'fs'
 
 # Schema.org
 
@@ -14,7 +14,7 @@ export const getStaticProps = () => {
   
   const meta = { }
   properties.map(property => meta[property] = property)
-  fs.writeFileSync('pages/Properties/Schema.org/_meta.json', JSON.stringify(meta, null, 2))
+  //fs.writeFileSync('pages/Properties/Schema.org/_meta.json', JSON.stringify(meta, null, 2))
 
   return {
     props: {
