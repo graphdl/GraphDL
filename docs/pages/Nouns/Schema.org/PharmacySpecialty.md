@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# PharmacySpecialty
+
+The practice or art and science of preparing and dispensing drugs and medicines.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

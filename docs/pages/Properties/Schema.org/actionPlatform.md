@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# actionPlatform
+
+The high level platform(s) where the Action can be performed for the given URL. To specify a specific application or operating system instance, use actionApplication.
+
+## Property of
+
+
+

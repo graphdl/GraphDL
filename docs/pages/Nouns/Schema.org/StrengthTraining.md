@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# StrengthTraining
+
+Physical activity that is engaged in to improve muscle and bone strength. Also referred to as resistance training.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

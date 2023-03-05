@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501k
+
+Nonprofit501k: Non-profit type referring to Child Care Organizations.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

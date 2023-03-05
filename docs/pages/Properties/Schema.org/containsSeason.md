@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# containsSeason
+
+A season that is part of the media series.
+
+## Property of
+
+
+

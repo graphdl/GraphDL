@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# PreSale
+
+Indicates that the item is available for ordering and delivery before general availability.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

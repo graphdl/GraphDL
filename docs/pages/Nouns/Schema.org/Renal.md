@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Renal
+
+A specific branch of medical science that pertains to the study of the kidneys and its respective disease states.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

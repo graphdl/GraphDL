@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# SingleCenterTrial
+
+A trial that takes place at a single center.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

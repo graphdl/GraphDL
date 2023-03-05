@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Surgical
+
+A specific branch of medical science that pertains to treating diseases, injuries and deformities by manual and instrumental means.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

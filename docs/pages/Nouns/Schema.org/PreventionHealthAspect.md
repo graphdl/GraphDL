@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# PreventionHealthAspect
+
+Information about actions or measures that can be taken to avoid getting the topic or reaching a critical situation related to the topic.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

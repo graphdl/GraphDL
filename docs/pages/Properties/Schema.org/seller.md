@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# seller
+
+An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
+
+## Property of
+
+
+

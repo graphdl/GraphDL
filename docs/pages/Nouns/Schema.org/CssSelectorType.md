@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# CssSelectorType
+
+Text representing a CSS selector.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

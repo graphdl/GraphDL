@@ -1,0 +1,21 @@
+import Link from 'next/link'
+
+# SatireOrParodyContent
+
+Content coded 'satire or parody content' in a <Link href="/MediaReview">MediaReview</Link>, considered in the context of how it was published or shared.<br/><br/>
+
+For a <a class="localLink" href="/VideoObject">VideoObject</a> to be 'satire or parody content': A video that was created as political or humorous commentary and is presented in that context. (Reshares of satire/parody content that do not include relevant context are more likely to fall under the â€œmissing contextâ€ rating.)<br/><br/>
+
+For an <a class="localLink" href="/ImageObject">ImageObject</a> to be 'satire or parody content': An image that was created as political or humorous commentary and is presented in that context. (Reshares of satire/parody content that do not include relevant context are more likely to fall under the â€œmissing contextâ€ rating.)<br/><br/>
+
+For an <a class="localLink" href="/ImageObject">ImageObject</a> with embedded text to be 'satire or parody content': An image that was created as political or humorous commentary and is presented in that context. (Reshares of satire/parody content that do not include relevant context are more likely to fall under the â€œmissing contextâ€ rating.)<br/><br/>
+
+For an <a class="localLink" href="/AudioObject">AudioObject</a> to be 'satire or parody content': Audio that was created as political or humorous commentary and is presented in that context. (Reshares of satire/parody content that do not include relevant context are more likely to fall under the â€œmissing contextâ€ rating.)
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

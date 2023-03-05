@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# BodyMeasurementHips
+
+Girth of hips (measured around the buttocks). Used, for example, to fit skirts.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# DoubleBlindedTrial
+
+A trial design in which neither the researcher nor the patient knows the details of the treatment the patient was randomly assigned to.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

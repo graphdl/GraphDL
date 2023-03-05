@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# issn
+
+The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+
+## Property of
+
+
+

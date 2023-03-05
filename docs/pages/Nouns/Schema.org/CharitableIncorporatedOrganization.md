@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# CharitableIncorporatedOrganization
+
+CharitableIncorporatedOrganization: Non-profit type referring to a Charitable Incorporated Organization (UK).
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

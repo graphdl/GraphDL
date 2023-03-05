@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# IOSPlatform
+
+Represents the broad notion of iOS-based operating systems.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

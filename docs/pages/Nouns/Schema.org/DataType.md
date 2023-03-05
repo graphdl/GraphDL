@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# DataType
+
+The basic data types such as Integers, Strings, etc.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

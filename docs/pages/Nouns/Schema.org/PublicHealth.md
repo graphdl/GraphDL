@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# PublicHealth
+
+Branch of medicine that pertains to the health services to improve and protect community health, especially epidemiology, sanitation, immunization, and preventive medicine.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

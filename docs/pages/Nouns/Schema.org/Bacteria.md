@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Bacteria
+
+Pathogenic bacteria that cause bacterial infection.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

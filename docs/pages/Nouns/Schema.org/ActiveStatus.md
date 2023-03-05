@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# ActiveStatus
+
+An in-progress action (e.g., while watching the movie, or driving to a location).
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

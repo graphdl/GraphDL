@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501n
+
+Nonprofit501n: Non-profit type referring to Charitable Risk Pools.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

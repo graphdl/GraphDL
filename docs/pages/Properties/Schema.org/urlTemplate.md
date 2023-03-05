@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# urlTemplate
+
+An url template (RFC6570) that will be used to construct the target of the execution of the action.
+
+## Property of
+
+
+

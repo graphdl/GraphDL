@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# RefundTypeEnumeration
+
+Enumerates several kinds of product return refund types.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

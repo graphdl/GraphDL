@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# MinimumAdvertisedPrice
+
+Represents the minimum advertised price ("MAP") (as dictated by the manufacturer) of an offered product.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

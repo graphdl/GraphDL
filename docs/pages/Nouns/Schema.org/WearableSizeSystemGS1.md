@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# WearableSizeSystemGS1
+
+GS1 (formerly NRF) size system for wearables.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

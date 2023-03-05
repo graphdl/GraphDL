@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# HealthCare
+
+HealthCare: this is a benefit for health care.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

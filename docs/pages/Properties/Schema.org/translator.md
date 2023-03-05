@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# translator
+
+Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.
+
+## Property of
+
+
+

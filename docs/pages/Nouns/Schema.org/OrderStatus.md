@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# OrderStatus
+
+Enumerated status values for Order.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

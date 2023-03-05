@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Hematologic
+
+A specific branch of medical science that pertains to diagnosis and treatment of disorders of blood and blood producing organs.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

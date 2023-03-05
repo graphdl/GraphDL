@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Subscription
+
+Represents the subscription pricing component of the total price for an offered product.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

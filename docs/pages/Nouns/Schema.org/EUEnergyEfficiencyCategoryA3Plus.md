@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# EUEnergyEfficiencyCategoryA3Plus
+
+Represents EU Energy Efficiency Class A+++ as defined in EU energy labeling regulations.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

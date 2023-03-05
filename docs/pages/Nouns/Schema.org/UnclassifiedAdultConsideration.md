@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# UnclassifiedAdultConsideration
+
+The item is suitable only for adults, without indicating why. Due to widespread use of "adult" as a euphemism for "sexual", many such items are likely suited also for the SexualContentConsideration code.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

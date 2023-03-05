@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# material
+
+A material that something is made from, e.g. leather, wool, cotton, paper.
+
+## Property of
+
+
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Ayurvedic
+
+A system of medicine that originated in India over thousands of years and that focuses on integrating and balancing the body, mind, and spirit.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

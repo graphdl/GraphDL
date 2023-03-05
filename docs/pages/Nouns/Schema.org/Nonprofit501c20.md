@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501c20
+
+Nonprofit501c20: Non-profit type referring to Group Legal Services Plan Organizations.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

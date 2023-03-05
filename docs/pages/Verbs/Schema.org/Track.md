@@ -1,0 +1,44 @@
+import Link from 'next/link'
+
+# Track
+
+An agent tracks an object for updates.<br/><br/>
+
+Related actions:<br/><br/>
+
+<ul>
+<li><Link href="/FollowAction">FollowAction</Link>: Unlike FollowAction, TrackAction refers to the interest on the location of innanimates objects.</li>
+<li><a class="localLink" href="/SubscribeAction">SubscribeAction</a>: Unlike SubscribeAction, TrackAction refers to  the interest on the location of innanimate objects.</li>
+</ul>
+
+## Properties
+
+<Grid>
+* [actionStatus](/Properties/Schema.org/actionStatus)
+,* [additionalType](/Properties/Schema.org/additionalType)
+,* [agent](/Properties/Schema.org/agent)
+,* [alternateName](/Properties/Schema.org/alternateName)
+,* [deliveryMethod](/Properties/Schema.org/deliveryMethod)
+,* [description](/Properties/Schema.org/description)
+,* [disambiguatingDescription](/Properties/Schema.org/disambiguatingDescription)
+,* [endTime](/Properties/Schema.org/endTime)
+,* [error](/Properties/Schema.org/error)
+,* [identifier](/Properties/Schema.org/identifier)
+,* [image](/Properties/Schema.org/image)
+,* [instrument](/Properties/Schema.org/instrument)
+,* [location](/Properties/Schema.org/location)
+,* [mainEntityOfPage](/Properties/Schema.org/mainEntityOfPage)
+,* [name](/Properties/Schema.org/name)
+,* [object](/Properties/Schema.org/object)
+,* [participant](/Properties/Schema.org/participant)
+,* [potentialAction](/Properties/Schema.org/potentialAction)
+,* [provider](/Properties/Schema.org/provider)
+,* [result](/Properties/Schema.org/result)
+,* [sameAs](/Properties/Schema.org/sameAs)
+,* [startTime](/Properties/Schema.org/startTime)
+,* [subjectOf](/Properties/Schema.org/subjectOf)
+,* [target](/Properties/Schema.org/target)
+,* [url](/Properties/Schema.org/url)
+
+</Grid>
+

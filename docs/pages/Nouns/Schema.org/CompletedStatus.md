@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# CompletedStatus
+
+An action that has already taken place.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

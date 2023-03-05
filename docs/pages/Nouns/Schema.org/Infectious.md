@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Infectious
+
+Something in medical science that pertains to infectious diseases, i.e. caused by bacterial, viral, fungal or parasitic infections.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

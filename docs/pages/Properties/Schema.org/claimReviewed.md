@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# claimReviewed
+
+A short summary of the specific claims reviewed in a ClaimReview.
+
+## Property of
+
+
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# WritePermission
+
+Permission to write or edit the document.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

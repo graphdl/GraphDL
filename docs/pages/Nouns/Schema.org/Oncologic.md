@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Oncologic
+
+A specific branch of medical science that deals with benign and malignant tumors, including the study of their development, diagnosis, treatment and prevention.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

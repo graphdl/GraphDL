@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# OnSitePickup
+
+A DeliveryMethod in which an item is collected on site, e.g. in a store or at a box office.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

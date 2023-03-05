@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# False
+
+The boolean value false.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

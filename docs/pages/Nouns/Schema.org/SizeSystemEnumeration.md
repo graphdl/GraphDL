@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# SizeSystemEnumeration
+
+Enumerates common size systems for different categories of products, for example "EN-13402" or "UK" for wearables or "Imperial" for screws.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

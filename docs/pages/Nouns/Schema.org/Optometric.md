@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Optometric
+
+The science or practice of testing visual acuity and prescribing corrective lenses.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

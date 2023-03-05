@@ -1,0 +1,14 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# vehicleSeatingCapacity
+
+The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.<br/><br/>
+
+Typical unit code(s): C62 for persons.
+
+## Property of
+
+
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Head
+
+Head assessment with clinical examination.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

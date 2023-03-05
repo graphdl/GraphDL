@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# NLNonprofitType
+
+NLNonprofitType: Non-profit organization type originating from the Netherlands.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

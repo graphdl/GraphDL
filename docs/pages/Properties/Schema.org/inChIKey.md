@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# inChIKey
+
+InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
+
+## Property of
+
+
+

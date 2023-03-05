@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# BodyMeasurementHead
+
+Maximum girth of head above the ears. Used, for example, to fit hats.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

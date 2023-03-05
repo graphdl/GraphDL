@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# BodyMeasurementBust
+
+Maximum girth of bust. Used, for example, to fit women's suits.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,29 @@
+import Link from 'next/link'
+
+# BreadcrumbList
+
+A BreadcrumbList is an ItemList consisting of a chain of linked Web pages, typically described using at least their URL and their name, and typically ending with the current page.<br/><br/>
+
+The <Link href="/position">position</Link> property is used to reconstruct the order of the items in a BreadcrumbList. The convention is that a breadcrumb list has an <a class="localLink" href="/itemListOrder">itemListOrder</a> of <a class="localLink" href="/ItemListOrderAscending">ItemListOrderAscending</a> (lower values listed first), and that the first items in this list correspond to the "top" or beginning of the breadcrumb trail, e.g. with a site or section homepage. The specific values of 'position' are not assigned meaning for a BreadcrumbList, but they should be integers, e.g. beginning with '1' for the first item in the list.
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [alternateName](/Properties/Schema.org/alternateName)
+,* [description](/Properties/Schema.org/description)
+,* [disambiguatingDescription](/Properties/Schema.org/disambiguatingDescription)
+,* [identifier](/Properties/Schema.org/identifier)
+,* [image](/Properties/Schema.org/image)
+,* [itemListElement](/Properties/Schema.org/itemListElement)
+,* [itemListOrder](/Properties/Schema.org/itemListOrder)
+,* [mainEntityOfPage](/Properties/Schema.org/mainEntityOfPage)
+,* [name](/Properties/Schema.org/name)
+,* [numberOfItems](/Properties/Schema.org/numberOfItems)
+,* [potentialAction](/Properties/Schema.org/potentialAction)
+,* [sameAs](/Properties/Schema.org/sameAs)
+,* [subjectOf](/Properties/Schema.org/subjectOf)
+,* [url](/Properties/Schema.org/url)
+
+</Grid>
+

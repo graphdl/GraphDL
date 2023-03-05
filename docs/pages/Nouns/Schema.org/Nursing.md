@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nursing
+
+A health profession of a person formally educated and trained in the care of the sick or infirm person.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

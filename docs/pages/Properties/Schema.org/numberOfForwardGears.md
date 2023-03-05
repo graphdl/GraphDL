@@ -1,0 +1,14 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# numberOfForwardGears
+
+The total number of forward gears available for the transmission system of the vehicle.<br/><br/>
+
+Typical unit code(s): C62
+
+## Property of
+
+
+

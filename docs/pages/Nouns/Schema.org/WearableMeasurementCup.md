@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# WearableMeasurementCup
+
+Measurement of the cup, for example of a bra
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

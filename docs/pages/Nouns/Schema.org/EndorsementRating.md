@@ -1,0 +1,35 @@
+import Link from 'next/link'
+
+# EndorsementRating
+
+An EndorsementRating is a rating that expresses some level of endorsement, for example inclusion in a "critic's pick" blog, a
+"Like" or "+1" on a social network. It can be considered the <Link href="/result">result</Link> of an <a class="localLink" href="/EndorseAction">EndorseAction</a> in which the <a class="localLink" href="/object">object</a> of the action is rated positively by
+some <a class="localLink" href="/agent">agent</a>. As is common elsewhere in schema.org, it is sometimes more useful to describe the results of such an action without explicitly describing the <a class="localLink" href="/Action">Action</a>.<br/><br/>
+
+An <a class="localLink" href="/EndorsementRating">EndorsementRating</a> may be part of a numeric scale or organized system, but this is not required: having an explicit type for indicating a positive,
+endorsement rating is particularly useful in the absence of numeric scales as it helps consumers understand that the rating is broadly positive.
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [alternateName](/Properties/Schema.org/alternateName)
+,* [author](/Properties/Schema.org/author)
+,* [bestRating](/Properties/Schema.org/bestRating)
+,* [description](/Properties/Schema.org/description)
+,* [disambiguatingDescription](/Properties/Schema.org/disambiguatingDescription)
+,* [identifier](/Properties/Schema.org/identifier)
+,* [image](/Properties/Schema.org/image)
+,* [mainEntityOfPage](/Properties/Schema.org/mainEntityOfPage)
+,* [name](/Properties/Schema.org/name)
+,* [potentialAction](/Properties/Schema.org/potentialAction)
+,* [ratingExplanation](/Properties/Schema.org/ratingExplanation)
+,* [ratingValue](/Properties/Schema.org/ratingValue)
+,* [reviewAspect](/Properties/Schema.org/reviewAspect)
+,* [sameAs](/Properties/Schema.org/sameAs)
+,* [subjectOf](/Properties/Schema.org/subjectOf)
+,* [url](/Properties/Schema.org/url)
+,* [worstRating](/Properties/Schema.org/worstRating)
+
+</Grid>
+

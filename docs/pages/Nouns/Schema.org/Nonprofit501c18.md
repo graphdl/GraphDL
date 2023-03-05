@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501c18
+
+Nonprofit501c18: Non-profit type referring to Employee Funded Pension Trust (created before 25 June 1959).
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

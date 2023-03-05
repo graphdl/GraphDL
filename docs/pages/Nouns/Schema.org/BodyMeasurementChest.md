@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# BodyMeasurementChest
+
+Maximum girth of chest. Used, for example, to fit men's suits.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

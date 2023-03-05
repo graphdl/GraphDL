@@ -1,0 +1,36 @@
+import Link from 'next/link'
+
+# FloorPlan
+
+A FloorPlan is an explicit representation of a collection of similar accommodations, allowing the provision of common information (room counts, sizes, layout diagrams) and offers for rental or sale. In typical use, some <Link href="/ApartmentComplex">ApartmentComplex</Link> has an <a class="localLink" href="/accommodationFloorPlan">accommodationFloorPlan</a> which is a <a class="localLink" href="/FloorPlan">FloorPlan</a>.  A FloorPlan is always in the context of a particular place, either a larger <a class="localLink" href="/ApartmentComplex">ApartmentComplex</a> or a single <a class="localLink" href="/Apartment">Apartment</a>. The visual/spatial aspects of a floor plan (i.e. room layout, <a href="https://en.wikipedia.org/wiki/Floor_plan">see wikipedia</a>) can be indicated using <a class="localLink" href="/image">image</a>.
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [alternateName](/Properties/Schema.org/alternateName)
+,* [amenityFeature](/Properties/Schema.org/amenityFeature)
+,* [description](/Properties/Schema.org/description)
+,* [disambiguatingDescription](/Properties/Schema.org/disambiguatingDescription)
+,* [floorSize](/Properties/Schema.org/floorSize)
+,* [identifier](/Properties/Schema.org/identifier)
+,* [image](/Properties/Schema.org/image)
+,* [isPlanForApartment](/Properties/Schema.org/isPlanForApartment)
+,* [layoutImage](/Properties/Schema.org/layoutImage)
+,* [mainEntityOfPage](/Properties/Schema.org/mainEntityOfPage)
+,* [name](/Properties/Schema.org/name)
+,* [numberOfAccommodationUnits](/Properties/Schema.org/numberOfAccommodationUnits)
+,* [numberOfAvailableAccommodationUnits](/Properties/Schema.org/numberOfAvailableAccommodationUnits)
+,* [numberOfBathroomsTotal](/Properties/Schema.org/numberOfBathroomsTotal)
+,* [numberOfBedrooms](/Properties/Schema.org/numberOfBedrooms)
+,* [numberOfFullBathrooms](/Properties/Schema.org/numberOfFullBathrooms)
+,* [numberOfPartialBathrooms](/Properties/Schema.org/numberOfPartialBathrooms)
+,* [numberOfRooms](/Properties/Schema.org/numberOfRooms)
+,* [petsAllowed](/Properties/Schema.org/petsAllowed)
+,* [potentialAction](/Properties/Schema.org/potentialAction)
+,* [sameAs](/Properties/Schema.org/sameAs)
+,* [subjectOf](/Properties/Schema.org/subjectOf)
+,* [url](/Properties/Schema.org/url)
+
+</Grid>
+

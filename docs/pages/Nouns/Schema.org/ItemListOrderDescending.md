@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# ItemListOrderDescending
+
+An ItemList ordered with higher values listed first.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

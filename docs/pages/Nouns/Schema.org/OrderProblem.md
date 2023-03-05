@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# OrderProblem
+
+OrderStatus representing that there is a problem with the order.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

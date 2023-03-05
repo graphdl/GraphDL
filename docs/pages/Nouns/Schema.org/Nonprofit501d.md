@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501d
+
+Nonprofit501d: Non-profit type referring to Religious and Apostolic Associations.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

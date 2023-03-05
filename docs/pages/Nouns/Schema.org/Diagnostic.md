@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Diagnostic
+
+A medical device used for diagnostic purposes.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

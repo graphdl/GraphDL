@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# HowOrWhereHealthAspect
+
+Information about how or where to find a topic. Also may contain location data that can be used for where to look for help if the topic is observed.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

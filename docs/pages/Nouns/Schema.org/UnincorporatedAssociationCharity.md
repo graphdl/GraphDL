@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# UnincorporatedAssociationCharity
+
+UnincorporatedAssociationCharity: Non-profit type referring to a charitable company that is not incorporated (UK).
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

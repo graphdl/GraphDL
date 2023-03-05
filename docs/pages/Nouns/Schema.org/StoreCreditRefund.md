@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# StoreCreditRefund
+
+Specifies that the customer receives a store credit as refund when returning a product.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

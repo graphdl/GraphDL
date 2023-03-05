@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# BodyMeasurementHeight
+
+Body height (measured between crown of head and soles of feet). Used, for example, to fit jackets.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

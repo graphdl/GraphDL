@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# WearableSizeSystemEN13402
+
+EN 13402 (joint European standard for size labelling of clothes).
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

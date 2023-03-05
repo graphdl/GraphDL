@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# BodyMeasurementWaist
+
+Girth of natural waistline (between hip bones and lower ribs). Used, for example, to fit pants.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# isLocatedInSubcellularLocation
+
+Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
+
+## Property of
+
+
+

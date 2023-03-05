@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501c26
+
+Nonprofit501c26: Non-profit type referring to State-Sponsored Organizations Providing Health Coverage for High-Risk Individuals.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

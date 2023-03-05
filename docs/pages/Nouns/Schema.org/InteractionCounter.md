@@ -1,0 +1,30 @@
+import Link from 'next/link'
+
+# InteractionCounter
+
+A summary of how users have interacted with this CreativeWork. In most cases, authors will use a subtype to specify the specific type of interaction.
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [alternateName](/Properties/Schema.org/alternateName)
+,* [description](/Properties/Schema.org/description)
+,* [disambiguatingDescription](/Properties/Schema.org/disambiguatingDescription)
+,* [endTime](/Properties/Schema.org/endTime)
+,* [identifier](/Properties/Schema.org/identifier)
+,* [image](/Properties/Schema.org/image)
+,* [interactionService](/Properties/Schema.org/interactionService)
+,* [interactionType](/Properties/Schema.org/interactionType)
+,* [location](/Properties/Schema.org/location)
+,* [mainEntityOfPage](/Properties/Schema.org/mainEntityOfPage)
+,* [name](/Properties/Schema.org/name)
+,* [potentialAction](/Properties/Schema.org/potentialAction)
+,* [sameAs](/Properties/Schema.org/sameAs)
+,* [startTime](/Properties/Schema.org/startTime)
+,* [subjectOf](/Properties/Schema.org/subjectOf)
+,* [url](/Properties/Schema.org/url)
+,* [userInteractionCount](/Properties/Schema.org/userInteractionCount)
+
+</Grid>
+

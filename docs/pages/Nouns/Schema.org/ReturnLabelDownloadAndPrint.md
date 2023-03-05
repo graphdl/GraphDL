@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# ReturnLabelDownloadAndPrint
+
+Indicated that a return label must be downloaded and printed by the customer.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

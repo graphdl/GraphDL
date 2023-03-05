@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# bestRating
+
+The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed.
+
+## Property of
+
+
+

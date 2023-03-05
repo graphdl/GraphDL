@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# EvidenceLevelC
+
+Only consensus opinion of experts, case studies, or standard-of-care.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

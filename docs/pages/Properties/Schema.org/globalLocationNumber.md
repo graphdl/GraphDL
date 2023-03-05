@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# globalLocationNumber
+
+The <a href="http://www.gs1.org/gln">Global Location Number</Link> (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.
+
+## Property of
+
+
+

@@ -1,0 +1,14 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# additionalProperty
+
+A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.<br/><br/>
+
+Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+
+## Property of
+
+
+

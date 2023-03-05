@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# successorOf
+
+A pointer from a newer variant of a product  to its previous, often discontinued predecessor.
+
+## Property of
+
+
+

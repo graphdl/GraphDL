@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# LivingWithHealthAspect
+
+Information about coping or life related to the topic.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

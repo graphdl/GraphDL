@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# RsvpResponseMaybe
+
+The invitee may or may not attend.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

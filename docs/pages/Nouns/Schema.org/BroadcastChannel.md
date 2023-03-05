@@ -1,0 +1,30 @@
+import Link from 'next/link'
+
+# BroadcastChannel
+
+A unique instance of a BroadcastService on a CableOrSatelliteService lineup.
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [alternateName](/Properties/Schema.org/alternateName)
+,* [broadcastChannelId](/Properties/Schema.org/broadcastChannelId)
+,* [broadcastFrequency](/Properties/Schema.org/broadcastFrequency)
+,* [broadcastServiceTier](/Properties/Schema.org/broadcastServiceTier)
+,* [description](/Properties/Schema.org/description)
+,* [disambiguatingDescription](/Properties/Schema.org/disambiguatingDescription)
+,* [genre](/Properties/Schema.org/genre)
+,* [identifier](/Properties/Schema.org/identifier)
+,* [image](/Properties/Schema.org/image)
+,* [inBroadcastLineup](/Properties/Schema.org/inBroadcastLineup)
+,* [mainEntityOfPage](/Properties/Schema.org/mainEntityOfPage)
+,* [name](/Properties/Schema.org/name)
+,* [potentialAction](/Properties/Schema.org/potentialAction)
+,* [providesBroadcastService](/Properties/Schema.org/providesBroadcastService)
+,* [sameAs](/Properties/Schema.org/sameAs)
+,* [subjectOf](/Properties/Schema.org/subjectOf)
+,* [url](/Properties/Schema.org/url)
+
+</Grid>
+

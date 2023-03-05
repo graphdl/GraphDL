@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# MapCategoryType
+
+An enumeration of several kinds of Map.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

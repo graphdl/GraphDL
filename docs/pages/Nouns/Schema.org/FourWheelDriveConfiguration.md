@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# FourWheelDriveConfiguration
+
+Four-wheel drive is a transmission layout where the engine primarily drives two wheels with a part-time four-wheel drive capability.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# legislationType
+
+The type of the legislation. Examples of values are "law", "act", "directive", "decree", "regulation", "statutory instrument", "loi organique", "rÃ¨glement grand-ducal", etc., depending on the country.
+
+## Property of
+
+
+

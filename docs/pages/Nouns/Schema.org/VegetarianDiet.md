@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# VegetarianDiet
+
+A diet exclusive of animal meat.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

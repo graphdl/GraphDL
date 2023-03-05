@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# UnofficialLegalValue
+
+Indicates that a document has no particular or special standing (e.g. a republication of a law by a private publisher).
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

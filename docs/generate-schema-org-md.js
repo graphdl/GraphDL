@@ -8,11 +8,12 @@ const fs = require('fs')
 for (const schema of schemaProperties) {
   const name = schema.label === 'Action' ? schema.label : schema.label.replace('Action', '')
   const md = `import Link from 'next/link'
+  
 import Grid from '@components/Grid'
 
 # ${name}
 
-${schema.description?.replace('<a class=\"localLink\"','<Link').replace('</a>','</Link>')}
+${schema.comment?.replace('<a class=\"localLink\"','<Link').replace('</a>','</Link>')}
 
 ## Property of
 
@@ -29,14 +30,15 @@ ${schema.description?.replace('<a class=\"localLink\"','<Link').replace('</a>','
 for (const schema of schemaTypes) {
   const name = schema.label === 'Action' ? schema.label : schema.label.replace('Action', '')
   const md = `import Link from 'next/link'
+
 # ${name}
 
-${schema.description?.replace('<a class=\"localLink\"','<Link').replace('</a>','</Link>')}
+${schema.comment?.replace('<a class=\"localLink\"','<Link').replace('</a>','</Link>')}
 
 ## Properties
 
 <Grid>
-${schema.properties.split(',').map(property => {
+${schema.properties.split(', ').map(property => {
   const prop = property.replace('https://schema.org/','')
   return `* [${prop}](/Properties/Schema.org/${prop})\n`
 })}

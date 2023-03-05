@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# FrontWheelDriveConfiguration
+
+Front-wheel drive is a transmission layout where the engine drives the front wheels.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501c11
+
+Nonprofit501c11: Non-profit type referring to Teachers' Retirement Fund Associations.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

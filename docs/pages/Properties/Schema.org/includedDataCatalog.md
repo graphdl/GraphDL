@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# includedDataCatalog
+
+A data catalog which contains this dataset (this property was previously 'catalog', preferred name is now 'includedInDataCatalog').
+
+## Property of
+
+
+

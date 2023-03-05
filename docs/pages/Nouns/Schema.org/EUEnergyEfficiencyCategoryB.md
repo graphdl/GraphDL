@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# EUEnergyEfficiencyCategoryB
+
+Represents EU Energy Efficiency Class B as defined in EU energy labeling regulations.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

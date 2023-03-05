@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501c10
+
+Nonprofit501c10: Non-profit type referring to Domestic Fraternal Societies and Associations.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

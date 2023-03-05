@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# WeaponConsideration
+
+The item is intended to induce bodily harm, for example guns, mace, combat knives, brass knuckles, nail or other bombs, and spears.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

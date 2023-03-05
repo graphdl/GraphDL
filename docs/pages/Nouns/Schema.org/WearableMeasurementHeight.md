@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# WearableMeasurementHeight
+
+Measurement of the height, for example the heel height of a shoe
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

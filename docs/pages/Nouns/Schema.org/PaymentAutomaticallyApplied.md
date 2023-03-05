@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# PaymentAutomaticallyApplied
+
+An automatic payment system is in place and will be used.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

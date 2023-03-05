@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# articleSection
+
+Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.
+
+## Property of
+
+
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# ReturnAtKiosk
+
+Specifies that product returns must be made at a kiosk.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

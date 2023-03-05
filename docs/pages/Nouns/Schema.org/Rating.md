@@ -1,0 +1,30 @@
+import Link from 'next/link'
+
+# Rating
+
+A rating is an evaluation on a numeric scale, such as 1 to 5 stars.
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [alternateName](/Properties/Schema.org/alternateName)
+,* [author](/Properties/Schema.org/author)
+,* [bestRating](/Properties/Schema.org/bestRating)
+,* [description](/Properties/Schema.org/description)
+,* [disambiguatingDescription](/Properties/Schema.org/disambiguatingDescription)
+,* [identifier](/Properties/Schema.org/identifier)
+,* [image](/Properties/Schema.org/image)
+,* [mainEntityOfPage](/Properties/Schema.org/mainEntityOfPage)
+,* [name](/Properties/Schema.org/name)
+,* [potentialAction](/Properties/Schema.org/potentialAction)
+,* [ratingExplanation](/Properties/Schema.org/ratingExplanation)
+,* [ratingValue](/Properties/Schema.org/ratingValue)
+,* [reviewAspect](/Properties/Schema.org/reviewAspect)
+,* [sameAs](/Properties/Schema.org/sameAs)
+,* [subjectOf](/Properties/Schema.org/subjectOf)
+,* [url](/Properties/Schema.org/url)
+,* [worstRating](/Properties/Schema.org/worstRating)
+
+</Grid>
+

@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# postalCodePrefix
+
+A defined range of postal codes indicated by a common textual prefix. Used for non-numeric systems such as UK.
+
+## Property of
+
+
+

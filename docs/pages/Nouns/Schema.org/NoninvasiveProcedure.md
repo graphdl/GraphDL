@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# NoninvasiveProcedure
+
+A type of medical procedure that involves noninvasive techniques.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

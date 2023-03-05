@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# LegalValueLevel
+
+A list of possible levels for the legal validity of a legislation.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# fileSize
+
+Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.
+
+## Property of
+
+
+

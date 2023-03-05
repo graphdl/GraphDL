@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# PaymentComplete
+
+The payment has been received and processed.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# ReturnFeesCustomerResponsibility
+
+Specifies that product returns must be paid for, and are the responsibility of, the customer.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

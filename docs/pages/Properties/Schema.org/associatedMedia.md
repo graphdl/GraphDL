@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# associatedMedia
+
+A media object that encodes this CreativeWork. This property is a synonym for encoding.
+
+## Property of
+
+
+

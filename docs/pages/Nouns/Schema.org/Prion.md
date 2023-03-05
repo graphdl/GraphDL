@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Prion
+
+A prion is an infectious agent composed of protein in a misfolded form.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

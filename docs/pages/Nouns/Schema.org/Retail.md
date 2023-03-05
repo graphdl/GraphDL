@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Retail
+
+The drug's cost represents the retail cost of the drug.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

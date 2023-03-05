@@ -1,0 +1,13 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# floorSize
+
+The size of the accommodation, e.g. in square meter or squarefoot.
+Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for square yard
+
+## Property of
+
+
+

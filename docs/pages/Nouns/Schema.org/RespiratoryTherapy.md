@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# RespiratoryTherapy
+
+The therapy that is concerned with the maintenance or improvement of respiratory function (as in patients with pulmonary disease).
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

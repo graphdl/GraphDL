@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# BenefitsHealthAspect
+
+Content about the benefits and advantages of usage or utilization of topic.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

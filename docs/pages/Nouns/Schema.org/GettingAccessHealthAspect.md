@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# GettingAccessHealthAspect
+
+Content that discusses practical and policy aspects for getting access to specific kinds of healthcare (e.g. distribution mechanisms for vaccines).
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501c1
+
+Nonprofit501c1: Non-profit type referring to Corporations Organized Under Act of Congress, including Federal Credit Unions and National Farm Loan Associations.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

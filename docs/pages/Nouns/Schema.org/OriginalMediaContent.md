@@ -1,0 +1,21 @@
+import Link from 'next/link'
+
+# OriginalMediaContent
+
+Content coded 'as original media content' in a <Link href="/MediaReview">MediaReview</Link>, considered in the context of how it was published or shared.<br/><br/>
+
+For a <a class="localLink" href="/VideoObject">VideoObject</a> to be 'original': No evidence the footage has been misleadingly altered or manipulated, though it may contain false or misleading claims.<br/><br/>
+
+For an <a class="localLink" href="/ImageObject">ImageObject</a> to be 'original': No evidence the image has been misleadingly altered or manipulated, though it may still contain false or misleading claims.<br/><br/>
+
+For an <a class="localLink" href="/ImageObject">ImageObject</a> with embedded text to be 'original': No evidence the image has been misleadingly altered or manipulated, though it may still contain false or misleading claims.<br/><br/>
+
+For an <a class="localLink" href="/AudioObject">AudioObject</a> to be 'original': No evidence the audio has been misleadingly altered or manipulated, though it may contain false or misleading claims.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

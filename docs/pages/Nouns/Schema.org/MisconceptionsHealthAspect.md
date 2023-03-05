@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# MisconceptionsHealthAspect
+
+Content about common misconceptions and myths that are related to a topic.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

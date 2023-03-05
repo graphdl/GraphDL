@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# BodyMeasurementFoot
+
+Foot length (measured between end of the most prominent toe and the most prominent part of the heel). Used, for example, to measure socks.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

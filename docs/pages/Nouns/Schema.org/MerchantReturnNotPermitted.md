@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# MerchantReturnNotPermitted
+
+Specifies that product returns are not permitted.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

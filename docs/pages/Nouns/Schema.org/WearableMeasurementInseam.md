@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# WearableMeasurementInseam
+
+Measurement of the inseam, for example of pants
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

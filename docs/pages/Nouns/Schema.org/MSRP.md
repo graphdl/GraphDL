@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# MSRP
+
+Represents the manufacturer suggested retail price ("MSRP") of an offered product.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

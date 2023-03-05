@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# ReservationPending
+
+The status of a reservation when a request has been sent, but not confirmed.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

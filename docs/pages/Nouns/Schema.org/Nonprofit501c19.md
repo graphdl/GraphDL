@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501c19
+
+Nonprofit501c19: Non-profit type referring to Post or Organization of Past or Present Members of the Armed Forces.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# EvidenceLevelA
+
+Data derived from multiple randomized clinical trials or meta-analyses.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# NonprofitANBI
+
+NonprofitANBI: Non-profit type referring to a Public Benefit Organization (NL).
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

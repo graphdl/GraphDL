@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# CoOp
+
+Play mode: CoOp. Co-operative games, where you play on the same team with friends.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# healthPlanId
+
+The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)
+
+## Property of
+
+
+

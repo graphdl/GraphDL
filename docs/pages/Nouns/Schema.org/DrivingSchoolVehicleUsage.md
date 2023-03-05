@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# DrivingSchoolVehicleUsage
+
+Indicates the usage of the vehicle for driving school.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

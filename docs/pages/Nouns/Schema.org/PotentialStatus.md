@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# PotentialStatus
+
+A description of an action that is supported.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

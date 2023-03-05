@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# OTC
+
+The character of a medical substance, typically a medicine, of being available over the counter or not.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

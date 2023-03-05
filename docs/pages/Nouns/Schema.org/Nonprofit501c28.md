@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501c28
+
+Nonprofit501c28: Non-profit type referring to National Railroad Retirement Investment Trusts.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

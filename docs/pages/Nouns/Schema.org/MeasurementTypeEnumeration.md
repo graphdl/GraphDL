@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# MeasurementTypeEnumeration
+
+Enumeration of common measurement types (or dimensions), for example "chest" for a person, "inseam" for pants, "gauge" for screws, or "wheel" for bicycles.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

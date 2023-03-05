@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# ReimbursementCap
+
+The drug's cost represents the maximum reimbursement paid by an insurer for the drug.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# OfflinePermanently
+
+Game server status: OfflinePermanently. Server is offline and not available.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

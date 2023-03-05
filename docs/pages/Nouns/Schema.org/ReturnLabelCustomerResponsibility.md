@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# ReturnLabelCustomerResponsibility
+
+Indicated that creating a return label is the responsibility of the customer.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# OpenTrial
+
+A trial design in which the researcher knows the full details of the treatment, and so does the patient.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

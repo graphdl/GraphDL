@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# paymentMethodId
+
+An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
+
+## Property of
+
+
+

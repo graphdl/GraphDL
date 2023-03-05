@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# KosherDiet
+
+A diet conforming to Jewish dietary practices.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

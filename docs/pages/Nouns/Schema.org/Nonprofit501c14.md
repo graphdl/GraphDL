@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501c14
+
+Nonprofit501c14: Non-profit type referring to State-Chartered Credit Unions, Mutual Reserve Funds.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

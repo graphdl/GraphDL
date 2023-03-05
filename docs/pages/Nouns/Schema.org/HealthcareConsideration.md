@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# HealthcareConsideration
+
+Item is a pharmaceutical (e.g., a prescription or OTC drug) or a restricted medical device.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

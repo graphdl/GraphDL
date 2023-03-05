@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# CardiovascularExam
+
+Cardiovascular system assessment with clinical examination.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

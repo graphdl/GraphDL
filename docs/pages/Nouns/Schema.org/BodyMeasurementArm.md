@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# BodyMeasurementArm
+
+Arm length (measured between arms/shoulder line intersection and the prominent wrist bone). Used, for example, to fit shirts.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

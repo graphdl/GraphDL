@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# EUEnergyEfficiencyCategoryF
+
+Represents EU Energy Efficiency Class F as defined in EU energy labeling regulations.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

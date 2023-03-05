@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# HowItWorksHealthAspect
+
+Content that discusses and explains how a particular health-related topic works, e.g. in terms of mechanisms and underlying science.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

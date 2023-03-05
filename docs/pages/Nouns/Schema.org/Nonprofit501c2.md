@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501c2
+
+Nonprofit501c2: Non-profit type referring to Title-holding Corporations for Exempt Organizations.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

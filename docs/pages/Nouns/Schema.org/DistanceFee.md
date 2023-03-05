@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# DistanceFee
+
+Represents the distance fee (e.g., price per km or mile) part of the total price for an offered product, for example a car rental.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

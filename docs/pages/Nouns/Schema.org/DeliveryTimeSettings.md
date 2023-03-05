@@ -1,0 +1,28 @@
+import Link from 'next/link'
+
+# DeliveryTimeSettings
+
+A DeliveryTimeSettings represents re-usable pieces of shipping information, relating to timing. It is designed for publication on an URL that may be referenced via the <Link href="/shippingSettingsLink">shippingSettingsLink</Link> property of an <a class="localLink" href="/OfferShippingDetails">OfferShippingDetails</a>. Several occurrences can be published, distinguished (and identified/referenced) by their different values for <a class="localLink" href="/transitTimeLabel">transitTimeLabel</a>.
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [alternateName](/Properties/Schema.org/alternateName)
+,* [deliveryTime](/Properties/Schema.org/deliveryTime)
+,* [description](/Properties/Schema.org/description)
+,* [disambiguatingDescription](/Properties/Schema.org/disambiguatingDescription)
+,* [identifier](/Properties/Schema.org/identifier)
+,* [image](/Properties/Schema.org/image)
+,* [isUnlabelledFallback](/Properties/Schema.org/isUnlabelledFallback)
+,* [mainEntityOfPage](/Properties/Schema.org/mainEntityOfPage)
+,* [name](/Properties/Schema.org/name)
+,* [potentialAction](/Properties/Schema.org/potentialAction)
+,* [sameAs](/Properties/Schema.org/sameAs)
+,* [shippingDestination](/Properties/Schema.org/shippingDestination)
+,* [subjectOf](/Properties/Schema.org/subjectOf)
+,* [transitTimeLabel](/Properties/Schema.org/transitTimeLabel)
+,* [url](/Properties/Schema.org/url)
+
+</Grid>
+

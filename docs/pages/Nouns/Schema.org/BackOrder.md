@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# BackOrder
+
+Indicates that the item is available on back order.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

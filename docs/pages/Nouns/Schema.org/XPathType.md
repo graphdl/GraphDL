@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# XPathType
+
+Text representing an XPath (typically but not necessarily version 1.0).
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

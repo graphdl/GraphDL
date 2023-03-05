@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# WearableSizeSystemIT
+
+Italian size system for wearables.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

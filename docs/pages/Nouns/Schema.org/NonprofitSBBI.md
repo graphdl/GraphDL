@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# NonprofitSBBI
+
+NonprofitSBBI: Non-profit type referring to a Social Interest Promoting Institution (NL).
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

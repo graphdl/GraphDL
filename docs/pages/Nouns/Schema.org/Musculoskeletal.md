@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Musculoskeletal
+
+A specific branch of medical science that pertains to diagnosis and treatment of disorders of muscles, ligaments and skeletal system.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

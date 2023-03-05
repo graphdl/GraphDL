@@ -1,0 +1,37 @@
+import Link from 'next/link'
+
+# MedicalStudy
+
+A medical study is an umbrella type covering all kinds of research studies relating to human medicine or health, including observational studies and interventional trials and registries, randomized, controlled or not. When the specific type of study is known, use one of the extensions of this type, such as MedicalTrial or MedicalObservationalStudy. Also, note that this type should be used to mark up data that describes the study itself; to tag an article that publishes the results of a study, use MedicalScholarlyArticle. Note: use the code property of MedicalEntity to store study IDs, e.g. clinicaltrials.gov ID.
+
+## Properties
+
+<Grid>
+* [additionalType](/Properties/Schema.org/additionalType)
+,* [alternateName](/Properties/Schema.org/alternateName)
+,* [code](/Properties/Schema.org/code)
+,* [description](/Properties/Schema.org/description)
+,* [disambiguatingDescription](/Properties/Schema.org/disambiguatingDescription)
+,* [funding](/Properties/Schema.org/funding)
+,* [guideline](/Properties/Schema.org/guideline)
+,* [healthCondition](/Properties/Schema.org/healthCondition)
+,* [identifier](/Properties/Schema.org/identifier)
+,* [image](/Properties/Schema.org/image)
+,* [legalStatus](/Properties/Schema.org/legalStatus)
+,* [mainEntityOfPage](/Properties/Schema.org/mainEntityOfPage)
+,* [medicineSystem](/Properties/Schema.org/medicineSystem)
+,* [name](/Properties/Schema.org/name)
+,* [potentialAction](/Properties/Schema.org/potentialAction)
+,* [recognizingAuthority](/Properties/Schema.org/recognizingAuthority)
+,* [relevantSpecialty](/Properties/Schema.org/relevantSpecialty)
+,* [sameAs](/Properties/Schema.org/sameAs)
+,* [sponsor](/Properties/Schema.org/sponsor)
+,* [status](/Properties/Schema.org/status)
+,* [study](/Properties/Schema.org/study)
+,* [studyLocation](/Properties/Schema.org/studyLocation)
+,* [studySubject](/Properties/Schema.org/studySubject)
+,* [subjectOf](/Properties/Schema.org/subjectOf)
+,* [url](/Properties/Schema.org/url)
+
+</Grid>
+

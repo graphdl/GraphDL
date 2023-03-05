@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# UnemploymentSupport
+
+UnemploymentSupport: this is a benefit for unemployment support.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

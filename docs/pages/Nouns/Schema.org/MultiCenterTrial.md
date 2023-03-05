@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# MultiCenterTrial
+
+A trial that takes place at multiple centers.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# BodyMeasurementHand
+
+Maximum hand girth (measured over the knuckles of the open right hand excluding thumb, fingers together). Used, for example, to fit gloves.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Tuesday
+
+The day of the week between Monday and Wednesday.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

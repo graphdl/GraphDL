@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# ListPrice
+
+Represents the list price (the price a product is actually advertised for) of an offered product.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Dentistry
+
+A branch of medicine that is involved in the dental care.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

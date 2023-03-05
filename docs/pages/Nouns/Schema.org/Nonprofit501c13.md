@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501c13
+
+Nonprofit501c13: Non-profit type referring to Cemetery Companies.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# alcoholWarning
+
+Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.
+
+## Property of
+
+
+

@@ -1,0 +1,12 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# workExample
+
+Example/instance/realization/derivation of the concept of this creative work. E.g. the paperback edition, first edition, or e-book.
+
+## Property of
+
+
+

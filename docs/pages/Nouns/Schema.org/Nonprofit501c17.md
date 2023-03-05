@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Nonprofit501c17
+
+Nonprofit501c17: Non-profit type referring to Supplemental Unemployment Benefit Trusts.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

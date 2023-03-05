@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# MerchantReturnFiniteReturnWindow
+
+Specifies that there is a finite window for product returns.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

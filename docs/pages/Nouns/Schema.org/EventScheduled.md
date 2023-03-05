@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# EventScheduled
+
+The event is taking place or has taken place on the startDate as scheduled. Use of this value is optional, as it is assumed by default.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

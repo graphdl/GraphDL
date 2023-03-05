@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# MusicAlbumProductionType
+
+Classification of the album by its type of content: soundtrack, live album, studio album, etc.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

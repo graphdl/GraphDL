@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Toxicologic
+
+A specific branch of medical science that is concerned with poisons, their nature, effects and detection and involved in the treatment of poisoning.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

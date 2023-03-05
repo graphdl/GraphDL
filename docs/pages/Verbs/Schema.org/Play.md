@@ -1,0 +1,45 @@
+import Link from 'next/link'
+
+# Play
+
+The act of playing/exercising/training/performing for enjoyment, leisure, recreation, competition or exercise.<br/><br/>
+
+Related actions:<br/><br/>
+
+<ul>
+<li><Link href="/ListenAction">ListenAction</Link>: Unlike ListenAction (which is under ConsumeAction), PlayAction refers to performing for an audience or at an event, rather than consuming music.</li>
+<li><a class="localLink" href="/WatchAction">WatchAction</a>: Unlike WatchAction (which is under ConsumeAction), PlayAction refers to showing/displaying for an audience or at an event, rather than consuming visual content.</li>
+</ul>
+
+## Properties
+
+<Grid>
+* [actionStatus](/Properties/Schema.org/actionStatus)
+,* [additionalType](/Properties/Schema.org/additionalType)
+,* [agent](/Properties/Schema.org/agent)
+,* [alternateName](/Properties/Schema.org/alternateName)
+,* [audience](/Properties/Schema.org/audience)
+,* [description](/Properties/Schema.org/description)
+,* [disambiguatingDescription](/Properties/Schema.org/disambiguatingDescription)
+,* [endTime](/Properties/Schema.org/endTime)
+,* [error](/Properties/Schema.org/error)
+,* [event](/Properties/Schema.org/event)
+,* [identifier](/Properties/Schema.org/identifier)
+,* [image](/Properties/Schema.org/image)
+,* [instrument](/Properties/Schema.org/instrument)
+,* [location](/Properties/Schema.org/location)
+,* [mainEntityOfPage](/Properties/Schema.org/mainEntityOfPage)
+,* [name](/Properties/Schema.org/name)
+,* [object](/Properties/Schema.org/object)
+,* [participant](/Properties/Schema.org/participant)
+,* [potentialAction](/Properties/Schema.org/potentialAction)
+,* [provider](/Properties/Schema.org/provider)
+,* [result](/Properties/Schema.org/result)
+,* [sameAs](/Properties/Schema.org/sameAs)
+,* [startTime](/Properties/Schema.org/startTime)
+,* [subjectOf](/Properties/Schema.org/subjectOf)
+,* [target](/Properties/Schema.org/target)
+,* [url](/Properties/Schema.org/url)
+
+</Grid>
+

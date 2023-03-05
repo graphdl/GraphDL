@@ -1,0 +1,13 @@
+import Link from 'next/link'
+  
+import Grid from '@components/Grid'
+
+# workFeatured
+
+A work featured in some event, e.g. exhibited in an ExhibitionEvent.
+       Specific subproperties are available for workPerformed (e.g. a play), or a workPresented (a Movie at a ScreeningEvent).
+
+## Property of
+
+
+

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Specialty
+
+Any branch of a field in which people typically develop specific expertise, usually after significant study, time, and effort.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

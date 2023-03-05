@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# CarUsageType
+
+A value indicating a special usage of a car, e.g. commercial rental, driving school, or as a taxi.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

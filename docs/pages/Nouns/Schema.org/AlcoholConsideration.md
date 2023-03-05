@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# AlcoholConsideration
+
+Item contains alcohol or promotes alcohol consumption.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

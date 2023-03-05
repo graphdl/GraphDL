@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# LegalForceStatus
+
+A list of possible statuses for the legal force of a legislation.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

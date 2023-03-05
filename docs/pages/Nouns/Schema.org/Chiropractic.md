@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# Chiropractic
+
+A system of medicine focused on the relationship between the body's structure, mainly the spine, and its functioning.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+

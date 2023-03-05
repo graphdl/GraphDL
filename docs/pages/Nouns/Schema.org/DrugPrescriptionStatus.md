@@ -1,0 +1,13 @@
+import Link from 'next/link'
+
+# DrugPrescriptionStatus
+
+Indicates whether this drug is available by prescription or over-the-counter.
+
+## Properties
+
+<Grid>
+* [](/Properties/Schema.org/)
+
+</Grid>
+
