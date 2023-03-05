@@ -8,6 +8,9 @@ Transaction:
   _verb: buys
   _object: vehicle
   _inverse: sells
-  buyer: Consumer | Dealer
-  seller: Consumer | Dealer
-  vehicle: Vehicle
+  buyer: Consumer.buys | Dealer.buys!
+  seller: Consumer.sells | Dealer.sells!
+  vehicle: Vehicle.transactions!
+  mileage: number!
+  price: currency!
+  trade: Transaction

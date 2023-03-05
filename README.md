@@ -2,6 +2,83 @@
 
 GraphDL is a graph-based data language for describing data models and data relationships.  It was designed as a full-stack declarative language for a post-ChatGPT world.
 
+```mermaid
+
+```mermaid
+erDiagram
+Graph ||--o{ Noun : has
+Graph ||--o{ Verb : has
+Noun ||--o{ Resource : has
+Verb }o--|| Action : does
+Verb ||--|| Noun : subject
+Verb ||--|| Noun : object
+Action ||--|| Resource : subject
+Action ||--|| Resource : object
+Verb ||--|| Trigger : triggers
+Trigger ||--o{ Event : has
+
+```
+
+```yaml
+Graph:
+  nouns: [Noun.graph]
+  verbs: [Verb.graph]
+  triggers: [Trigger.graph]
+  roles: [Role.graph]
+  tenant: Tenant.graphs
+
+Noun:
+  graph: Graph.nouns
+  subjectOf: [Verb->subject]
+  objectOf: [Verb->object]
+  instances: [Resource->type]
+
+Resource:
+  type: Noun.instances
+  subjectOf: [Action->subject]
+  objectOf: [Action->object]
+  data: Data
+
+Verb:
+  graph: Graph.verbs
+  actions: [Action->verb]
+  triggers: [Trigger->verb]
+  function: Function
+
+Action:
+  subject: Resource.subjectOf
+  verb: Verb.actions
+  object: Resource.objectOf
+  events: [Event->action]
+
+Trigger:
+  graph: Graph.triggers
+  verb: Verb.trigger
+  events: [Event->trigger]
+
+Event:
+  trigger: Trigger.events
+  action: Action.events
+
+Role:
+  graph: Graph.roles
+  users: [User->role]
+
+Tenant: 
+  graphs: [Graph->tenant]
+  users: [User->tenants]
+  admins: [User->adminOf]
+  owners: [User->ownerOf]
+
+User:
+  roles: [Role.users]
+  tenants: [Tenant.users]
+  adminOf: [Tenant.admins]
+  ownerOf: [Tenant.owners]
+```
+
+
+
 ```yaml
 User:
  _id:   email
