@@ -33,5 +33,6 @@ export const getStaticProps = () => {
 
 {/* {props.nouns.map(noun => <Chip text={noun}/> )} */}
 <ul>
-{props.verbs.map(verb => <li><Link href={'/Verbs/' + verb}>{verb}</Link></li> )}
+{/* {props.verbs.map(verb => <li><Link href={'/Verbs/' + verb}>{verb}</Link></li> )} */}
+{props.verbs.map(verb => <li><Link href={'/Verbs/Schema.org/' + verb}>{verb}</Link></li> )}
 </ul>
