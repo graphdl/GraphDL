@@ -7,13 +7,9 @@ const fs = require('fs')
 
 for (const schema of schemaProperties) {
   const name = schema.label === 'Action' ? schema.label : schema.label.replace('Action', '')
-  const md = `import Link from 'next/link'
-  
-import Grid from '@components/Grid'
+  const md = `# ${name}
 
-# ${name}
-
-${schema.comment?.replace('<a class=\"localLink\"','<Link').replace('</a>','</Link>')}
+${schema.comment}
 
 ## Property of
 
@@ -29,11 +25,9 @@ ${schema.comment?.replace('<a class=\"localLink\"','<Link').replace('</a>','</Li
 
 for (const schema of schemaTypes) {
   const name = schema.label === 'Action' ? schema.label : schema.label.replace('Action', '')
-  const md = `import Link from 'next/link'
+  const md = `# ${name}
 
-# ${name}
-
-${schema.comment?.replace('<a class=\"localLink\"','<Link').replace('</a>','</Link>')}
+${schema.comment}
 
 ## Properties
 
@@ -48,3 +42,8 @@ ${schema.properties.split(', ').map(property => {
   const _type = schema.label.match(/..+Action$/) ? 'Verbs' : 'Nouns'
   fs.writeFileSync(`./pages/${_type}/Schema.org/${name}.mdx`, md)
 }
+
+// import Grid from '@components/Grid'
+// import Link from 'next/link'
+  
+// ${schema.comment?.replace('<a class=\"localLink\"','<Link').replace('</a>','</Link>')}
