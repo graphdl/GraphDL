@@ -21,7 +21,7 @@ ${schema.comment?.replace('<a class=\"localLink\"','<Link').replace('</a>','</Li
 
 `
   const _type = schema.label.match(/..+Action$/) ? 'Verbs' : 'Nouns'
-  fs.writeFileSync(`./pages/Properties/Schema.org/${name}.md`, md)
+  fs.writeFileSync(`./pages/Properties/Schema.org/${name}.mdx`, md)
 }
 
 
@@ -46,5 +46,5 @@ ${schema.properties.split(', ').map(property => {
 
 `
   const _type = schema.label.match(/..+Action$/) ? 'Verbs' : 'Nouns'
-  fs.writeFileSync(`./pages/${_type}/Schema.org/${name}.md`, md)
+  fs.writeFileSync(`./pages/${_type}/Schema.org/${name}.mdx`, md)
 }
