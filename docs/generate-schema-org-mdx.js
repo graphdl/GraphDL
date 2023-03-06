@@ -25,7 +25,9 @@ ${schema.comment}
 
 for (const schema of schemaTypes) {
   const name = schema.label === 'Action' ? schema.label : schema.label.replace('Action', '')
-  const md = `# ${name}
+  const md = `import { Grid } from '@/components/Grid'
+  
+# ${name}
 
 ${schema.comment}
 
@@ -34,8 +36,8 @@ ${schema.comment}
 <Grid>
 ${schema.properties.split(', ').map(property => {
   const prop = property.replace('https://schema.org/','')
-  return `* [${prop}](/Properties/Schema.org/${prop})\n`
-})}
+  return `* [${prop}](/Properties/Schema.org/${prop})`
+}).join('\n')}
 </Grid>
 
 `
