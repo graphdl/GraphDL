@@ -86,7 +86,7 @@ export type Action = Noun & {
   _plural: 'Actions'
   _description: 'An Action happens when an instance of a Noun (i.e. Resource) does a Verb to a different Resource.'
   _subject: Resources
-  _verb: Verbs
+  _action: Verbs
   _object: Resources
 }
 
