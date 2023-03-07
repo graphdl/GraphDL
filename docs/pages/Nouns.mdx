@@ -8,35 +8,140 @@ has [Properties](/Properties) that describe its attributes.
 [Nouns](/Nouns/Noun) relate to each other through [Verbs](/Verbs).
 [Triggers](/Triggers) are the potential [Events](/Events) that can
 happen to a [Noun](/Nouns/Noun). A [Resource](/Nouns/Resource) is a specific
-instance of a [Noun](/Nouns/Noun), and an [Action](/Nouns/Action) is a
-specific instance of a [Verb](/Verbs) relating to specific instances of
-[Nouns](/Nouns), and an [Event](/Nouns/Event) is an instance of a 
-[Trigger](/Nouns/Trigger).
+instance of a [Noun](/Nouns/Noun).
 
-<Grid>
-  <ListItem icon='■●' name='Graph'/>
-  <ListItem icon='■' name='Noun'/>
-  <ListItem icon='●' name='Verb'/>
-  <ListItem icon='◆' name='Trigger'/> 
-  <ListItem icon='∷' name='Property'/>
-  <ListItem icon='□' name='Resource'/>
-  <ListItem icon='○' name='Action'/>
-  <ListItem icon='◇' name='Event'/>
-  {/* <ListItem icon='⧆' name='Query'/>
-  <ListItem icon='⊛' name='Search'/> */}
-  <ListItem icon='入' name='API'/>
-  <ListItem icon='❴❵' name='Data'/>
-  <ListItem icon='❪❫' name='Function'/>
-  <ListItem icon='❮❯' name='UI'/>
-  <ListItem icon='▼' name='Role'/>
-  <ListItem icon='☶' name='Site'/>
-  <ListItem icon='⧉' name='App'/>
-  <ListItem icon='☱' name='Docs'/>
-  <ListItem icon='▽' name='User'/>
-  <ListItem icon='△' name='Tenant'/>
-  <ListItem icon='⟢' name='Request'/>
-  <ListItem icon='⟣' name='Response'/>
-</Grid>
+## Defining a Noun
+
+The simple syntax for defining a Noun is:
+
+```yaml
+☁️ SaaS: Software as a Service (WebApplication)
+```
+
+is the same as the full syntax:
+
+```yaml
+SaaS:
+  _id: saas
+  _name: SaaS
+  _icon: ☁️
+  _description: Software as a Service
+  _type: https://schema.org/WebApplication
+```
+
+## Internal Properties
+
+Properties that start with an underscore (`_`) are internal properties of a noun that
+provide semantic and functional information about the Noun.
+
+### `_id`
+
+The `_id` property is the unique identifier for the Noun.  It is used to
+reference the Noun in other parts of the Graph.  It is also used to
+generate the URL for the Noun's representation in the App, API, Site, and Docs.
+
+### `_name`
+
+The `_name` property is the name of the Noun.  It is used to generate the
+human-readable title of the Noun's representation in the App, API, Site, and Docs.
+
+### `_icon`
+
+The `_icon` property is the icon of the Noun.  It provides the visual representation 
+of the Noun in the App, API, Site, and Docs.
+
+### `_description`
+
+The `_description` property is the description of the Noun.  It is used to generate the
+human-readable description of the Noun's representation in the App, API, Site, and Docs.
+
+### `_type`
+
+The `_type` property is the base class that Noun inherits from.  It can be another Noun 
+in the Graph, a Noun that was [imported], the name or URL of the [Thing](/Nouns/Thing) on Schema.org, 
+or the URL of any JSON Schema or TypeScript Type.  All Properties on the base Noun are
+inherited by the Noun.
+
+### `_sameAs`
+
+The `_sameAs` property is the URL of the Noun's representation in Schema.org.  It provides
+the synonymous or canonical representation of the Noun without inheriting any of the
+properties of the referenced Noun. This is useful for defining Nouns where you don't want
+to inherit all of the properties of the referenced Noun.
+
+```yaml
+SaaS:
+  _id: saas
+  _name: SaaS
+  _icon: ☁️
+  _description: Software as a Service
+  _type: https://schema.org/WebApplication
+```
+
+### `_source`
+
+The `_source` property is the URL of the Noun's source data.  A Noun with a `_source` property
+implies it is a read-only Noun in a Graph, so it's resources cannot be modified.  It is useful for defining
+Nouns with Resources that are imported from external sources.
+
+```yaml
+Country:
+  _plural: Countries
+  _source: https://json.fyi/countries.json
+  _id:     cca2
+  _name:   name.common
+  _icon:   🌎
+```
+
+### `_seed`
+
+The `_seed` property is the URL of the Noun's seed data.  A Noun with a `_seed` property
+gets its initial Resources seeded from the data at the URL, but Resources can be created, updated,
+and deleted.
+
+```yaml
+Product:
+  _id:   entityId
+  _name: productName
+  _seed: https://json.fyi/northwind/products.json
+```
+
+## Calculated Properties
+
+### Property References
+
+Properties can be calculated by referencing other properties in the Noun like `_id: iata` 
+
+```yaml
+Colo:
+ _id:     iata
+ _source: https://speed.cloudflare.com/locations
+ iata:    string
+ ```
+
+### String Literals
+
+Properties can be calculated by using string literals like `_name: ${iata} - ${city}, ${cca2}, ${region}`
+
+ ```yaml
+Colo:
+ _name:   ${iata} - ${city}, ${cca2}, ${region}
+ _source: https://speed.cloudflare.com/locations
+ ```
+
+### JavaScript Functions
+
+Calculated Properties can be written JavaScript expressions like `Date.now() + 1000 * 60 * 60 * 24 * 30`
+
+```yaml
+Cache:
+  expires: Date.now() + 1000 * 60 * 60 * 24 * 30
+```
+
+
+
+Properties 
+
 
 ## Schema.org
 

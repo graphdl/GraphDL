@@ -1,4 +1,6 @@
 import { Tab, Tabs } from 'nextra-theme-docs'
+import { Grid } from '../components/Grid'
+import { ListItem } from '../components/ListItem'
  
 # ■●■ GraphDL - Graph Definition Language
 
@@ -295,6 +297,43 @@ The generated [Javascript](/#) and [Typescript](/#) code includes the base data 
 
 That can be deployed anywhere including [Cloudflare Workers](/#), [Deno Deploy](/#), [Fly.io](/#), [AWS](/#), [Azure](/#), [GCP](/#)
 or with self-hosted containers
+
+
+
+Nouns are the things in a [Graph](/Nouns/Graph).  Every [Noun](/Nouns/Noun)
+has [Properties](/Properties) that describe its attributes.
+[Nouns](/Nouns/Noun) relate to each other through [Verbs](/Verbs).
+[Triggers](/Triggers) are the potential [Events](/Events) that can
+happen to a [Noun](/Nouns/Noun). A [Resource](/Nouns/Resource) is a specific
+instance of a [Noun](/Nouns/Noun), and an [Action](/Nouns/Action) is a
+specific instance of a [Verb](/Verbs) relating to specific instances of
+[Nouns](/Nouns), and an [Event](/Nouns/Event) is an instance of a 
+[Trigger](/Nouns/Trigger).
+
+<Grid>
+  <ListItem icon='■●' name='Graph'/>
+  <ListItem icon='■' name='Noun'/>
+  <ListItem icon='●' name='Verb'/>
+  <ListItem icon='◆' name='Trigger'/> 
+  <ListItem icon='∷' name='Property'/>
+  <ListItem icon='□' name='Resource'/>
+  <ListItem icon='○' name='Action'/>
+  <ListItem icon='◇' name='Event'/>
+  {/* <ListItem icon='⧆' name='Query'/>
+  <ListItem icon='⊛' name='Search'/> */}
+  <ListItem icon='入' name='API'/>
+  <ListItem icon='❴❵' name='Data'/>
+  <ListItem icon='❪❫' name='Function'/>
+  <ListItem icon='❮❯' name='UI'/>
+  <ListItem icon='▼' name='Role'/>
+  <ListItem icon='☶' name='Site'/>
+  <ListItem icon='⧉' name='App'/>
+  <ListItem icon='☱' name='Docs'/>
+  <ListItem icon='▽' name='User'/>
+  <ListItem icon='△' name='Tenant'/>
+  <ListItem icon='⟢' name='Request'/>
+  <ListItem icon='⟣' name='Response'/>
+</Grid>
 
 ## ■● Graph
 
