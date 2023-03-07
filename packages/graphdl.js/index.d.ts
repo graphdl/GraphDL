@@ -20,6 +20,8 @@ export type Graph = Noun & {
   users: (args: Search) => Promise<User[]>
 }
 
+export type Nouns = `[${keyof Graph['nouns']}`
+
 export type Noun = {
   _id: string
   _icon: string
@@ -89,13 +91,14 @@ export type Action = Noun & {
 }
 
 
-export type Nouns = 
+export type Relationship = 
   `${keyof Graph['nouns']}` // 1:1 Embedded
   | `[${keyof Graph['nouns']}]` // 1:N Embedded
   | `${keyof Graph['nouns']}.${keyof Graph['nouns']['noun']}` // 1:1 Reference
   | `${keyof Graph['nouns']}->${keyof Graph['nouns']['noun']}` // 1:1 Lookup
   | `[${keyof Graph['nouns']}.${keyof Graph['nouns']['noun']}]` // 1:N Reference
   | `[${keyof Graph['nouns']}->${keyof Graph['nouns']['noun']}]` // 1:N Lookup
+  | `[${keyof Graph['nouns']}-->${keyof Graph['nouns']['noun']}]` // 1:N Graph Lookup
 
 export type Verbs = `${keyof Graph['verbs']}`
 export type Resources = `${keyof Graph['nouns']}/${string}`
@@ -105,7 +108,7 @@ export type Properties = {
   [property: string]: Property | `[${Property}]` | `${Property}!` 
 }
 
-export type Property = 'string' | 'markdown' | 'url' | 'email' | 'phone' | 'date' | 'time' | 'datetime' | 'timestamp' | 'number' | 'integer' | 'currency' | 'boolean' | 'object'
+export type Property = 'string' | 'markdown' | 'url' | 'email' | 'phone' | 'date' | 'time' | 'datetime' | 'timestamp' | 'duration' | 'number' | 'integer' | 'currency' | 'boolean' | 'object'
 export type Visibility = 'anonymous' | 'public' | 'tenant' | 'user' | 'admin'
 export type URL = `https://${string}.${string}`
 export type DefaultRoles = 'anonymous' | 'public' | 'tenant' | 'user' | 'admin'
@@ -113,6 +116,13 @@ export type Source = {
   url: URL
   // ToDo: Flesh out the rest of the source object
 }
+
+export type DurationPeriod = 'millisecond' | 'second' | 'minute' | 'hour' | 'day' | 'week' | 'month' | 'year'
+export type DurationPeriods = DurationPeriod | `${DurationPeriod}s`
+export type DurationAbbreviations = 'ms' | 's' | 'm' | 'h' | 'd' | 'D' | 'w' | 'W' | 'mo' | 'M' | 'y' | 'Y'
+export type Duration = `${number} ${DurationPeriods}` | `${number}${DurationAbbreviations}`
+export type Durations = Duration | `${Duration}${Duration}` | `${Duration} ${Duration}` |
+                        `${Duration}${Duration}${Duration}` | `${Duration} ${Duration}} ${Duration}`
 
 export type Search = {
   page: number
