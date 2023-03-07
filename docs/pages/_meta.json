@@ -15,5 +15,11 @@
   "APIs": "入 APIs",
   "Data": "❴❵ Data",
   "Functions": "❪❫ Functions",
-  "UI": "❮❯ UI"
+  "UI": "❮❯ UI",
+  "----": {
+    "type": "separator"
+  },
+  "epcis": "GS1 EPCIS & CBV",
+  "saas": "OpenSaaS.org",
+  "schema": "Schema.org"
 }
