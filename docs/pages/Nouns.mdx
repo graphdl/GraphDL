@@ -40,20 +40,59 @@ The `_id` property is the unique identifier for the Noun.  It is used to
 reference the Noun in other parts of the Graph.  It is also used to
 generate the URL for the Noun's representation in the App, API, Site, and Docs.
 
+```yaml {2}
+SaaS:
+  _id: saas
+  _name: SaaS
+  _icon: ☁️
+  _description: Software as a Service
+  _type: https://schema.org/WebApplication
+```
+
 ### `_name`
 
 The `_name` property is the name of the Noun.  It is used to generate the
 human-readable title of the Noun's representation in the App, API, Site, and Docs.
+
+
+```yaml {3}
+SaaS:
+  _id: saas
+  _name: SaaS
+  _icon: ☁️
+  _description: Software as a Service
+  _type: https://schema.org/WebApplication
+```
 
 ### `_icon`
 
 The `_icon` property is the icon of the Noun.  It provides the visual representation 
 of the Noun in the App, API, Site, and Docs.
 
+
+```yaml {4}
+SaaS:
+  _id: saas
+  _name: SaaS
+  _icon: ☁️
+  _description: Software as a Service
+  _type: https://schema.org/WebApplication
+```
+
 ### `_description`
 
 The `_description` property is the description of the Noun.  It is used to generate the
 human-readable description of the Noun's representation in the App, API, Site, and Docs.
+
+
+```yaml {5}
+SaaS:
+  _id: saas
+  _name: SaaS
+  _icon: ☁️
+  _description: Software as a Service
+  _type: https://schema.org/WebApplication
+```
 
 ### `_type`
 
@@ -62,6 +101,16 @@ in the Graph, a Noun that was [imported], the name or URL of the [Thing](/Nouns/
 or the URL of any JSON Schema or TypeScript Type.  All Properties on the base Noun are
 inherited by the Noun.
 
+
+```yaml {6}
+SaaS:
+  _id: saas
+  _name: SaaS
+  _icon: ☁️
+  _description: Software as a Service
+  _type: https://schema.org/WebApplication
+```
+
 ### `_sameAs`
 
 The `_sameAs` property is the URL of the Noun's representation in Schema.org.  It provides
@@ -69,7 +118,7 @@ the synonymous or canonical representation of the Noun without inheriting any of
 properties of the referenced Noun. This is useful for defining Nouns where you don't want
 to inherit all of the properties of the referenced Noun.
 
-```yaml
+```yaml {6}
 SaaS:
   _id: saas
   _name: SaaS
@@ -85,7 +134,7 @@ implies it is a read-only Noun in a Graph, so it's resources cannot be modified.
 Nouns with Resources that are imported from external sources.
 
 ```yaml
-Country:
+Country: {3}
   _plural: Countries
   _source: https://json.fyi/countries.json
   _id:     cca2
@@ -100,7 +149,7 @@ gets its initial Resources seeded from the data at the URL, but Resources can be
 and deleted.
 
 ```yaml
-Product:
+Product: {3}
   _id:   entityId
   _name: productName
   _seed: https://json.fyi/northwind/products.json
