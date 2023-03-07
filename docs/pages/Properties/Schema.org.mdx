@@ -5,8 +5,8 @@ import * as fs from 'fs'
 # Schema.org
 
 <ul>
-{/* {props.properties.map(property => <li><Link href={'/Properties/' + property}>{property}</Link></li> )} */}
-{props.properties.map(property => <li><Link href={'/Properties/Schema.org/' + property}>{property}</Link></li> )}
+{props.properties.map(property => <li><Link href={'/Properties/' + property}>{property}</Link></li> )}
+{/* {props.properties.map(property => <li><Link href={'/Properties/Schema.org/' + property}>{property}</Link></li> )} */}
 </ul>
 
 export const getStaticProps = () => {

@@ -8,6 +8,12 @@ export const getStaticProps = async ({params}) => {
 
   const schema = graph.find(item => item.label === id)
 
+  if (!schema) {
+    return {
+      notFound: true,
+    }
+  }
+
   return {
     props: {
       schema
@@ -22,7 +28,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths: [],
-    fallback: true
+    fallback: 'blocking'
   }
 }
 
