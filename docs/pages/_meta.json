@@ -19,7 +19,8 @@
   "----": {
     "type": "separator"
   },
-  "epcis": "GS1 EPCIS & CBV",
-  "saas": "OpenSaaS.org",
-  "schema": "Schema.org"
+  "EPCIS": "GS1.org",
+  "SaaS": "OpenSaaS.org",
+  "Schema": "Schema.org",
+  "Wiki": "Wikipedia.org"
 }
