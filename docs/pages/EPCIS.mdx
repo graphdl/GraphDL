@@ -4,6 +4,8 @@
 
 ### Company
 
+Global Location Number (GLN) is used to identify Parties and locations like Companies, warehouses, factories, stores
+
 ## What
 
 ### Product
@@ -11,7 +13,7 @@
 Global Trade Item Number (GTIN) is used to identify Products and services, like a Can of soup, 
 chocolate bar, music album
 
-Global Model Number (GMN) - product model for Medical devices
+Global Model Number (GMN) is a product model for Medical devices
 
 ### Asset
 
@@ -51,17 +53,368 @@ Global Shipment Identification Number (GSIN) is used to identify
 
 ## When
 
+### Date Time
+
+### Duration
+
 ## Why
 
 ### Business Steps
 
+#### Accepting
+
+Denotes a specific activity within a business process where an object changes possession or ownership or both.
+
+#### Arriving
+
+Denotes a specific activity within a business process where an object arrives at a location.
+
+#### Assembling
+
+Denotes an activity within a business process whereby one or more objects are combined to create a new finished product.
+
+#### Collecting
+
+Denotes a specific activity within a business process where an object is picked up and collected for future disposal, recycling, or re-use.
+
+#### Commissioning
+
+Instance-level identifier has been created and encoded in a tag, or a class-level identifier is associated with instance-level identifiers for the first time.
+
+#### Consigning
+
+Indicates the overall process of staging_outbound, loading, departing, and accepting. It can be used when more granular process step information is unknown or inaccessible.
+
+#### Creating Class Instance
+
+Denotes a step in a business process where an instance or increased quantity of a class-level identifier is produced.
+
+#### Cycle Counting
+
+Process of counting objects within a location to get an accurate inventory for business needs other than accounting purposes (for example, replenishment and allocation).
+
+#### Decommissioning
+
+Instance-level identifier is disassociated from an object. The object can be recommissioned but with a new identifier.
+
+#### Departing
+
+Denotes a specific activity within a business process where an object leaves a location on its way to a destination.
+
+#### Destroying
+
+Process of terminating an object. For an instance-level identifier, the object won't be the subject of follow-up events.
+
+#### Disassembling
+
+Denotes a specific activity within a business process where an object is broken down into separate, uniquely identified component parts.
+
+#### Dispensing
+
+Denotes a specific activity within a business process where a product is made available in full or part to a consumer.
+
+#### Encoding
+
+Process of writing an instance-level identifier (typically an EPC) to a barcode or RFID tag, where the identifier isn't yet associated with an object at this step. Encoding must only be used in a TransactionEvent.
+
+#### Entering Exiting
+
+Denotes a specific activity at the Entrance/Exit door of a facility where customers are leaving with purchased product or entering with product to be returned.
+
+#### Holding
+
+Denotes a specific activity within a business process where an object is separated for further review. inspecting Process of reviewing objects to address potential physical or documentation defects.
+
+#### Installing
+
+Denotes a specific activity within a business process where an object is put into a composite object (not merely a container).
+
+#### Killing
+
+Process of terminating an RFID tag previously associated with an object. The object and its instance-level identifier can continue to exist and be the subject of follow-up events (through a barcode, manual data entry, replacement tag, and so on).
+
+#### Loading
+
+Denotes a specific activity within a business process where an object is loaded into a shipping conveyance.
+
+#### Packing
+
+Items are packed into a larger container, such as aggregation.
+
+#### Picking
+
+Loose items are picked to fill a supplier order.
+
+#### Receiving
+
+Items are being received at a new location and are part of the receiver’s inventory.
+
+#### Removing
+
+Denotes a specific activity within a business process where an object is taken out of a composite object. Opposite of installing.
+
+#### Repacking
+
+Items are unpacked and repacked with a different packaging configuration, such as with another item type, or co-packing.
+
+#### Repairing
+
+Denotes a specific activity within a business process where a malfunctioning product is repaired (typically by a post-sales service), without replacing it with a new one.
+
+#### Replacing
+
+Denotes a specific activity within a business process where an object is substituted or exchanged for another object.
+
+#### Reserving
+
+Process in which a set of instance-level identifiers, not yet commissioned, are provided for use by another party.
+
+#### Retail Selling
+
+When an item is sold and ownership is transferred to the customer
+
+#### Sampling
+
+Denotes a testing activity within a business process where one or more portions of an object are examined for quality testing, quality inspection, or customs clearance purposes
+
+#### Sensor Reporting
+
+Denotes a specific activity within a business process where sensor data, pertaining to the physical properties and condition of an object or location, is returned.
+
+#### Shipping
+
+Represents staging, loading, and departing when more granular steps aren't required or known.
+
+#### Staging Outbound
+
+Denotes a specific activity within a business process in which an object moves from a facility to an area where it awaits transport.
+
+#### Stock Taking
+
+Process of counting objects within a location following established rules or standards or both for accounting purposes.
+
+#### Stocking
+
+Denotes a specific activity within a business process at a location to make an object available to the customer or for order fulfilment within a distribution center (DC).
+
+#### Storing
+
+Denotes a specific activity within a business process where an object is moved into and out of storage within a location.
+
+#### Transporting
+
+Process of moving an object from one location to another using a vehicle (for example, a ship, train, truck, or aircraft).
+
+#### Unloading
+
+Denotes a specific activity within a business process where an object is unloaded from a shipping conveyance.
+
+#### Unpacking
+
+Items are removed from a larger container and disaggregated into smaller units.
+
+#### Void Shipping
+
+Denotes a process of declaring that one or more objects in a prior outbound process.
+
 ### Business Transactions
+
+#### Bill of Lading
+
+A document issued by a carrier to a shipper, listing and acknowledging receipt of goods for transport and specifying terms of delivery
+
+#### Certificate
+
+A document confirming certain characteristics of an object (for example, product), person, or organization, typically issued by a third party.
+
+#### Dispatch Advice
+
+A document or message by means of which the seller or consignor informs the consignee about the dispatch of goods. Also called an “Advanced Shipment Notice,” but the value desadv is always used regardless of local nomenclature.
+
+#### Invoice
+
+A document or message claiming payment for goods or services supplied under conditions agreed by the seller and buyer.
+
+#### Pedigree
+
+A record that traces the ownership or custody and transactions of a product as it moves among various trading partners.
+
+#### Purchase Order
+
+A document/message that specifies details for goods and services ordered under conditions agreed by the seller and buyer.
+
+#### Purchase Order Confirmation
+
+A document that provides confirmation from an external supplier to the request of a purchaser to deliver a specified quantity of material, or perform a specified service, at a specified price within a specified time. (Sometimes internally called a “Sales Order”.)
+
+#### Production Order
+
+An organization-internal document or message issued by a producer that starts a manufacturing process of goods.
+#### Receiving Advice
+
+A document or message that provides the receiver of the shipment the capability to inform the shipper of actual goods received, compared to what was advised as being sent.
+
+#### Return Merchandise Authorization
+
+A document issued by the seller that authorizes a buyer to return merchandise for credit determination.
+
+#### Test Procedure
+
+A document that provides a formal specification of a sequence of instructions to verify one or several criteria.
+
+#### Test Result
+
+A document that includes the outcome of a given test procedure.
+
+#### Upstream EPCIS Event
+
+Event ID URI(s) of event(s) provided by an upstream supplier, such as packing and shipping events (for example, as the basis for the inferred completeness of inbound aggregations).
 
 ### Disposition
 
-### Source
+#### Active
 
-### Destination
+A new commissioned object has been introduced to the supply chain.
+
+#### Available
+
+Object has been returned to service or to the supply chain
+
+#### Completeness Inferred
+
+A downstream recipient infers that the contents of a shipment below the outer packing layer are complete, as indicated in EPCIS packing and shipping events provided by the upstream supplier.
+
+#### Completeness Verified
+
+A downstream recipient verifies that the contents of a shipment below the outer packing layer are complete. This verification requires unpacking and scanning the barcodes or EPC/RFID tags of the contents.
+
+#### Conformant
+
+Outcome of a successful, passed inspection in the inspecting or repairing step.
+
+#### Container Closed 
+
+Object has been loaded onto a container, the doors have been closed, and the shipment has been sealed.
+
+#### Container Open 
+
+A container’s doors have been opened or a seal of a shipment has been broken.
+
+#### Damaged
+
+An object has been damaged or reduced in value.
+
+#### Destroyed
+
+An object has been rendered unusable.
+
+#### Dispensed
+
+A full quantity of product is distributed to a consumer.
+
+#### Disposed
+
+Object has been returned for disposal.
+
+#### Encoded
+
+An instance-level identifier has been encoded to a tag.
+
+#### Expired
+
+An object is past its expiration date.
+
+#### In Progress
+
+Default state of an object in the supply chain.
+
+#### In Transit
+
+Object being shipped between two trading partners.
+
+#### Inactive
+
+Decommissioned object that can be reintroduced to the supply chain.
+
+#### Mismatch Class
+
+Class-level identifiers don't correspond to the identifiers that were expected.
+
+#### Mismatch Instance
+
+Instance-level identifiers don't correspond to the identifiers
+
+#### Mismatch Quantity
+
+Quantity doesn't correspond to the expected quantity.
+
+#### Needs Replacement
+
+Component(s) or other asset(s) must be replaced to ensure fulfilment of functional requirements.
+
+#### Non-Conformant
+
+Outcome of an unsuccessful/failed inspection in an inspecting or repairing step. Opposite of available.
+
+#### Non-Sellable Other
+
+Object can't be sold to a customer.
+
+#### Partially Dispensed
+
+A portion of a product is distributed to a customer, while additional product is retained for later distribution.
+
+#### Recalled
+
+An item has been recalled.
+
+#### Reserved
+
+Instance-level identifier has been allocated for a third party.
+
+#### Retail Sold
+
+Product has been purchased by a customer.
+
+#### Returned
+
+Object has been sent or brought back for various reasons. It might or might not be sellable.
+
+#### Sellable Accessible
+
+An item can be sold in a store to a customer.
+
+#### Sellable Not Accessible
+
+Product can be sold as is, but customers can't access product for purchase.
+
+#### Stolen
+
+An object has been taken without permission or right.
+
+#### Unavailable
+
+Object has been removed from service or from the supply chain (for example, pending repair).
+
+#### Unknown
+
+An object’s condition isn't known.
+
+
+### Source & Destination
+
+#### Owning Party
+
+The party who owns the object at the source or destination.
+
+#### Possessing Party
+
+The party with physical possession of the object at the included location.
+
+#### Location
+
+The source or destination denotes the physical location of the object after the event and must be consistent 
+with the Read Point.
 
 ## Where
 
@@ -71,3 +424,8 @@ Global Location Number (GLN) is used to identify Parties and locations like Comp
 
 ## How
 
+### Condition
+
+#### Sensor Element List	
+
+This is a new dimension which supports adding IoT sensor data to any event type.
