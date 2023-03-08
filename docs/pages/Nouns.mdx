@@ -26,7 +26,7 @@ So this example:
 
 Is the same as the full syntax:
 
-```yaml
+```yaml [[6, 0-100, https://schema.org]]
 SaaS:
   _id: saas
   _name: SaaS
@@ -139,8 +139,8 @@ The `_source` property is the URL of the Noun's source data.  A Noun with a `_so
 implies it is a read-only Noun in a Graph, so it's resources cannot be modified.  It is useful for defining
 Nouns with Resources that are imported from external sources.
 
-```yaml
-Country: {3}
+```yaml {3}
+Country:
   _plural: Countries
   _source: https://json.fyi/countries.json
   _id:     cca2
@@ -154,8 +154,8 @@ The `_seed` property is the URL of the Noun's seed data.  A Noun with a `_seed` 
 gets its initial Resources seeded from the data at the URL, but Resources can be created, updated,
 and deleted.
 
-```yaml
-Product: {3}
+```yaml {3}
+Product:
   _id:   entityId
   _name: productName
   _seed: https://json.fyi/northwind/products.json
@@ -167,7 +167,7 @@ Product: {3}
 
 Properties can be calculated by referencing other properties in the Noun like `_id: iata` 
 
-```yaml
+```yaml {2}
 Colo:
  _id:     iata
  _source: https://speed.cloudflare.com/locations
@@ -178,7 +178,7 @@ Colo:
 
 Properties can be calculated by using string literals like `_name: ${iata} - ${city}, ${cca2}, ${region}`
 
- ```yaml
+ ```yaml {2}
 Colo:
  _name:   ${iata} - ${city}, ${cca2}, ${region}
  _source: https://speed.cloudflare.com/locations
@@ -188,7 +188,7 @@ Colo:
 
 Calculated Properties can be written JavaScript expressions like `Date.now() + 1000 * 60 * 60 * 24 * 30`
 
-```yaml
+```yaml {2}
 Cache:
   expires: Date.now() + 1000 * 60 * 60 * 24 * 30
 ```
