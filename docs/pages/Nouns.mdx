@@ -161,9 +161,12 @@ Product:
   _seed: https://json.fyi/northwind/products.json
 ```
 
-## Calculated Properties
 
-### Property References
+## Properties 
+
+### Calculated Properties
+
+#### Property References
 
 Properties can be calculated by referencing other properties in the Noun like `_id: iata` 
 
@@ -174,7 +177,7 @@ Colo:
  iata:    string
  ```
 
-### String Literals
+#### String Literals
 
 Properties can be calculated by using string literals like `_name: ${iata} - ${city}, ${cca2}, ${region}`
 
@@ -184,7 +187,7 @@ Colo:
  _source: https://speed.cloudflare.com/locations
  ```
 
-### JavaScript Functions
+#### JavaScript Functions
 
 Calculated Properties can be written JavaScript expressions like `Date.now() + 1000 * 60 * 60 * 24 * 30`
 
@@ -193,9 +196,19 @@ Cache:
   expires: Date.now() + 1000 * 60 * 60 * 24 * 30
 ```
 
+## Relationships
 
+### Embedded One-to-One
 
-Properties 
+### Reference One-to-One
+
+### Embedded One-to-Many
+
+### Reference One-to-Many
+
+### Reference Many-to-Many
+
+### Graph Traversal Many-to-Many
 
 
 ## Schema.org
