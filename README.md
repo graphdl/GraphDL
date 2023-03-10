@@ -3,8 +3,6 @@
 GraphDL is a graph-based data language for describing data models and data relationships.  It was designed as a full-stack declarative language for a post-ChatGPT world.
 
 ```mermaid
-
-```mermaid
 erDiagram
 Graph ||--o{ Noun : has
 Graph ||--o{ Verb : has
