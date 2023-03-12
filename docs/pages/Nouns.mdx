@@ -161,6 +161,24 @@ Product:
   _seed: https://json.fyi/northwind/products.json
 ```
 
+### `_state`
+
+The `_state` property of a Noun is a Finite State Machine and the `_state` of a Resource represents it's current state and context.
+
+```yaml {3}
+Switch:
+  _state:
+    initial: inactive
+    states:
+      inactive:
+        on:
+          toggle: active
+      active:
+        on:
+          toggle: inactive
+       
+```
+
 
 ## Properties 
 
