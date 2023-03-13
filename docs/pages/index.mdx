@@ -82,53 +82,144 @@ Request:
 </Tab>
 <Tab>
 ```yaml filename="graphdl.yaml" copy
-_name:        Northwind
-_seed:        https://json.fyi/northwind.json
-_defaultId:   entityId
-_constraints: true
+SaaS:
+  plans: [Plan]
+  visitors: [Visitors->visits]
+  registrations: [Visitor->registrations]
+  logins: [User->logsIn]
+  users: [User->uses]
+  onboardings: [User->onboards]
+  activations: [User->activates]
+  subscriptions: [User->subscribes]
+  payments: [Customer->payments]
+  upgrades: [Customer->upgrades]
+  retention: [Customer->retains]
+  expansion: [Customer->expands]
+  refererrals: [Customer->refers]
+  churn: [Customer->cancels]
+  reactivations: [Customer->reactivates]
+  apiKeys: [User->apiKeys]
+  requests: [Request->SaaS]
+  errors: [Error->SaaS]
 
-Category:
- _name: ${categoryName} - ${description}
+
+Plan:
+  name: string
+  description: string
+  price: currency
+  term: annual | monthly
+  features: [string | Feature]
+  
+Visitor:
+  _type: Person
+  visits: [SaaS->visits]
+  registers: [SaaS->registrations]
+  ip: string
+  isp: string
+  city: string
+  region: string
+  country: string
+  continent: string
+  browser: string
+  ja3hash: string
+  fingerprint: string
+
+Prospect:
+  _type: Visitor
+  name: string
+  email: string
+  phone: string
+  company: string | Company
+  title: string
+  contacts: SaaS
+
+User:
+  _type: Prospect
+  plan: SaaS.plans
+  logsIn: [SaaS->logins]
+  uses: [SaaS->users]
+  onboards: SaaS.onboardings
+  activates: SaaS.activations
+  subscribes: SaaS.subscriptions
+  apiKeys: [SaaS->apiKeys]
+  requests: [Request->User]
+  errors: [Error->User]
 
 Customer:
- _name: companyName
- _icon: 
- 
-Employee:
- _name: ${firstname} ${lastname}, ${title}
+  _type: User
+  pays: [SaaS->payments]
+  upgrades: [SaaS->upgrades] 
+  retains: [SaaS->retention]
+  refers: [SaaS->referrals] 
+  cancels: [SaaS->churn] 
+  reactivates: [SaaS->reactivations]
 
-EmployeeTerritory:
- _name: territoryCode
- employeeId: Employee
- territoryCode: Territory.territoryCode
- 
-OrderDetail:
- _name: ${quantity} ${productId->name}
- orderId:   Order
- productId: Product
- 
-Product:
- _name:      productName
- categoryId: Category
- supplierId: Supplier
- 
-SalesOrder:
- _name: ${date(orderDate)} - ${count(<-OrderDetail)} Items
- customerId: Customer
- employeeId: Employee
- shipperId:  Shipper
+Visit:
+  _subject: Visitor
+  _action: visits
+  _object: Site
 
-Shipper:
- _name: companyName
- 
-Supplier:
- _name: companyName
- 
-Region:
- _name: regiondescription
- 
-Territory:
- regionId: Region
+Contact:
+  _subject: Prospect
+  _action: contacts
+  _object: SaaS
+  communications: [Email | Call | Chat | Meeting | Event | Webinar | Social | Other]
+
+Registration:
+  _subject: Visitor
+  _action: registers
+  _object: SaaS
+  email: EmailSequence
+  
+Using:
+  _subject: User
+  _action: uses
+  _reverse: users
+  _object: SaaS
+  email: EmailSequence
+
+Onboarding:
+  _subject: User
+  _action: onboards
+  _object: SaaS
+  emails: EmailSequence
+
+Activation:
+  _subject: User
+  _action: activates
+  _object: SaaS
+  emails: EmailSequence
+
+Subscription:
+  _subject: User
+  _action: subscribes
+  _object: SaaS
+  plan: SaaS.plans
+  emails: EmailSequence
+
+Cancellation:
+  _subject: Customer
+  _action: cancels
+  _inverse: retains
+  _object: SaaS
+
+APIKey:
+  _subject: User
+  _action: apiKeys
+  _object: SaaS
+  prefix: string
+  hash: string
+
+EmailSequence:
+  _subject: SaaS
+  _action: emails
+  _object: Prospect | User | Customer
+  emails: [EmailTemplate]
+  timing: [duration]
+
+EmailTemplate:
+  subject: string
+  body: markdown | richtext | html
 ```
 </Tab>
 <Tab>
