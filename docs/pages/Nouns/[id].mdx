@@ -22,7 +22,7 @@ export const getStaticProps = async ({params}) => {
 
 export const getStaticPaths = async () => {
 
-  const nouns = ['Action','Event','Property','Role']
+  const nouns = ['Action','Event','Property','Role','State']
 
   const ids = graph.map(schema => schema.label)
                      .filter(item => !item?.match(/..+Action$/))
