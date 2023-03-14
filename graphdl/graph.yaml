@@ -18,10 +18,10 @@ _priority: 2
 ● Verb:
   _description:   A [Verb] connects a [Noun] to a different [Noun], and is expressed as "[Subject] [Verb] [Object]".
   _subject:       Noun._subjectOf
-  _verb:          string = _name
-  _verbPast:      string = _name + 'ed'
-  _verbActive:    string = _name + 's'
-  _verbGerund:    string = _name + 'ing'
+  _event:         string = _name
+  _action:        string = _name + 's'
+  _state:         string = _name + 'ed'
+  _activity:      string = _name + 'ing'
   _object:        Noun._objectOf
   _graph:         [Graph.verbs]
 

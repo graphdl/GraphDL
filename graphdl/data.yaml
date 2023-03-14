@@ -6,11 +6,11 @@ _priority: 4
   _project:       string = slugify(_name)
   _database:      string = slugify(_name)
   _domain:        string = https://${_project}.${env.BASE_DOMAIN}
-  _requests:      [Request.graph]
+  _requests:      [Request->graph]
 
 ■ Noun:
-  _resources:     [Resource.noun]
-  _requests:      [Request.noun]
+  _resources:     [Resource->noun]
+  _requests:      [Request->noun]
 
 □ Resource:
   _type:          Noun.resources
@@ -59,7 +59,7 @@ _priority: 4
   user:         User.requests
   role:         Role.requests
   tenant:       Tenant.requests
-  timestamp:    timestamp
+  timestamp:    timestamp = new Date()
   type:         list | search | get | create | update | delete
   body:         json
   query:        json
