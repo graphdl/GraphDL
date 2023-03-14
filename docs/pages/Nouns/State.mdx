@@ -1,0 +1,19 @@
+# State
+
+The `_state` property on a Noun represents a Finite State Machine while the `state` of a Resource is it's current State.
+
+```yaml
+Switch:
+  _state:
+    initial: inactive
+    states:
+      inactive:
+        on:
+          toggle: active
+      active:
+        on:
+          toggle: inactive
+```
+
+The syntax of `_state` is compatible with [XState](https://xstate.js.org) and can be [visualized](https://stately.ai/viz) and 
+[edited](https://stately.ai/registry/new) with [Stately](https://stately.ai)
