@@ -22,5 +22,6 @@
   "EPCIS": "GS1.org",
   "SaaS": "OpenSaaS.org",
   "Schema": "Schema.org",
-  "Wiki": "Wikipedia.org"
+  "Wiki": "Wikipedia.org",
+  "XState": "XState.JS.org"
 }
