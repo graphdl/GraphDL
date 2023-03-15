@@ -12,9 +12,10 @@ import: https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/main/graphdl/c
   _objectOf:      [Verb._object]
 
 □ Resource:
-  _description:   A [Resource] is a specific instance of a [Noun]
-  subjectOf:      [Action.subject]
-  objectOf:       [Action.object]
+  _description:   A [Resource] is a specific instance of a [Noun]  
+  subjectOf:      [Action->subject]
+  objectOf:       [Action->object]
+  data:           json
 
 ● Verb:
   _description:   A [Verb] connects a [Noun] to a different [Noun], and is expressed as "[Subject] [Verb] [Object]".
@@ -28,6 +29,7 @@ import: https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/main/graphdl/c
 
 ○ Action:
   _description:   An [Action] happens when an instance of a [Noun] (i.e. [Resource]) does a [Verb] to a different [Resource].
+  
   subject:        Resource.subjectOf
   verb:           Verb.active
   object:         Resource.objectOf

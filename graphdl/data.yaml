@@ -16,9 +16,6 @@ import: https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/main/graphdl/g
 □ Resource:
   _type:          Noun.resources
   _description:   A Resource is a specific instance of a Noun
-  data:           json
-  subjectOf:      [Action.subject]
-  objectOf:       [Action.object]
   requests:       [Request.resource]
   created:        Request.create
   createdAt:      created->timestamp
