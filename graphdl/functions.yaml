@@ -1,7 +1,6 @@
 ∵ GraphDL: Javascript Functions are supported as a native property type in GraphDL.
-_priority: 3
 
-import: string | [string] = graphdl from 'https://pkg.do/graphdl.js'
+import: https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/main/graphdl/data.yaml
 
 🜉 Graph:
   _onInitialize:  function
