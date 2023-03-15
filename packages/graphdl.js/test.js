@@ -1,4 +1,4 @@
-import { mock, test } from 'node:test'
+import { test } from 'node:test'
 import assert from 'node:assert'
 
 import { compose, init, generateJavascript } from './core.js'
@@ -8,7 +8,8 @@ import { compose, init, generateJavascript } from './core.js'
 
 
 test('confirm schema', async (t) => {
-  const schema = await fetch('https://graphdl.org/schema.json').then(res => res.json())
+  // const schema = await fetch('https://graphdl.org/schema.json').then(res => res.json())
+  const schema = await fetch('https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/main/graphdl/core.yaml').then(res => res.json())
 
   console.log(schema)
 
