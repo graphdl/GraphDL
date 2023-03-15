@@ -1,6 +1,7 @@
 ∵ GraphDL: It is possible to embed UI components in a GraphDL schema with Markdown, HTML, MDX and/or JSX syntax.
 
-import: UI from 'https://pkg.do/@graphdl/ui'
+import: 
+  UI: https://pkg.do/@graphdl/ui
 
 🜉 Graph:
   _adminLayout:     url | jsx = props => <Admin {...props}/>
