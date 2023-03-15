@@ -1,8 +1,8 @@
 🜉 GraphDL: GraphDL is a graph-based data language for describing data models and data relationships.
 
 import: 
- - https://schema.org/version/latest/schemaorg-current-https.jsonld
- - https://raw.githubusercontent.com/gs1/EPCIS/master/JSON-LD-Context/epcis-context-root.jsonld
+  schema: https://schema.org/version/latest/schemaorg-current-https.jsonld
+  epcis: https://raw.githubusercontent.com/gs1/EPCIS/master/JSON-LD-Context/epcis-context-root.jsonld
 
 ∵ Graph:   
   _description:   A [Graph] consists of the [Noun]s in it's domain space.
