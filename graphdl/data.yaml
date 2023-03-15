@@ -1,5 +1,6 @@
 ∵ GraphDL: A concrete implementation of GraphDL can function as a Database with Resources as instances of Nouns
-_priority: 4
+
+import: https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/main/graphdl/graph.yaml
 
 🜉 Graph:
   _tenant:        [Tenant.graph]
