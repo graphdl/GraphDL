@@ -1,1 +1,167 @@
+# iteration one: represents all the classes and code lists defined in the EPCIS ontology 
+# at https://ref.gs1.org/epcis/. any additional definitions are inferred from the
+# _type reference URIs defined below. this should provide an extensible graph definition
+# with the base implementations as defined by GS1; we can extend as we see fit.
 
+# this represents an abstract base type -- is this supported? Or should we define only concrete classes?
+Event:
+# is the _id property lexical, (i.e. the class identifiers from the underlying ontology), 
+# or do they represent the instance identifier data/type used?
+# it appears from other examples they are the latter. If that is the case, do we
+# have a place to define the lexical class identifier, (e.g. epcis:EPCISEvent), as defined
+# in the underlying ontology? Do we need such a property?
+  _id: epcis:EPCISEvent | uuid() 
+  _name: Base EPCIS Event
+  _description: A logistics event. This is a common superclass (base type) for all EPCIS events. All of the more specific event types are subclasses of EPCISEvent.
+  _type: https://ref.gs1.org/epcis/EPCISEvent
+
+# concrete EPCIS types
+AggregationEvent:
+  _id: epcis:AggregationEvent | uuid()
+  _name: Aggregation EPCIS Event
+  _description: Describes events that apply to objects that have been aggregated to one another.
+  _type: https://ref.gs1.org/epcis/AggregationEvent
+
+AssociationEvent:
+  _id: epcis:AssociationEvent | uuid()
+  _name: Association EPCIS Event
+  _description: Describes the association or disassociation of one or several physical objects with a parent object or a specific physical location.
+  _type: https://ref.gs1.org/epcis/AssociationEvent
+
+ObjectEvent:
+  _id: epcis:ObjectEvent | uuid()
+  _name: Object EPCIS Event
+  _description: Captures information about an event pertaining to one or more physical or digital objects identified by instance-level (EPC) or class-level (EPC Class) identifiers.
+  _type: https://ref.gs1.org/epcis/ObjectEvent
+
+TransactionEvent:
+  _id: epcis:TransactionEvent | uuid()
+  _name: Transaction EPCIS Event
+  _description: Describes the association or disassociation of physical or digital objects to one or more business transactions
+  _type: https://ref.gs1.org/epcis/TransactionEvent
+
+TransformationEvent:
+  _id: epcis:TransformationEvent | uuid()
+  _name: Transaction EPCIS Event
+  _description: Captures information about an event in which one or more physical or digital objects identified by instance-level (EPC) or class-level (EPC Class) identifiers are fully or partially consumed as inputs and one or more objects identified by instance-level (EPC) or class-level (EPC Class) identifiers are produced as outputs.
+  _type: https://ref.gs1.org/epcis/TransformationEvent
+
+BizTransaction:
+  _id: epcis:BizTransaction | uuid()
+  _name: EPCIS Business Transaction
+  _description: Describes a particular business transaction.
+  _type: https://ref.gs1.org/epcis/BizTransaction
+
+EPCISDocument:
+  _id: epcis:EPCISDocument | uuid()
+  _name: EPCIS Document
+  _description: A means to transport a collection of EPCIS events, optionally accompanied by relevant master data, as a single electronic document.
+  _type: https://ref.gs1.org/epcis/EPCISDocument
+
+EPCISDocumentBody:
+  _id: epcis:EPCISDocumentBody | uuid()
+  _name: EPCIS Document Body
+  _description: Intermediate node that is connected to EPCISDocument using epcisBody, and includes a list of events using eventList.
+  _type: https://ref.gs1.org/epcis/EPCISDocumentBody
+
+EPCISDocumentHeader:
+  _id: epcis:Type | uuid()
+  _name: EPCIS Document Header
+  _description: Intermediate node that is connected to EPCISDocument using epcisHeader, and may include master data using masterData.
+  _type: https://ref.gs1.org/epcis/EPCISDocumentHeader
+
+ErrorDeclaration:
+  _id: epcis:ErrorDeclaration | uuid()
+  _name: EPCIS Error Declaration
+  _description: Indicates that this event has special semantics instead of the normal semantics which assert that various things happened and that various things are true following the event, the semantics of this event assert that those prior assertions are in error..
+  _type: https://ref.gs1.org/epcis/ErrorDeclaration
+
+ILMD:
+  _id: epcis:ILMD | uuid()
+  _name: EPCIS Instance/Lot master data
+  _description: Data that describes a specific instance of a physical or digital object, or a specific batch/lot of objects that are produced in batches/lots..
+  _type: https://ref.gs1.org/epcis/ILMD
+
+MasterData:
+  _id: epcis:MasterData | uuid()
+  _name: EPCIS Master Data
+  _description: Intermediate node that is connected to EPCISDocumentHeader using masterData, and may include vocabulary elements using vocabularyList.
+  _type: https://ref.gs1.org/epcis/MasterData
+
+PersistentDisposition:
+  _id: epcis:PersistentDisposition | uuid()
+  _name: EPCIS Persistent Disposition
+  _description: Specifies one or more business conditions of the event's objects, subsequent to the event..
+  _type: https://ref.gs1.org/epcis/PersistentDisposition
+
+QuantityElement:
+  _id: epcis:QuantityElement | uuid()
+  _name: EPCIS Quantity Element
+  _description: A structure that identifies objects identified by a specific class-level identifier, either a specific quantity or an unspecified quantity..
+  _type: https://ref.gs1.org/epcis/QuantityElement
+
+SensorElement:
+  _id: epcis:SensorElement | uuid()
+  _name: EPCIS Sensor Element
+  _description: A structure that contains an optional sensorMetadata structure and one or several sensorReport structures.
+  _type: https://ref.gs1.org/epcis/SensorElement
+
+SensorMetadata:
+  _id: epcis:SensorMetadata | uuid()
+  _name: EPCIS Sensor Metadata
+  _description: One or several metadata attributes, which are applicable to all sensorReport structures that are part of the same sensorElement.
+  _type: https://ref.gs1.org/epcis/SensorMetadata
+
+SensorReport:
+  _id: epcis:SensorReport | uuid()
+  _name: EPCIS Sensor Report
+  _description: One or several attributes that pertain to a specific sensor observation..
+  _type: https://ref.gs1.org/epcis/SensorReport
+
+SourceOrDestination:
+  _id: epcis:SourceOrDestination | uuid()
+  _name: EPCIS Source or Destination
+  _description: Provides additional business context when an EPCIS event is part of a business transfer; that is, a process in which there is a change of location, or transfer of ownership, or transfer of possession (responsibility and/or custody) of physical or digital objects..
+  _type: https://ref.gs1.org/epcis/SourceOrDestination
+
+  # CBV Code Lists
+
+BTTs:
+  _id: cbv:BTT | uuid() 
+  # the lexical ids on the code lists i've added are derived from the
+  # list values. they are the common id segements for each list 
+  # value, (i.e. the identifier before the hyphen. 
+  # example: Bill of Lading cbv:BTT-bol -> cbv:BTT To represent the list) 
+  _name: CBV Business Transaction Types
+  _description: The domain of business transaction type values in the core business vocabulary.
+  _type: https://ref.gs1.org/cbv/BTT
+
+BizSteps:
+  _id: cbv:BizStep | uuid()
+  _name: CBV Business Steps
+  _description: The domain of Business Step values in the core business vocabulary.
+  _type: https://ref.gs1.org/cbv/BizStep
+
+Dispositions:
+  _id: cbv:Disp | uuid()
+  _name: CBV Dispositions
+  _description: The domain of Disposition values in the core business vocabulary.
+  _type: https://ref.gs1.org/cbv/Disp
+
+ErrorReasons:
+  _id: cbv:ER | uuid()
+  _name: CBV Error Reasons
+  _description: The domain of Error Reson values in the core business vocabulary.
+  _type: https://ref.gs1.org/cbv/ER
+
+SourceDestinationTypes:
+  _id: cbv:SDT | uuid()
+  _name: CBV Source/Destination Types
+  _description: The domain of Source/Destination Type values in the core business vocabulary.
+  _type: https://ref.gs1.org/cbv/SDT
+
+Components:
+  _id: cbv:Comp | uuid()
+  _name: CBV Components
+  _description: The domain of Component values in the core business vocabulary.
+  _type: https://ref.gs1.org/cbv/Comp
