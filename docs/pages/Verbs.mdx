@@ -1,5 +1,50 @@
 # ● Verbs
 
+For example, let's look at the Verb `Ship`.  A Verb defines a relationships between a `Subject` and an `Object`:
+
+```yaml
+Shipper.ships: Shipment
+```
+
+In this case, `Shipper` is the Subject that is performing the `Verb` to the `Object`
+
+An `Action` is an instance of `Resource` performing the `Verb` to the `Object` like:
+
+```yaml
+Amazon.ships: Order\abc123
+```
+
+You can also express metadata on the `Verb`:
+
+```yaml
+Shipper.ships:
+  shipment: Shipment
+  from: Origin
+  to: Destination
+  with: Provider
+```
+
+There are multiple tenses of the Verb `Ship`:
+
+  - Activity: `Shipping`
+  - Event: `Ship`
+  - Action: `Ships`
+  - State: `Shipped`
+
+
+
+## Subject
+
+
+
+## Activity
+
+The `Activity` is otherwise known as the gerund, or Noun form of the Verb.  This is is typically formed by adding `-ing` to the base Verb.
+
+## Event 
+
+
+
 ### ⊙ Get
 ### ⊜ List
 ### ⊛ Search
