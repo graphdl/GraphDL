@@ -31,7 +31,20 @@ There are multiple tenses of the Verb `Ship`:
   - Action: `Ships`
   - State: `Shipped`
 
-
+```yaml
+Shipping:
+  _subject: Shipper
+  _event: Ship
+  _action: Ships
+  _activity: Shipping
+  _state: Shipped
+  _object: Shipment
+  from: Origin
+  to: Destination
+  with: Provider
+  asn: EDI.AdvancedShipmentNotice
+  bol: EDI.BillOfLading
+```
 
 ## Subject
 
