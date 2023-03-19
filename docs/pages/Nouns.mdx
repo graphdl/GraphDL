@@ -216,7 +216,19 @@ Cache:
 
 ## Relationships
 
+A `Noun` can have several different types of relationships with another `Noun`
+
 ### Embedded One-to-One
+
+By referencing a `Noun` directly as the type, without a `.` or `->` then the referenced `Noun` is embedded
+in the document as a property of the parent `Noun`.
+
+```yaml {2}
+Colo:
+ _id:     iata
+ _source: https://speed.cloudflare.com/locations
+ iata:    string
+```
 
 ### Reference One-to-One
 
@@ -224,9 +236,11 @@ Cache:
 
 ### Reference One-to-Many
 
+### Lookup One-to-Many
+
 ### Reference Many-to-Many
 
-### Graph Traversal Many-to-Many
+### Lookup Many-to-Many
 
 
 ## Schema.org
