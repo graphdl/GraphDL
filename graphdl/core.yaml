@@ -18,9 +18,12 @@ import:
   _description:   markdown | html = A [Noun] is a person, place, thing, or idea.
   _source:        url | [string] | [object]
   _seed:          url | [string] | [object]
-  _visibility:    anonymous | public | tenant | user | admin = tenant
+  _visibility:    anonymous, public, tenant, user, admin = tenant
   _graph:         [Graph.nouns]
-  ${property}:    Properties | `[${Properties}]` | `${Properties}!` | `${Nouns}` | `[${Nouns}]` | `${Nouns}.${property}` | `[${Nouns}.${property}]`  | `${Nouns}->${property}` | `[${Nouns}->${property}]`
+  _properties:    [Property]
 
-∷ Properties:     
-  _enum: rdfs:label | string | markdown | url | email | phone | date | time | datetime | timestamp | number | integer | currency | boolean | object
+∷ Property:
+  id:             string!
+  name:           string = titleCase(id)
+  description:    string | markdown
+  type:           string, markdown, url, email, phone, date, time, datetime, timestamp, number, integer, currency, boolean, object

@@ -29,7 +29,7 @@ import: https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/main/graphdl/g
   tenant:         created->tenant
 
 ▼ Role:
-  _seed:        anonymous | public | tenant | user | admin | owner
+  _seed:        anonymous, public, tenant, user, admin, owner
   resources:    [Resource] 
   users:        [User->roles]
   requests:     [Request->role]
@@ -58,7 +58,7 @@ import: https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/main/graphdl/g
   role:         Role.requests
   tenant:       Tenant.requests
   timestamp:    timestamp = new Date()
-  type:         list | search | get | create | update | delete
+  type:         list, search, get, create, update, delete
   body:         json
   query:        json
   headers:      json
@@ -77,7 +77,7 @@ import: https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/main/graphdl/g
 ⟣ Response:
   request:      Request.response
   success:      boolean
-  status:       200 | 201 | 204 | 400 | 401 | 403 | 404 | 409 | 500
+  status:       200, 201, 204, 400, 401, 403, 404, 409, 500
   data:         json
   html:         html
   error:        json

@@ -3,6 +3,10 @@
 import: 
   yup: https://pkg.do/yup@1.0.2
 
+
+∷ Property:
+  validation:    string | function
+
 # Validate:     
 #   string:   string()
 #   markdown: 

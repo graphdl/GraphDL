@@ -50,9 +50,9 @@ export const init = graphdl => {
       graph.nouns[noun]._id = slugify(noun)
       graph.nouns[noun]._name = noun
       graph.nouns[noun]._icon = getIcon(key)
-      Object.entries(val).map(([property, value]) => {
+      graph.nouns[noun]._properties = Object.entries(val).map(([property, value]) => {
         const [ props, defaultValue ] = isArray(value) ? value : value.split(' = ')
-        const required = props.includes('!')
+        const required = props.includes('!') ?? undefined
         const types = props.split(' | ').map(propertyType => {
           // TODO: Identify if an array or not
           // TODO: Identify if a property is required or not
