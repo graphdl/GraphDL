@@ -13,7 +13,7 @@ test('confirm schema', async (t) => {
 
   const graph = init(schema)
 
-  console.log(graph)
+  console.log(JSON.stringify(graph, null, 2))
 
   // compose(schema.graphdl)
   
