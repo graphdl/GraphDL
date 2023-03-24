@@ -2,6 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert'
 
 import { compose, init, generateJavascript } from './core.js'
+// import expectedCoreResult from './tests/core'
 
 
 
@@ -17,7 +18,7 @@ test('confirm schema', async (t) => {
 
   // compose(schema.graphdl)
   
-  assert.strictEqual(schema, schema)
+  assert.strictEqual(schema, {})
   // assert.
 })
 

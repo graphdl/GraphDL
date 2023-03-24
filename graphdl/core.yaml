@@ -25,5 +25,6 @@ import:
 ∷ Property:
   id:             string!
   name:           string = titleCase(id)
+  icon:           string | url | svg
   description:    string | markdown
   type:           string, markdown, url, email, phone, date, time, datetime, timestamp, number, integer, currency, boolean, object

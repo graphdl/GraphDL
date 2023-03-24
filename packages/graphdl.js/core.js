@@ -52,20 +52,23 @@ export const init = graphdl => {
       graph.nouns[noun]._icon = getIcon(key)
       graph.nouns[noun]._properties = Object.entries(val).map(([property, value]) => {
         const [ props, defaultValue ] = isArray(value) ? value : value.split(' = ')
-        const required = props.includes('!') ?? undefined
-        const types = props.split(' | ').map(propertyType => {
+        const required = props.includes('!') ? true : undefined
+        const many = props.startsWith('[') && propertyType.endsWith(']') ? true : undefined
+        const options = props.includes(',') ? props.split(',').map(i => i.trim()) : undefined
+        const types = props.includes(' | ') ? props.split(' | ').map(propertyType => {
           // TODO: Identify if an array or not
           // TODO: Identify if a property is required or not
           // TODO: Identify if a property is a relationship to another Noun
           // TODO: Identify if a Noun relationship is embedded, referenced, or looked up
-          return propertyType
-          // const many = propertyType.startsWith('[') && propertyType.endsWith(']')
-          // const [ referencedNoun, referencedProperty ] = propertyType.includes('.') ? propertyType.split('.') : []
-          // const [ lookupNoun, lookupProperty ] = propertyType.includes('->') ? propertyType.split('->') : []
-          // const embeddedNoun = (propertyType.slice(0, 1).match(/[A-Z]/g)) ? propertyType : undefined
-          // return { propertyType, many, referencedNoun, referencedProperty, lookupNoun, lookupProperty, embeddedNoun }
-        })
-        graph.nouns[noun][property] = { required, types, defaultValue }
+          const propMany = propertyType.startsWith('[') && propertyType.endsWith(']') ? true : undefined
+          const propType = propertyType.replace('[', '').replace(']', '')
+          const [ referencedNoun, referencedProperty ] = propertyType.includes('.') ? propertyType.split('.') : []
+          const [ lookupNoun, lookupProperty ] = propertyType.includes('->') ? propertyType.split('->') : []
+          const embeddedNoun = (propertyType.slice(0, 1).match(/[A-Z]/g)) ? propertyType : undefined
+          return { type: propType, many: propMany, referencedNoun, referencedProperty, lookupNoun, lookupProperty, embeddedNoun }
+        }) : undefined
+        const type = types ? undefined : options ? 'string' : props
+        return { name: property, type, required, many, options, types, defaultValue }
       })
 
       // TODO: Identify Noun relationships and add to graph.verbs
