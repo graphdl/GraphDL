@@ -19,12 +19,15 @@
 
 export const init = graphdl => {
   const graph = { 
-    nouns: { },
-    verbs: { },
+    // nouns: { },
+    // verbs: { },
   }
-  Object.entries(graph).map(([key, val]) => {
-    // Get Graph-level properties
-    if (key.startsWith('_')) {
+  Object.entries(graphdl).map(([key, val]) => {
+    if (key === 'import') {
+      // TODO: import other GraphDL, JSON Schema, JSON-LD, JavaScript, and TypeScript files
+      graph.import = val
+    } else if (key.startsWith('_')) {
+      // Get Graph-level properties
       graph[key] = val
 
     // Get ID, Icon, Noun, & Description from Abbreviated Syntax like:
@@ -42,12 +45,13 @@ export const init = graphdl => {
     //   verbs:          [Verb]
     } else if (isObject(val)) {
       const noun = getNoun(key)
+      if (!graph.nouns) graph.nouns = { }
       graph.nouns[noun] = { }
       graph.nouns[noun]._id = slugify(noun)
       graph.nouns[noun]._name = noun
       graph.nouns[noun]._icon = getIcon(key)
       Object.entries(val).map(([property, value]) => {
-        nouns[noun][property] = value
+        graph.nouns[noun][property] = value
       })
 
       // TODO: Identify Noun relationships and add to graph.verbs

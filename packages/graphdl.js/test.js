@@ -11,11 +11,14 @@ test('confirm schema', async (t) => {
   // const schema = await fetch('https://graphdl.org/schema.json').then(res => res.json())
   const schema = await fetch('https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/main/graphdl/core.yaml').then(res => res.json())
 
-  console.log(schema)
+  const graph = init(schema)
 
-  compose(schema.graphdl)
+  console.log(graph)
+
+  // compose(schema.graphdl)
   
   assert.strictEqual(schema, schema)
+  // assert.
 })
 
 

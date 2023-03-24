@@ -22,4 +22,5 @@ import:
   _graph:         [Graph.nouns]
   ${property}:    Properties | `[${Properties}]` | `${Properties}!` | `${Nouns}` | `[${Nouns}]` | `${Nouns}.${property}` | `[${Nouns}.${property}]`  | `${Nouns}->${property}` | `[${Nouns}->${property}]`
 
-∷ Properties:     rdfs:label | string | markdown | url | email | phone | date | time | datetime | timestamp | number | integer | currency | boolean | object
+∷ Properties:     
+  _enum: rdfs:label | string | markdown | url | email | phone | date | time | datetime | timestamp | number | integer | currency | boolean | object
