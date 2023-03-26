@@ -17,8 +17,7 @@ Amazon.ships: Order\abc123
 You can also express metadata on the `Verb`:
 
 ```yaml
-Shipper.ships:
-  shipment: Shipment
+Shipper.ships->Shipment:
   from: Origin
   to: Destination
   with: Provider
