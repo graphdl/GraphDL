@@ -1,30 +1,21 @@
-import: https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/workflows/graphdl/workflow.yaml
+_name: TrafficLightSystem
 
-🜉 Graph:
-  name: "Traffic Light System"
-  workflows: [TrafficLight]
+TrafficLight:
+  _name: Traffic Light
+  _state: Red
 
-▶▶ TrafficLight:
-  _description: Traffic light state machine with transitions between Red, Green, and Yellow lights.
-  nouns: [Light]
-  verbs: [Switch]
-  initialState: "Red"
-  states:
-    - id: Red
-      on:
-        - verb: Switch
-          targetState: Green
-    - id: Green
-      on:
-        - verb: Switch
-          targetState: Yellow
-    - id: Yellow
-      on:
-        - verb: Switch
-          targetState: Red
+Red: TrafficLight._state
+Green: TrafficLight._state
+Yellow: TrafficLight._state
 
-■ Light:
-  _description: A traffic light with Red, Green, and Yellow states that switch sequentially.
+RedToGreen:
+  state: Red
+  targetState: Green
 
-● Switch:
-  _description: Switches the traffic light state from one color to another.
+GreenToYellow:
+  state: Green
+  targetState: Yellow
+
+YellowToRed:
+  state: Yellow
+  targetState: Red
