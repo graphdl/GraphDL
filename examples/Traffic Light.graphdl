@@ -1,21 +1,18 @@
 _name: TrafficLightSystem
 
 TrafficLight:
-  _name: Traffic Light
-  _state: Red
+  _icon: 🚦
 
-Red: TrafficLight._state
-Green: TrafficLight._state
-Yellow: TrafficLight._state
-
-RedToGreen:
-  state: Red
-  targetState: Green
-
-GreenToYellow:
-  state: Green
-  targetState: Yellow
-
-YellowToRed:
-  state: Yellow
-  targetState: Red
+Traffic Light Workflow:
+  nouns: [TrafficLight]
+  initialState: Red
+  states:
+    - name: Red
+      on:
+        - targetState: Green
+    - name: Green
+      on:
+        - targetState: Yellow
+    - name: Yellow
+      on:
+        - targetState: Red
