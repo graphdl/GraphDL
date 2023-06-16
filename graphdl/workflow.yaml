@@ -21,8 +21,11 @@ import:
   _description: An entity involved in the workflow process as subject or object.
   workflows: [Workflow.nouns]
 
+□ Resource:
+  _state: [State]
+
 □ State:
-  _description: Represents the state of a resource during a workflow, compatible with XState.
+  _description: Represents the state of a resource during a workflow.
   workflow: Workflow.states
   on: [Transition.state]
   entry: function
