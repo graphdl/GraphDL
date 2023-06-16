@@ -1,0 +1,21 @@
+■ Workflow:
+  _name: Traffic Light
+  initialState: green
+  states: [State.workflow]
+
+□ State:
+  - _id: green
+    on:
+      - verb: Change
+        targetState: yellow
+  - _id: yellow
+    on:
+      - verb: Change
+        targetState: red
+  - _id: red
+    on:
+      - verb: Change
+        targetState: green
+
+● Verb:
+  _id: Change
