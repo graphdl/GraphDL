@@ -5,7 +5,7 @@ import:
 🜉 Graph:
   workflows: [Workflow.graph]
 
-■ Workflow:
+▶▶ Workflow:
   _description: A Workflow represents a series of actions, triggers, and states that form a process applied to specific nouns.
   graph: Graph.workflows
   nouns: [Noun.workflows]
@@ -24,7 +24,7 @@ import:
 □ Resource:
   _state: [State]
 
-□ State:
+▶ State:
   _description: Represents the state of a resource during a workflow.
   workflow: Workflow.states
   on: [Transition.state]
