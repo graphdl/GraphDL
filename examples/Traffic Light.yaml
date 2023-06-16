@@ -4,7 +4,7 @@ import: https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/workflows/grap
   name: "Traffic Light System"
   workflows: [TrafficLight]
 
-■ TrafficLight:
+▶▶ TrafficLight:
   _description: Traffic light state machine with transitions between Red, Green, and Yellow lights.
   nouns: [Light]
   verbs: [Switch]
