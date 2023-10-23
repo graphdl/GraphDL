@@ -1,0 +1,40 @@
+import:
+  - https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/main/graphdl/core.yaml
+  - https://yaml.do/raw.githubusercontent.com/graphdl/graphdl/main/graphdl/graph.yaml
+
+🜉 Graph:
+  workflows: [Workflow.graph]
+
+▶▶ Workflow:
+  _description: A Workflow represents a series of actions, triggers, and states that form a process applied to specific nouns.
+  graph: Graph.workflows
+  nouns: [Noun.workflows]
+  verbs: [Verb.workflows]
+  initialState: string
+  states: [State.workflow]
+
+● Verb:
+  _description: Connects a noun to another noun, an action that can be part of a workflow process.
+  workflows: [Workflow.verbs]
+
+■ Noun:
+  _description: An entity involved in the workflow process as subject or object.
+  workflows: [Workflow.nouns]
+
+□ Resource:
+  _state: [State]
+
+▶ State:
+  _description: Represents the state of a resource during a workflow.
+  workflow: Workflow.states
+  on: [Transition.state]
+  entry: function
+  exit: function
+
+⇆ Transition:
+  _description: Defines the transition between states in a workflow based on actions or triggers.
+  state: State.on
+  verb: Verb
+  targetState: State
+  condition: function
+  actions: [Function]
