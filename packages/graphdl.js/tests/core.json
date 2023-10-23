@@ -147,6 +147,20 @@
           "defaultValue": "titleCase(id)"
         },
         {
+          "name": "icon",
+          "types": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "url"
+            },
+            {
+              "type": "svg"
+            }
+          ]
+        },
+        {
           "name": "description",
           "types": [
             {
