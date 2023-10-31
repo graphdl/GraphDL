@@ -9,6 +9,7 @@ import { buildConfig } from 'payload/config'
 import { Logo } from './components/logo'
 
 import { Actions } from './collections/Actions'
+import { Components } from './collections/Components'
 import { Nouns } from './collections/Nouns'
 import { Resources } from './collections/Resources'
 import { Users } from './collections/Users'
@@ -19,10 +20,17 @@ import { Properties } from './collections/Properties'
 import { Tenants } from './collections/Tenants'
 import { Roles } from './collections/Roles'
 import { Functions } from './collections/Functions'
-import { UI } from './collections/UI'
 import { Graphs } from './collections/Graphs'
 import { Integrations } from './collections/Integrations'
 import { Settings } from './collections/Settings'
+import { API } from './collections/API'
+import { SDK } from './collections/SDK'
+import { Project } from './collections/Project'
+import { App } from './collections/App'
+import { Webhooks } from './collections/Webhooks'
+import { Docs } from './collections/Docs'
+import { Domains } from './collections/Domains'
+import { Site } from './collections/Site'
 
 export default buildConfig({
   admin: {
@@ -33,8 +41,17 @@ export default buildConfig({
     components: { graphics: { Logo, Icon: Logo }},
   },
   editor: slateEditor({}),
+  globals: [
+    Project,
+    API,
+    SDK,
+    App,
+    Docs,
+    Site,
+    Integrations,
+    // Settings,
+  ],
   collections: [
-    Graphs,
     Nouns,
     Verbs,
     Properties,
@@ -42,14 +59,16 @@ export default buildConfig({
     Actions,
     Triggers,
     Events,
+    Webhooks,
     Functions,
-    UI,
+    Components,
+    Domains,
+    Graphs,
     Tenants,
     Roles,
     Users,
-    Integrations,
+    
   ],
-  globals: [Settings],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
@@ -57,7 +76,15 @@ export default buildConfig({
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
   plugins: [payloadCloud()],
-  db: mongooseAdapter({
-    url: process.env.DATABASE_URI,
-  }),
+  // db: mongooseAdapter({
+  //   url: process.env.DATABASE_URI,
+  // }),
+  // Remove this once Payload fixes forced `readPreference=primary` on transactions 
+  db: (args) => {
+    const baseAdapter = mongooseAdapter({
+      url: process.env.DATABASE_URI ?? '',
+    })(args)
+    baseAdapter.beginTransaction = async () => null
+    return baseAdapter
+  },
 })
