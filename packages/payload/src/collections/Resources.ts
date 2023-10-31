@@ -6,7 +6,7 @@ import { saveYamlAsJson } from '../utilities/saveYamlToJson'
 export const Resources: CollectionConfig = {
   slug: 'resources',
   labels: { singular: '□ Resource', plural: '□ Resources' },
-  admin: { group: 'Data', useAsTitle: 'name', defaultColumns: ['name', 'type', 'yaml'], listSearchableFields: ['name', 'type', 'resourceId', 'yaml'] },
+  admin: { group: '彡 Data', useAsTitle: 'name', defaultColumns: ['name', 'type', 'yaml'], listSearchableFields: ['name', 'type', 'resourceId', 'yaml'] },
   versions: { maxPerDoc: 0 },
   fields: [
     { type: 'relationship', name: 'type', relationTo: 'nouns', hasMany: false, admin: { position: 'sidebar', readOnly: true } },

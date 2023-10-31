@@ -3,10 +3,10 @@ import { CollectionConfig } from 'payload/types'
 
 export const Verbs: CollectionConfig = {
   slug: 'verbs',
-  admin: { group: 'Data', useAsTitle: 'name' },
+  admin: { group: '■● Graph', useAsTitle: 'name' },
   timestamps: false,
   access: { read: () => true },
-  labels: { singular: '● Verb', plural: '● Verbs' },
+  labels: { singular: 'Verb', plural: '● Verbs' },
   fields: [
     { type: 'text', name: 'name' },
     { type: 'row', fields: [

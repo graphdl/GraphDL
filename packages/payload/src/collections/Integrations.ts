@@ -1,8 +1,8 @@
 import { CollectionConfig } from 'payload/types'
 
-export const Tenants: CollectionConfig = {
-  slug: 'tenants',
-  labels: { singular: '△ Tenant', plural: '△ Tenants' },
+export const Integrations: CollectionConfig = {
+  slug: 'integrations',
+  labels: { singular: '巛 Integration', plural: '巛 Integrations' },
   admin: { group: 'Admin', useAsTitle: 'name' },
   fields: [
     { type: 'text', name: 'name', required: true },

@@ -3,8 +3,8 @@ import { CollectionConfig } from 'payload/types'
 
 export const Nouns: CollectionConfig = {
   slug: 'nouns',
-  admin: { group: 'Data', useAsTitle: 'name' },
-  labels: { singular: '■ Noun', plural: '■ Nouns' },
+  admin: { group: '■● Graph', useAsTitle: 'name' },
+  labels: { singular: 'Noun', plural: '■ Nouns' },
   timestamps: false,
   access: { read: () => true },
   fields: [

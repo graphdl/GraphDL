@@ -4,7 +4,7 @@ import { saveYamlAsJson } from '../utilities/saveYamlToJson'
 export const Actions: CollectionConfig = {
   slug: 'actions',
   labels: { singular: '○ Action', plural: '○ Actions' },
-  admin: { group: 'Data',   useAsTitle: 'name' },
+  admin: { group: '彡 Data',   useAsTitle: 'name' },
   versions: { maxPerDoc: 0 },
   fields: [
     { type: 'row', fields: [
