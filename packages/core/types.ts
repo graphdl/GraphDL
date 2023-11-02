@@ -1,29 +1,46 @@
+import { Action, Thing } from 'schema-dts'
 import type { createMachine } from 'xstate'
 import type React from 'react'
+import { $Context } from './context'
 
-export type Noun<TNouns extends string = string> = {
-  id: string
-  type: Word<{ noun: string, plural: string }>
-  name?: string
+export type Graph<Nouns extends string = string, Verbs extends string = string> = {
+  nouns: Record<Nouns, Noun>
+  verbs: Record<Verbs, Verb>
+} & Metadata<Nouns, Verbs>
+
+export type Noun<Nouns extends string = string, Verbs extends string = string, T extends Data = {}> = {
+  noun: string | { singular: string, plural: string }
+  actions?: Record<Verbs, Nouns | Verb<Nouns, Verbs, T>>
+} & Metadata<Nouns, Verbs, T>
+
+export type Verb<Nouns extends string = string, Verbs extends string = string, T extends Data = {}> = {
+  subject: Noun
+  verb: string | { action: string, activity: string, act: string, event: string,  }
+  object: Noun
+} & Metadata<Nouns, Verbs, T>
+
+
+export type Data = Record<string,any>
+
+export type Metadata<Nouns extends string = string, Verbs extends string = string, T extends Data = {}> = {
   icon?: string | Url | React.FC
-  sameAs?: string | Url
+  sameAs?: string | Url | Thing
   description?: string
   seed?: Url | Function
   source?: Url | Source | Function
-  state?: typeof createMachine<TNouns>
-  properties: Record<TNouns, Property>
+  state?: typeof createMachine<T>
+  properties?: Record<keyof T, Property>
+  metadata?: Data
 }
 
-// TODO: Add `_` prefix to all metadata properties from Noun
-// export type ResourceMetadata = {
-//   _id: string
-//   _name: string
-//   _type: string
-//   _sameAs: string | Url
-//   _icon: string | Url | React.FC
-//   _description?: string
+// export type EventHook<Nouns extends string = string, Verbs extends string = string, T extends Data = {}> = {
 
-// }
+export type Hook = ($: $Context) => Promise< Success | Error >
+
+export type ResourceMetadataProperties = {
+  [key in `_${keyof Omit<Noun, 'properties'>}` ]: Noun[keyof Noun]
+}
+
 
 
 export type SeedFunction = ($: NounContext) => Promise< Success | Error >
@@ -45,10 +62,6 @@ export type Error = {
   error: string
 } & Record<string, any>
 
-export type Verb = {
-  id: string
-  name: string
-}
 
 // export type Nouns = Record<string, Noun>
 // export type Verbs = Record<string, Verb>
@@ -59,10 +72,6 @@ export type ResourceEvents = `on${ResourceActions}`
 
 export type Component = React.FC
 
-export type $Context<Nouns extends string = string> = {
-  nouns: Record<Nouns, Noun>
-  verbs: Record<string, Verb>
-}
 
 export type Url = `https://${string}.${string}` | URL
 export type EmailAddress = `${string}@${string}.${string}`
