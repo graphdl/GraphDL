@@ -8,8 +8,13 @@ export type Graph<Nouns extends string = string, Verbs extends string = string> 
   verbs: Record<Verbs, Verb>
 } & Metadata<Nouns, Verbs>
 
+export type GraphOptionalVerbs<Nouns extends string = string, Verbs extends string = string> = {
+  nouns: Record<Nouns, Noun>
+  verbs?: Record<Verbs, Verb>
+} & Metadata<Nouns, Verbs>
+
 export type Noun<Nouns extends string = string, Verbs extends string = string, T extends Data = {}> = {
-  noun: string | { singular: string, plural: string }
+  noun: { singular: string, plural: string }
   actions?: Record<Verbs, Nouns | Verb<Nouns, Verbs, T>>
 } & Metadata<Nouns, Verbs, T>
 
@@ -33,6 +38,8 @@ export type Metadata<Nouns extends string = string, Verbs extends string = strin
   metadata?: Data
 }
 
+// export type Properties<T extends Data = {}> = Record<keyof T, Property>
+
 // export type EventHook<Nouns extends string = string, Verbs extends string = string, T extends Data = {}> = {
 
 export type Hook = ($: $Context) => Promise< Success | Error >
@@ -51,7 +58,9 @@ export type VerbContext = {}
 
 export type Source = {}
 
-export type Property = string | number | object | Function
+export type Property<Nouns extends string = string, Verbs extends string = string, Properties extends string = string> = {
+
+}
 
 export type Success = {
   success: true
