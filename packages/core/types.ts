@@ -2,6 +2,7 @@ import { Action, Thing } from 'schema-dts'
 import type { createMachine } from 'xstate'
 import type React from 'react'
 import { $Context } from './context'
+import { Things, ThingProperties } from './schema'
 
 export type Graph<Nouns extends string = string, Verbs extends string = string> = {
   nouns: Record<Nouns, Noun>
@@ -24,6 +25,19 @@ export type Verb<Nouns extends string = string, Verbs extends string = string, T
   object: Noun
 } & Metadata<Nouns, Verbs, T>
 
+
+export type PropertyPrimitives = 'Number' | 'Date' | 'Time' | 'Boolean' | 'Text' | 'DateTime'
+export type PropertyWebPrimitives = 'TextArea' | 'RichText' | 'Select' | 'SelectMany' | 'Checkbox' | 'Radio' | 'File' | 'Url' | 'Email' | 'Phone' 
+export type PropertyCodePrimitives = 'Code' | 'JSON' | 'JavaScript' | 'TypeScript' | 'YAML' | 'Markdown'
+
+export type PropertyRelationships<Nouns extends string, Verbs extends string> = 
+  `${Nouns}` | `${Nouns}!` | [`${Nouns}`] | [`${Nouns}!`] |
+  `巛${Nouns}` | [`巛${Nouns}!`] 
+
+export type PropertyNames<Nouns extends string, Verbs extends string> = PropertyPrimitives | PropertyWebPrimitives | PropertyCodePrimitives | PropertyRelationships<Nouns, Verbs>
+
+export type SimpleGraph<Nouns extends string = string, Verbs extends string = string> = Record<Nouns, Noun<Nouns, Verbs> | SimpleNouns<Nouns, Verbs>>
+export type SimpleNouns<Nouns extends string = string, Verbs extends string = string> = Things | Record<Nouns, Noun<Nouns, Verbs>>
 
 export type Data = Record<string,any>
 
