@@ -32,8 +32,30 @@ export type PropertyRelationships<Nouns extends string, Verbs extends string> =
 
 export type PropertyNames<Nouns extends string, Verbs extends string> = PropertyPrimitives | PropertyWebPrimitives | PropertyCodePrimitives | PropertyRelationships<Nouns, Verbs>
 
-export type SimpleGraph<Nouns extends string = string, Verbs extends string = string> = Record<Nouns, Noun<Nouns, Verbs> | SimpleNouns<Nouns, Verbs>>
-export type SimpleNouns<Nouns extends string = string, Verbs extends string = string> = Things | Record<Nouns, Noun<Nouns, Verbs>>
+export type SimpleGraph<Nouns extends string = string, Verbs extends string = string> = Record<Nouns, Noun<Nouns, Verbs> | SimpleNouns<Nouns, Verbs>  | Things | Things[] > // (Nouns | Things) | (Nouns | Things)[]>
+export type SimpleNouns<Nouns extends string = string, Verbs extends string = string> = Record<Nouns, Noun<Nouns, Verbs>>
+
+export type TestNouns<Nouns extends string = string> = Record<Nouns, Things | Things[] | Nouns> //Nouns | Things | (Nouns | Things)[]>
+
+const exampleNouns: TestNouns = {
+  Company: 'Organization',
+  Contact: 'Person',
+  Customer: ['Organization', 'Person', 'AcceptAction' ],
+  Idea: 'Company',
+}
+
+const exampleGraph: SimpleGraph = {
+  nouns: {
+    // Customer: 
+    // Customer: 'Organization',
+    // Contact: 'Person',
+    // Deal: 'SellAction',
+    // Lead: 'Person',
+  },
+  verbs: {
+
+  }
+}
 
 export type Data = Record<string,any>
 
