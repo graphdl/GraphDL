@@ -4,12 +4,8 @@ import type React from 'react'
 import { $Context } from './context'
 import { Things, ThingProperties } from './schema'
 
-export type Graph<Nouns extends string = string, Verbs extends string = string> = {
-  nouns: Record<Nouns, Noun>
-  verbs: Record<Verbs, Verb>
-} & Metadata<Nouns, Verbs>
 
-export type GraphOptionalVerbs<Nouns extends string = string, Verbs extends string = string> = {
+export type Graph<Nouns extends string = string, Verbs extends string = string> = {
   nouns: Record<Nouns, Noun>
   verbs?: Record<Verbs, Verb>
 } & Metadata<Nouns, Verbs>
@@ -89,9 +85,10 @@ export type Error = {
 // export type Nouns = Record<string, Noun>
 // export type Verbs = Record<string, Verb>
 
-export type ResourceActions = 'Create' | 'Read' | 'Update' | 'Delete' | 'Change' | 'Error'
-
-export type ResourceEvents = `on${ResourceActions}`
+const ResourceActions = ['Create', 'Read', 'Update', 'Delete', 'Change', 'Error'] as const
+export type ResourceActionsArray = typeof ResourceActions
+export type ResourceEvent = ResourceActionsArray[number]
+export type ResourceEvents = `on${ResourceEvent}`
 
 export type Component = React.FC
 
