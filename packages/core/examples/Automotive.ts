@@ -20,5 +20,9 @@ export const Automotive = createGraph({
     is: 'Person',
     with: ['MonetaryAmount','LoanOrCredit'],
   }
+}, {
+  Dealer: {
+    Sells: 'Listing',
+  }
 })
 
