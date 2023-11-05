@@ -1,33 +1,24 @@
-import { createGraph } from './CRM'
+import { createGraph } from '..'
 
 export const Automotive = createGraph({
-  nouns: {
-    Vehicle: 'Vehicle',
-    Company: 'Organization',
-    Sale: 'SellAction',
-    Purchase: 'BuyAction',
-    Deal: ['SellAction', 'BuyAction', 'Vehicle', 'LendAction', 'LoanOrCredit'],
-    WholesaleDeal: 'Deal',
-    RetailDeal: 'Deal',
-    PrivatePartyDeal: 'Deal',
-    Lead: 'Person',
-    Buyer: ['Person', 'Company', 'AutoDealer'],
-    Seller: ['Person', 'Company', 'AutoDealer'],
-    Customer: ['Person', 'Company'],
-    Loan: 'LoanOrCredit',
-    CreditApp: 'LendAction',
-    PreApproval: 'CreditApp',
-    SalesPerson: 'Person',
-    Dealer: 'AutoDealer',
-    Auction: 'AutomotiveBusiness',
+  Vehicle: 'Vehicle',
+  Dealer: 'AutoDealer',
+  Listing: {
+    is: 'OfferForPurchase',
+    of: 'Vehicle',
+    at: 'PriceSpecification',
+    by: 'AutoDealer',
   },
-  verbs: {
-    Deal: {
-      buyer: 'Customer',
-      seller: 'Seller',
-    },
-    Customer: {
-      buys: 'Deal',
-    },
+  Deal: {
+    is: 'SellAction',
+    of: 'Vehicle',
+    by: 'AutoDealer',
+    to: 'Person',
+    at: 'PriceSpecification',
+  },
+  Buyer: {
+    is: 'Person',
+    with: ['MonetaryAmount','LoanOrCredit'],
   }
 })
+
