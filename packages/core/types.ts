@@ -40,7 +40,7 @@ export type $Context<N extends Nouns<N>, V extends Verbs<N>> = {
   user: User<N,V>
   巛: Events<N,V> | Stream<N,V>
   彡: Database<N,V>
-  入: Actions<N,V> | Triggers<N,V> | Events<N,V>
+  入: Actions<N,V> | Triggers<N,V> | Activities<N,V> | Events<N,V>
   口: Resource<N,V>
   _: Property<N,V>
   只: User<N,V>
