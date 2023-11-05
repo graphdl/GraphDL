@@ -1,6 +1,6 @@
-import { Graph } from './types'
+// import { Graph } from './types'
 
-export type $Context<Nouns extends string = string, Verbs extends string = string> = Graph<Nouns, Verbs> & {
+export type $Context<Nouns extends string = string, Verbs extends string = string> = {
   
 }
 

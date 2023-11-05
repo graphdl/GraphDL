@@ -11,37 +11,38 @@ const remindFollowUp = (obj:any,obj2:any) => {}
 const generateProposal = (obj:any) => {}
 const confirmIntent = (obj:any) => {}
 
-export const CRM = createGraph({
-  nouns: {
-    Company: 'Organization',
-    Employee: 'Person',
-    Customer: ['Company','Person'],
-    Contact: 'Person',
-    Deal: 'SellAction',
-    Proposal: 'Offer',
-    Product: 'Product',
-    Service: 'Service',
-    SalesPerson: 'Employee',
-    Price: 'PriceSpecification',
-    Lead: 'Person',
-  },
-  verbs: {
-    Company: {
-      Employs: 'Employee',
-      Needs: ['Product','Service'],
-      Buys: 'Deal'
-    },
-    Deal: {
-      Has: 'Price',
-      Includes: 'Product'
-    },
-    SalesPerson: {
-      Sells: 'Deal'
-    },
-    Proposal: {
-      Send: () => {},
-    }
-  },
+// export const CRM = createGraph({
+//   nouns: {
+//     Company: 'Organization',
+//     Employee: 'Person',
+//     Customer: ['Company','Person'],
+//     Contact: 'Person',
+//     Deal: 'SellAction',
+//     Proposal: 'Offer',
+//     Product: 'Product',
+//     Service: 'Service',
+//     SalesPerson: 'Employee',
+//     Price: 'PriceSpecification',
+//     Lead: 'Person',
+//   },
+//   verbs: {
+//     Company: {
+//       Employs: 'Employee',
+//       Needs: ['Product','Service'],
+//       Buys: 'Deal'
+//     },
+//     Deal: {
+//       Has: 'Price',
+//       Includes: 'Product'
+//     },
+//     SalesPerson: {
+//       Sells: 'Deal'
+//     },
+//     Proposal: {
+//       Send: () => {},
+//     }
+//   },
+
   // TODO: Figure out the types
   // actions: {
   //   Send: {
@@ -65,16 +66,6 @@ export const CRM = createGraph({
   //   },
   // },
 
-})
+// })
 
-
-export function createGraph<
-    N extends Record<string, Things | keyof N | Array<Things | keyof N>>, 
-    V extends Partial<Record<keyof N, Record<string, keyof N | Array<keyof N > | Function>>>
-  > (graph: { nouns: N, verbs?: V, actions?: V, events?: V }): object {
-  const { nouns, verbs, actions, events } = graph
-  return { nouns, verbs, actions, events }
-}
-// TODO: Figure out how to type this and pass in Noun/Verb names
-export type Functions<I = any, O = any> = Record<string, (input: I) => O | Promise<O>>
 

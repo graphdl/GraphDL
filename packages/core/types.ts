@@ -1,133 +1,17 @@
-import { Action, Thing } from 'schema-dts'
-import type { createMachine } from 'xstate'
-import type React from 'react'
-import { $Context } from './context'
-import { Things, ThingProperties } from './schema'
+import { E } from 'vitest/dist/reporters-5f784f42.js'
+import { SchemaThings, SchemaActions, SchemaProperties } from './schema'
 
+export type DefaultNouns = 'User' | 'Trigger' | 'Action' | 'Noun' | 'Verb' | 'Event' | 'Property' | 'Resource' | 'App' | 'API' | 'UI' | 'Function' | 'Request' | 'Response'
+export type CommonPrepositions = 'about' | 'as' | 'at' | 'by' | 'for' | 'from' | 'in' | 'of' | 'on' | 'to' | 'via' | 'with' | 'within'
+export type ExtendedPrepositions = 'aboard' | 'about' | 'above' | 'across' | 'after' | 'against' | 'along' | 'amid' | 'among' | 'anti' | 'around' | 'as' | 'at' | 'before' | 'behind' | 'below' | 'beneath' | 'beside' | 'besides' | 'between' | 'beyond' | 'but' | 'by' | 'concerning' | 'considering' | 'despite' | 'down' | 'during' | 'except' | 'excepting' | 'excluding' | 'following' | 'for' | 'from' | 'in' | 'inside' | 'into' | 'like' | 'minus' | 'near' | 'of' | 'off' | 'on' | 'onto' | 'opposite' | 'outside' | 'over' | 'past' | 'per' | 'plus' | 'regarding' | 'round' | 'save' | 'since' | 'than' | 'through' | 'to' | 'toward' | 'towards' | 'under' | 'underneath' | 'unlike' | 'until' | 'up' | 'upon' | 'versus' | 'via' | 'with' | 'within' | 'without'
 
-export type Graph<Nouns extends string = string, Verbs extends string = string> = {
-  nouns: Record<Nouns, Noun>
-  verbs?: Record<Verbs, Verb>
-} & Metadata<Nouns, Verbs>
-
-export type Noun<Nouns extends string = string, Verbs extends string = string, T extends Data = {}> = {
-  noun: { singular: string, plural: string }
-  actions?: Record<Verbs, Nouns | Verb<Nouns, Verbs, T>>
-} & Metadata<Nouns, Verbs, T>
-
-export type Verb<Nouns extends string = string, Verbs extends string = string, T extends Data = {}> = {
-  subject: Noun
-  verb: string | { action: string, activity: string, act: string, event: string,  }
-  object: Noun
-} & Metadata<Nouns, Verbs, T>
-
-
-export type PropertyPrimitives = 'Number' | 'Date' | 'Time' | 'Boolean' | 'Text' | 'DateTime'
-export type PropertyWebPrimitives = 'TextArea' | 'RichText' | 'Select' | 'SelectMany' | 'Checkbox' | 'Radio' | 'File' | 'Url' | 'Email' | 'Phone' 
-export type PropertyCodePrimitives = 'Code' | 'JSON' | 'JavaScript' | 'TypeScript' | 'YAML' | 'Markdown'
-
-export type PropertyRelationships<Nouns extends string, Verbs extends string> = 
-  `${Nouns}` | `${Nouns}!` | [`${Nouns}`] | [`${Nouns}!`] |
-  `巛${Nouns}` | [`巛${Nouns}!`] 
-
-export type PropertyNames<Nouns extends string, Verbs extends string> = PropertyPrimitives | PropertyWebPrimitives | PropertyCodePrimitives | PropertyRelationships<Nouns, Verbs>
-
-export type SimpleGraph<Nouns extends string = string, Verbs extends string = string> = Record<Nouns, Noun<Nouns, Verbs> | SimpleNouns<Nouns, Verbs>  | Things | Things[] > // (Nouns | Things) | (Nouns | Things)[]>
-export type SimpleNouns<Nouns extends string = string, Verbs extends string = string> = Record<Nouns, Noun<Nouns, Verbs>>
-
-export type TestNouns<Nouns extends string = string> = Record<Nouns, Things | Things[] | Nouns> //Nouns | Things | (Nouns | Things)[]>
-
-const exampleNouns: TestNouns = {
-  Company: 'Organization',
-  Contact: 'Person',
-  Customer: ['Organization', 'Person', 'AcceptAction' ],
-  Idea: 'Company',
+export type Things<N extends Nouns<N>> = keyof Nouns<N> extends string ? SchemaThings | DefaultNouns | keyof Nouns<N> : never
+export type PropositionalPhrase<N extends Nouns<N>> = `${CommonPrepositions}${Things<N>}` | `not${Capitalize<CommonPrepositions>}${Things<N>}`
+export type Noun<N extends Nouns<N>> = Record<ExtendedPrepositions | 'is', Things<N> | Array<Things<N>>> & Is
+export type Nouns<N extends Record<string,any>> = {
+  [K in keyof N]: Things<N> | Is | Noun<N[K]> | Array<Things<N> | PropositionalPhrase<N>>
 }
-
-const exampleGraph: SimpleGraph = {
-  nouns: {
-    // Customer: 
-    // Customer: 'Organization',
-    // Contact: 'Person',
-    // Deal: 'SellAction',
-    // Lead: 'Person',
-  },
-  verbs: {
-
-  }
-}
-
-export type Data = Record<string,any>
-
-export type Metadata<Nouns extends string = string, Verbs extends string = string, T extends Data = {}> = {
-  icon?: string | Url | React.FC
-  sameAs?: string | Url | Thing
-  description?: string
-  seed?: Url | Function
-  source?: Url | Source | Function
-  state?: typeof createMachine<T>
-  properties?: Record<keyof T, Property>
-  metadata?: Data
-}
-
-// export type Properties<T extends Data = {}> = Record<keyof T, Property>
-
-// export type EventHook<Nouns extends string = string, Verbs extends string = string, T extends Data = {}> = {
-
-export type Hook = ($: $Context) => Promise< Success | Error >
-
-export type ResourceMetadataProperties = {
-  [key in `_${keyof Omit<Noun, 'properties'>}` ]: Noun[keyof Noun]
-}
+export type Is = { is: any }
 
 
 
-export type SeedFunction = ($: NounContext) => Promise< Success | Error >
-
-export type GraphContext = {}
-export type NounContext = {}
-export type VerbContext = {}
-
-export type Source = {}
-
-export type Property<Nouns extends string = string, Verbs extends string = string, Properties extends string = string> = {
-
-}
-
-export type Success = {
-  success: true
-} & Record<string, any>
-
-export type Error = {
-  success: false
-  error: string
-} & Record<string, any>
-
-
-// export type Nouns = Record<string, Noun>
-// export type Verbs = Record<string, Verb>
-
-const ResourceActions = ['Create', 'Read', 'Update', 'Delete', 'Change', 'Error'] as const
-export type ResourceActionsArray = typeof ResourceActions
-export type ResourceEvent = ResourceActionsArray[number]
-export type ResourceEvents = `on${ResourceEvent}`
-
-export type Component = React.FC
-
-
-export type Url = `https://${string}.${string}` | URL
-export type EmailAddress = `${string}@${string}.${string}`
-
-export type Word<T> = string | T
-
-// export type Word = string | {
-//   verb: string // third person singular like `Creates`
-//   activity: string // gerund like `Creating
-//   action: string // active like `Create`
-//   event: string // past tense like `Created`
-// } | {
-//   noun: string
-//   plural: string
-// }
-
-export const sum = (a: number, b: number) => a + b

@@ -1,4 +1,6 @@
-
+export type SchemaThings = Things
+export type SchemaActions = Actions
+export type SchemaProperties = ThingProperties
 
 export type Actions = 'Accept' | 'Achieve' | 'Activate' | 'Add' | 'Agree' | 'Allocate' | 'Append' | 'Apply' | 'Arrive' | 'Ask' | 'Assess' | 'Assign' | 'Authorize' | 'Befriend' | 'Bookmark' | 'Borrow' | 'Buy' | 'Cancel' | 'Check' | 'CheckIn' | 'CheckOut' | 'Choose' | 'Comment' | 'Communicate' | 'Confirm' | 'Consume' | 'Control' | 'Cook' | 'Create' | 'Deactivate' | 'Delete' | 'Depart' | 'Disagree' | 'Discover' | 'Dislike' | 'Donate' | 'Download' | 'Draw' | 'Drink' | 'Eat' | 'Endorse' | 'Exercise' | 'Film' | 'Find' | 'Follow' | 'Give' | 'Ignore' | 'Inform' | 'Insert' | 'Install' | 'Interact' | 'Invite' | 'Join' | 'Leave' | 'Lend' | 'Like' | 'Listen' | 'Lose' | 'Marry' | 'Move' | 'Order' | 'Organize' | 'Paint' | 'Pay' | 'Perform' | 'Photograph' | 'Plan' | 'Play' | 'PlayGame' | 'PreOrder' | 'Prepend' | 'Quote' | 'React' | 'Read' | 'Receive' | 'Register' | 'Reject' | 'Rent' | 'Replace' | 'Reply' | 'Reserve' | 'Resume' | 'Return' | 'Review' | 'Rsvp' | 'Schedule' | 'Search' | 'SeekTo' | 'Sell' | 'Send' | 'Share' | 'SolveMath' | 'Subscribe' | 'Suspend' | 'Take' | 'Tie' | 'Tip' | 'Track' | 'Trade' | 'Transfer' | 'Travel' | 'UnRegister' | 'Update' | 'Use' | 'View' | 'Vote' | 'Want' | 'Watch' | 'Wear' | 'Win' | 'Write'
 
