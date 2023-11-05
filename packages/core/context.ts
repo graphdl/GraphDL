@@ -1,8 +1,8 @@
 // import { Graph } from './types'
 
-export type $Context<Nouns extends string = string, Verbs extends string = string> = {
+// export type $Context<Nouns extends string = string, Verbs extends string = string> = {
   
-}
+// }
 
   // 巛: Event
   // 彡: Data
