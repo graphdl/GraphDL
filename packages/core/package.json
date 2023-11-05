@@ -5,6 +5,8 @@
   "type": "module",
   "main": "index.js",
   "types": "index.ts",
+  "private": false,
+  "access": "public",
   "scripts": {
     "build": "tsc",
     "test": "vitest"
