@@ -22,7 +22,15 @@ export const Automotive = createGraph({
   }
 }, {
   Dealer: {
-    Sells: 'Listing',
+    Buys: 'Vehicle',
+    Trades: 'Vehicle',
+    Sells: { 
+      Vehicle: {
+        to: 'Buyer',
+        for: 'PriceSpecification',
+        with: 'LoanOrCredit'
+      }
+    }
   }
 })
 

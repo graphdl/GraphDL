@@ -28,8 +28,8 @@ export type ToEvent<V extends string> = V extends `${infer A}s` ? `${A}ed` : V
 
 export const createGraph = <N extends Nouns<N>>(nouns: N, verbs?: Verbs<N>) => ({ nouns, verbs })
 
-export type Verbs<N extends Nouns<N>> = Partial<Record<keyof Nouns<N>, Record<string, keyof Nouns<N>>>>
-// export type Verbs<N extends Nouns<N>> = Partial<Record<keyof Nouns<N>, Record<string, keyof Nouns<N> | Partial<Record<keyof Nouns<N>, Noun<N>>>>>>
+// export type Verbs<N extends Nouns<N>> = Partial<Record<keyof Nouns<N>, Record<string, keyof Nouns<N>>>>
+export type Verbs<N extends Nouns<N>> = Partial<Record<keyof Nouns<N>, Record<string, keyof Nouns<N> | Partial<Record<keyof Nouns<N>, Partial<Record<ExtendedPrepositions, Things<N>>>>>>>>
 
 export const Automotive = createGraph({
   Vehicle: 'Vehicle',
@@ -38,11 +38,13 @@ export const Automotive = createGraph({
   Buyer: 'Person'
 }, {
   Dealer: {
-    Sells: 'Vehicle'
-    //   Vehicle: {
-    //     to: 'Buyer',
-    //   }
-    // }
+    Sells: { 
+      Vehicle: {
+        to: 'Buyer',
+        for: 'PriceSpecification',
+        with: 'LoanOrCredit'
+      }
+    }
   }
 })
 
