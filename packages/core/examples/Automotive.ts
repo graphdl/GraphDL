@@ -18,12 +18,30 @@ export const Automotive = createGraph({
   },
   Buyer: {
     is: 'Person',
-    with: ['MonetaryAmount','LoanOrCredit'],
-  }
+    with: ['MonetaryAmount?','LoanOrCredit?'],
+  },
+  Service: 'Service',
+  ServiceQuote: {
+    is: 'OfferForService',
+    of: 'Service',
+    at: 'PriceSpecification',
+    by: ['AutoDealer','AutoRepair','AutoBodyShop','AutoPartsStore','TireShop','AutoRental','GasStation','AutoWash','AutoWax'],
+  },
+  ServiceOrder: {
+    is: 'Order',
+    of: 'Service',
+    at: 'PriceSpecification',
+    by: ['AutoDealer','AutoRepair','AutoBodyShop','AutoPartsStore','TireShop','AutoRental','GasStation','AutoWash','AutoWax'],
+  },
 }, {
   Dealer: {
     Buys: 'Vehicle',
-    Trades: 'Vehicle',
+    Trades: {
+      Vehicle: {
+        for: 'Vehicle',
+        as: 'TradeAction',
+      }
+    },
     Sells: { 
       Vehicle: {
         to: 'Buyer',
