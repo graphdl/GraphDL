@@ -1,0 +1,16 @@
+{
+  "name": "@graphdl/mongo",
+  "description": "GraphDL Integration with MongoDB",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/graphdl/graphdl.git"
+  },
+  "keywords": [],
+  "author": "Drivly",
+  "license": "MIT",
+  "homepage": "https://graphdl.org"
+}

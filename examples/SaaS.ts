@@ -1,4 +1,4 @@
-import { createGraph } from '../packages/core'
+import { createGraph } from '../packages/core/index'
 
 export const SaaS = createGraph({
   nouns: {
@@ -32,5 +32,21 @@ export const SaaS = createGraph({
     MRR: { is: 'MonetaryAmount', of: 'Subscription', to: 'Provider', per: 'TimeInterval', in: 'Month' },
     ARPU: { is: 'MonetaryAmount', of: 'Subscription', to: 'Provider', per: 'Customer' },
     NRR: { is: 'MonetaryAmount', of: 'Subscription', to: 'Provider', per: 'TimeInterval', in: 'Year', from: 'Churn' },
+  },
+  machines: {
+    User: {
+      states: {
+        Created: { on: { 
+          Updating: { target: 'Updated', guard: 'Cancelled' },
+          Deleting: { target: 'Deleting', guard: 'Cancelled' },
+        } },
+        Updated: { on: { 
+          Updating: { target: 'Updated', guard: 'Cancelled' },
+          Deleting: { target: 'Deleting', guard: 'Cancelled' },
+        } },
+        Cancelled: { on: { Toggle: 'inactive' } },
+        Deleted: { type: 'final' },
+      },
+    }
   }
 })

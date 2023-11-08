@@ -113,8 +113,8 @@ export type Story<G extends Graph<G>> = {
     job: string
   },
   problem: {
-    internal: string
     external: string
+    internal: string
     philisophical: string
     villian: string
   },
