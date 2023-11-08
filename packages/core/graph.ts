@@ -5,27 +5,69 @@ import { App, Docs, Site, Brand, NounViews } from './ui'
 import { API, Data } from './api'
 import { stringify } from './utils'
 
-export const createGraph = <G extends Graph<G>>(graph: G) => {
+export const createGraph = <G extends Graph<G>>(graph: { nouns: Nouns<G> } & Partial<G>) => {
   graph.toString = () => stringify(graph)
 }
 
-export type Graph<G extends Graph<G> = { nouns: {}}> = {
+export type Graph<G extends Graph<G> = DefaultGraph> = {
   nouns: Nouns<G>
-  verbs?: Partial<Verbs<G>>
-  actions?: Partial<Actions<G>>
-  triggers?: Partial<Triggers<G>>
-  events?: Partial<Events<G>>
-  plurals?: Partial<Plurals<G>>
-  properties?: Partial<NounProperties<G>>
-  fields?: Partial<NounFields<G>>
-  views?: Partial<NounViews<G>>
-  app?: Partial<App<G>>
-  api?: Partial<API<G>>
-  site?: Partial<Site<G>>
-  admin?: Partial<App<G>>
-  docs?: Partial<Docs<G>>
-  db?: Partial<Data<G>>
-  brand?: Partial<Brand<G>>
+  verbs: Partial<Verbs<G>>
+  actions: Partial<Actions<G>>
+  triggers: Partial<Triggers<G>>
+  events: Partial<Events<G>>
+  plurals: Partial<Plurals<G>>
+  properties: Partial<NounProperties<G>>
+  fields: Partial<NounFields<G>>
+  views: Partial<NounViews<G>>
+  app: Partial<App<G>>
+  api: Partial<API<G>>
+  site: Partial<Site<G>>
+  admin: Partial<App<G>>
+  docs: Partial<Docs<G>>
+  db: Partial<Data<G>>
+  brand: Partial<Brand<G>>
+}
+
+type DefaultGraph = {
+  nouns: {
+    User: { is: 'Person' },
+    Tenant: { is: 'Organization' },
+    Admin: { is: 'Person' },
+  },
+  verbs: {
+    User: {
+      Create: { is: 'Create' },
+      Update: { is: 'Update' },
+      Delete: { is: 'Delete' },
+      Login: { is: 'Login' },
+      Logout: { is: 'Logout' },
+      Signup: { is: 'Signup' },
+    },
+    Tenant: {
+      Create: { is: 'Create' },
+      Update: { is: 'Update' },
+      Delete: { is: 'Delete' },
+    },
+    Admin: {
+      Create: { is: 'Create' },
+      Update: { is: 'Update' },
+      Delete: { is: 'Delete' },
+    }
+  },
+  actions: {},
+  triggers: {},
+  events: {},
+  plurals: {},
+  properties: {},
+  fields: {},
+  views: {},
+  app: {},
+  api: {},
+  site: {},
+  admin: {},
+  docs: {},
+  db: {},
+  brand: {},
 }
 
 export type Noun<G extends Graph<G>> = Things | keyof G['nouns']
