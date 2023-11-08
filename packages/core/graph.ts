@@ -1,9 +1,9 @@
 import { Things, SchemaActions, Prepositions, ThingProperties,  } from './schema'
 import type { NounFields, NounProperties } from './properties'
-import type { BSON, Document, ObjectId, Collection as MongoCollection } from 'mongodb'
-import { App, Docs, Site, Brand, NounViews } from './ui'
+import { App, Docs, Site, Brand, NounViews, Story } from './ui'
 import { API, Data } from './api'
 import { stringify } from './utils'
+import { Machines } from './state'
 
 export const createGraph = <G extends Graph<G>>(graph: { nouns: Nouns<G> } & Partial<G>) => {
   graph.toString = () => stringify(graph)
@@ -17,6 +17,7 @@ export type Graph<G extends Graph<G> = DefaultGraph> = {
   events: Partial<Events<G>>
   plurals: Partial<Plurals<G>>
   properties: Partial<NounProperties<G>>
+  machines: Partial<Machines<G>>
   fields: Partial<NounFields<G>>
   views: Partial<NounViews<G>>
   app: Partial<App<G>>
@@ -26,6 +27,7 @@ export type Graph<G extends Graph<G> = DefaultGraph> = {
   docs: Partial<Docs<G>>
   db: Partial<Data<G>>
   brand: Partial<Brand<G>>
+  story: Partial<Story<G>>
 }
 
 type DefaultGraph = {
@@ -57,6 +59,7 @@ type DefaultGraph = {
   actions: {},
   triggers: {},
   events: {},
+  machines: {},
   plurals: {},
   properties: {},
   fields: {},
@@ -68,6 +71,7 @@ type DefaultGraph = {
   docs: {},
   db: {},
   brand: {},
+  story: {},
 }
 
 export type Noun<G extends Graph<G>> = Things | keyof G['nouns']

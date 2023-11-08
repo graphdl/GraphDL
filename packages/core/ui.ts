@@ -106,6 +106,37 @@ export type Brand<G extends Graph<G>> = {
   darkAccent: Color
 }
 
+export type Story<G extends Graph<G>> = {
+  hero: {
+    persona: string
+    industry: string
+    job: string
+  },
+  problem: {
+    internal: string
+    external: string
+    philisophical: string
+    villian: string
+  },
+  guide: {
+    name: string
+    offer: string
+  }
+  plan: {
+    step1: string
+    step2: string
+    step3: string
+  } | string | object,
+  action: string | object
+  failure: string | object
+  stakes: string | object
+  success: string | object
+  transformation: string | {
+    from: string
+    to: string
+  }
+}
+
 export type BaseColors = 'black' | 'white' | 'slate' | 'gray' | 'zinc' | 'neutral' | 'stone' | 'red' | 'orange' | 'amber' | 'yellow' 
   | 'lime' | 'green' | 'emerald' | 'teal' | 'cyan' | 'sky' | 'blue' | 'indigo' | 'violet' | 'purple' | 'fuchsia' | 'pink' | 'rose'
 export type ColorShades = '50' | '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900' | '950'
