@@ -111,17 +111,17 @@ export type Story<G extends Graph<G>> = {
     persona: string
     industry: string
     job: string
-  },
+  } | object | string,
   problem: {
     external: string
     internal: string
-    philisophical: string
+    philosophical: string
     villian: string
-  },
+  } | string,
   guide: {
     name: string
     offer: string
-  }
+  } | object | string,
   plan: {
     step1: string
     step2: string

@@ -5,8 +5,10 @@ import { API, Data } from './api'
 import { stringify } from './utils'
 import { Machines } from './state'
 
-export const createGraph = <G extends Graph<G>>(graph: { nouns: Nouns<G> } & Partial<G>) => {
-  graph.toString = () => stringify(graph)
+export const createGraph = <G extends Graph<G>>(graph: Nouns<G> | { nouns: Nouns<G> } & Partial<G>) => {
+  const fullGraph = (graph as Graph).nouns ? graph : { nouns: graph }
+  fullGraph.toString = () => stringify(graph)
+  return fullGraph as Graph<G>
 }
 
 export type Graph<G extends Graph<G> = DefaultGraph> = {
@@ -76,7 +78,7 @@ type DefaultGraph = {
 
 export type Noun<G extends Graph<G>> = Things | keyof G['nouns']
 export type NounModule<G extends Graph<G>> = {
-  [P in 'is' & (Prepositions)]: OptionalNouns<G>
+  [P in 'is' & (Prepositions | ThingProperties)]: PluralAndOptionalNouns<G> | PluralAndOptionalNouns<G>[]
 }
 export type Nouns<G extends Graph<G>> = {
   [N in keyof G['nouns']]: G['nouns'][N]
@@ -100,7 +102,9 @@ export type IsPlural<K> = K extends `${infer Base}s` ? K : never
 export type Pluralize<K> = K extends `${infer Base}s` ? K : never
 export type Plurals<G extends Graph<G>> = Record<keyof G['nouns'], string>
 
-export type OptionalNoun<G extends Graph<G>> =  Noun<G> extends string ? Noun<G> | `${Noun<G>}?` : never
+export type PluralAndOptionalNouns<G extends Graph<G>> = PluralNouns<G> | OptionalNouns<G>
+export type PluralNouns<G extends Graph<G>> = Noun<G> extends string ? `${Noun<G>}s` : never
+export type OptionalNoun<G extends Graph<G>> = Noun<G> extends string ? Noun<G> | `${Noun<G>}?` : never
 export type OptionalNouns<G extends Graph<G>> = OptionalNoun<G> | `[${OptionalNoun<G>}]` | OptionalNoun<G>[]
 export type PastTense = `${string}ed`
 export type PresentTense = `${string}s`
