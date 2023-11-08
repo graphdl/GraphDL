@@ -1,29 +1,31 @@
 import { Things, SchemaActions, Prepositions, ThingProperties,  } from './schema'
 import type { NounFields, NounProperties } from './properties'
 import type { BSON, Document, ObjectId, Collection as MongoCollection } from 'mongodb'
-import { App, Docs, Site } from './ui'
+import { App, Docs, Site, Brand, NounViews } from './ui'
 import { API, Data } from './api'
-import { G } from 'vitest/dist/reporters-5f784f42.js'
+import { stringify } from './utils'
 
-export const createGraph = <G extends Graph<G>>(graph: G): G => {
-  return graph
+export const createGraph = <G extends Graph<G>>(graph: G) => {
+  graph.toString = () => stringify(graph)
 }
 
 export type Graph<G extends Graph<G> = { nouns: {}}> = {
   nouns: Nouns<G>
   verbs?: Partial<Verbs<G>>
-  actions?: Actions<G>
-  triggers?: Triggers<G>
-  events?: Events<G>
-  plurals?: Plurals<G>
-  properties?: NounProperties<G>
-  fields?: NounFields<G>
-  app?: App<G>
-  api?: API<G>
-  site?: Site<G>
-  admin?: App<G>
-  docs?: Docs<G>
-  db?: Data<G>
+  actions?: Partial<Actions<G>>
+  triggers?: Partial<Triggers<G>>
+  events?: Partial<Events<G>>
+  plurals?: Partial<Plurals<G>>
+  properties?: Partial<NounProperties<G>>
+  fields?: Partial<NounFields<G>>
+  views?: Partial<NounViews<G>>
+  app?: Partial<App<G>>
+  api?: Partial<API<G>>
+  site?: Partial<Site<G>>
+  admin?: Partial<App<G>>
+  docs?: Partial<Docs<G>>
+  db?: Partial<Data<G>>
+  brand?: Partial<Brand<G>>
 }
 
 export type Noun<G extends Graph<G>> = Things | keyof G['nouns']

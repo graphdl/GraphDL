@@ -44,6 +44,15 @@ export const Automotive = createGraph({
         }
       }
     }
+  },
+  triggers: {
+    Vehicle: {
+      Created: vehicle => {}
+    }
+  },
+  brand: {
+    primaryColor: 'emerald-600'
+    
   }
 })
 

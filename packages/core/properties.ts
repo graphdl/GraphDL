@@ -2,11 +2,12 @@ import { Graph } from './graph'
 import { ThingProperties } from './schema'
 
 export type NounProperties<G extends Graph<G>> = {
-  [N in keyof G['nouns']]: any //Properties<G, N>
+  [N in keyof G['nouns']]: Properties<G, N>
 }
 export type NounFields<G extends Graph<G>> = {
-  [N in keyof G['nouns']]: any //Fields<G, N>
+  [N in keyof G['nouns']]: Fields<G, N>
 }
+
 
 export type Properties<G extends Graph<G>, N extends keyof G['nouns']> = {
   [P in keyof G['properties'][N]]: Property<G,N,P>
