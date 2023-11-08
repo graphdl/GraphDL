@@ -1,44 +1,59 @@
 import { Things, SchemaActions, Prepositions, ThingProperties,  } from './schema'
 import type { NounFields, NounProperties } from './properties'
 import type { BSON, Document, ObjectId, Collection as MongoCollection } from 'mongodb'
-import { App, Site } from './ui'
+import { App, Docs, Site } from './ui'
+import { API, Data } from './api'
+import { G } from 'vitest/dist/reporters-5f784f42.js'
 
+export const createGraph = <G extends Graph<G>>(graph: G): G => {
+  return graph
+}
 
-export type Graph<G extends Graph<G>> = {
+export type Graph<G extends Graph<G> = { nouns: {}}> = {
   nouns: Nouns<G>
-  verbs: Verbs<G>
-  actions: Actions<G>
-  triggers: Triggers<G>
-  events: Events<G>
-  plurals: Plurals<G>
-  properties: NounProperties<G>
-  fields: NounFields<G>
-  app: App<G>
-  site: Site<G>
+  verbs?: Partial<Verbs<G>>
+  actions?: Actions<G>
+  triggers?: Triggers<G>
+  events?: Events<G>
+  plurals?: Plurals<G>
+  properties?: NounProperties<G>
+  fields?: NounFields<G>
+  app?: App<G>
+  api?: API<G>
+  site?: Site<G>
+  admin?: App<G>
+  docs?: Docs<G>
+  db?: Data<G>
 }
 
 export type Noun<G extends Graph<G>> = Things | keyof G['nouns']
 export type NounModule<G extends Graph<G>> = {
-  [P in 'is' & (Prepositions)]: Noun<G>
+  [P in 'is' & (Prepositions)]: OptionalNouns<G>
 }
 export type Nouns<G extends Graph<G>> = {
   [N in keyof G['nouns']]: G['nouns'][N]
 }
 
 export type Verb<G extends Graph<G>> = {
-  [V in keyof G['verbs']]: Noun<G>
+  [V in PresentTense]: keyof G['nouns'] | Partial<DirectObject<G>>
+}
+
+export type DirectObject<G extends Graph<G>> = {
+  [N in keyof G['nouns']]:  Partial<{
+    [P in Prepositions]: OptionalNouns<G>
+  }>
 }
 
 export type Verbs<G extends Graph<G>> = {
-  [N in keyof G['nouns']]: {
-    [V in PresentTense]: Verb<G>
-  }
+  [N in keyof G['nouns']]: Partial<Verb<G>>
 }
 
 export type IsPlural<K> = K extends `${infer Base}s` ? K : never
 export type Pluralize<K> = K extends `${infer Base}s` ? K : never
 export type Plurals<G extends Graph<G>> = Record<keyof G['nouns'], string>
 
+export type OptionalNoun<G extends Graph<G>> =  Noun<G> extends string ? Noun<G> | `${Noun<G>}?` : never
+export type OptionalNouns<G extends Graph<G>> = OptionalNoun<G> | `[${OptionalNoun<G>}]` | OptionalNoun<G>[]
 export type PastTense = `${string}ed`
 export type PresentTense = `${string}s`
 export type ActiveTense = `${string}ing`
