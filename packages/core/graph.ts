@@ -1,4 +1,7 @@
 import { Things, SchemaActions, Prepositions, ThingProperties,  } from './schema'
+import type { NounFields, NounProperties } from './properties'
+import type { BSON, Document, ObjectId, Collection as MongoCollection } from 'mongodb'
+import { App, Site } from './ui'
 
 
 export type Graph<G extends Graph<G>> = {
@@ -7,6 +10,11 @@ export type Graph<G extends Graph<G>> = {
   actions: Actions<G>
   triggers: Triggers<G>
   events: Events<G>
+  plurals: Plurals<G>
+  properties: NounProperties<G>
+  fields: NounFields<G>
+  app: App<G>
+  site: Site<G>
 }
 
 export type Noun<G extends Graph<G>> = Things | keyof G['nouns']
@@ -27,20 +35,23 @@ export type Verbs<G extends Graph<G>> = {
   }
 }
 
+export type IsPlural<K> = K extends `${infer Base}s` ? K : never
+export type Pluralize<K> = K extends `${infer Base}s` ? K : never
+export type Plurals<G extends Graph<G>> = Record<keyof G['nouns'], string>
 
 export type PastTense = `${string}ed`
 export type PresentTense = `${string}s`
 export type ActiveTense = `${string}ing`
-export type IsPresentTense<K> = K extends `${infer Base}s` ? K : never;
-export type IsPastTense<K> = K extends `${infer Base}ed` ? K : never;
-export type IsActiveTense<K> = K extends `${infer Base}ing` ? K : never;
+export type IsPresentTense<K> = K extends `${infer Base}s` ? K : never
+export type IsPastTense<K> = K extends `${infer Base}ed` ? K : never
+export type IsActiveTense<K> = K extends `${infer Base}ing` ? K : never
 export type ToAction<V extends string> = V extends `${infer A}s` ? A : never
 export type ToActivity<V extends string> = V extends `${infer A}s` ? `${A}ing` : never
 export type ToEvent<V extends string> = V extends `${infer A}s` ? `${A}ed` : never
 
-export type Trigger<G extends Graph<G>, S extends Noun<G>, V extends `${string}ing`, N extends Noun<G>> = ($: $Context<G>) => any;
-export type Action<G extends Graph<G>, S extends Noun<G>, V extends PresentTense, O extends Noun<G>> = ($: $Context<G>) => any;
-export type Event<G extends Graph<G>, S extends Noun<G>, V extends PastTense, O extends Noun<G>> = ($: $Context<G>) => any;
+export type Trigger<G extends Graph<G>, S extends Noun<G>, V extends `${string}ing`, N extends Noun<G>> = ($: $Context<G>) => any
+export type Action<G extends Graph<G>, S extends Noun<G>, V extends PresentTense, O extends Noun<G>> = ($: $Context<G>) => any
+export type Event<G extends Graph<G>, S extends Noun<G>, V extends PastTense, O extends Noun<G>> = ($: $Context<G>) => any
 
 export type Triggers<G extends Graph<G>> = {
   [S in keyof G['nouns']]: {
@@ -58,7 +69,6 @@ export type Actions<G extends Graph<G>> = {
   }
 }
 
-
 export type Events<G extends Graph<G>> = {
   [S in keyof G['nouns']]: {
     [K in keyof G['verbs'][S] as IsPastTense<ToEvent<Extract<K, string>>>]: {
@@ -66,6 +76,9 @@ export type Events<G extends Graph<G>> = {
     }
   }
 }
+
+
+
 
 
 export type $Context<G extends Graph<G>> = G & {
