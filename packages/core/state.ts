@@ -1,5 +1,6 @@
 import { Graph, IsPresentTense } from '.'
 import { 
+  createMachine,
   StateMachine, 
   MachineContext, 
   EventObject,
@@ -10,7 +11,7 @@ import {
 } from 'xstate'
 
 export type Machines<G extends Graph<G>> = {
-  [N in keyof G['nouns']]: Partial<StateMachine<any, any, any, any, any, any, any, any, any>>
+  [N in keyof G['nouns']]: any  // Partial<StateMachine<any, any, any, any, any, any, any, any, any>>
 }
 
 export type Context<G extends Graph<G>, N extends keyof G['nouns']> = MachineContext
