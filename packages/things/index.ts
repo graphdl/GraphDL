@@ -1,0 +1,35 @@
+import { PrepositionsAndActivities, Things } from './things'
+// import { Thing } from './schema'
+
+export type ThingsAndPrepositions<T extends string> = ThingsWithInstances<T> | PrepositionsAndActivities 
+export type ThingsWithInstances<T extends string> = T | Things | `InstanceOf${Things | T}`
+export type SimpleThings<T extends string> = Record<string, ThingsWithInstances<T>>
+// export type ExpandedThings<T extends Record<T extends string ? T : never, any>> = {
+//   is: ThingsWithInstances<T> | ThingsWithInstances<T>[]
+// } & {
+//   [K in PrepositionsAndActivities]?: ThingsAndPrepositions<T> | ThingsAndPrepositions<T>[]
+// }
+
+// Keep this very simple as only Thing
+export const listThings = <T extends string>(things: Record<T, Things>) => things
+// export const defineThings = <T extends string>(things: Record<T, ThingsWithInstances<T> | ThingsWithInstances<T>[] | ExpandedThings<T>>) => things
+
+
+// listThings is only string value things
+// defineThings allows expanded definitions
+// defineDomain only allows prepositions to refer to things in the domain
+
+
+export const things = listThings({
+  Dealer: 'AutoDealer',
+  Vehicle: 'Vehicle',
+  Website: 'WebSite',
+})
+
+// export const definedThings = defineThings({
+//   Dealer: 'AutoDealer',
+//   // Dealer: { is: 'AutoDealer', selling: 'Vehicles', on: 'WebSite' },
+//   Vehicle: { is: 'Car' },
+// })
+
+
