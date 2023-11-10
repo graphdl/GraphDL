@@ -31,57 +31,21 @@ export type Graph<G extends Graph<G> = DefaultGraph> = {
   brand: Partial<Brand<G>>
   story: Partial<Story<G>>
 }
-
-type DefaultGraph = {
-  nouns: {
-    User: { is: 'Person' },
-    Tenant: { is: 'Organization' },
-    Admin: { is: 'Person' },
-  },
-  verbs: {
-    User: {
-      Create: { is: 'Create' },
-      Update: { is: 'Update' },
-      Delete: { is: 'Delete' },
-      Login: { is: 'Login' },
-      Logout: { is: 'Logout' },
-      Signup: { is: 'Signup' },
-    },
-    Tenant: {
-      Create: { is: 'Create' },
-      Update: { is: 'Update' },
-      Delete: { is: 'Delete' },
-    },
-    Admin: {
-      Create: { is: 'Create' },
-      Update: { is: 'Update' },
-      Delete: { is: 'Delete' },
-    }
-  },
-  actions: {},
-  triggers: {},
-  events: {},
-  machines: {},
-  plurals: {},
-  properties: {},
-  fields: {},
-  views: {},
-  app: {},
-  api: {},
-  site: {},
-  admin: {},
-  docs: {},
-  db: {},
-  brand: {},
-  story: {},
-}
-
-export type Noun<G extends Graph<G>> = Things | keyof G['nouns']
+// export type NounsOrThings<G extends Graph<G>> = Things | Nouns<G>
+export type Noun<G extends Graph<G>> = Things | keyof G['nouns'] // | Array<keyof G['nouns'] | Things>
 export type NounModule<G extends Graph<G>> = {
-  [P in 'is' & (Prepositions | ThingProperties)]: PluralAndOptionalNouns<G> | PluralAndOptionalNouns<G>[]
-}
+  [P in 'is' | Prepositions]: Things | keyof G['nouns'] // Noun<G>
+} & {
+  is: Things //| keyof G['nouns']
+} 
+  // [P in 'is' & (Prepositions | ThingProperties)]: PluralAndOptionalNouns<G> | PluralAndOptionalNouns<G>[]
+// }
 export type Nouns<G extends Graph<G>> = {
-  [N in keyof G['nouns']]: G['nouns'][N]
+  [N in string]: Things | ({ is: Things } | { [P in Prepositions]: Things }) 
+  // [N in string]: Things | NounModule<G>
+  // [N in keyof G['nouns']]: NounModule<G> | Noun<G>
+  // [N in keyof G['nouns']]: Things // Noun<G> | NounModule<G>
+  // [N in keyof G['nouns']]: G['nouns'][N] extends NounModule<G> ? NounModule<G> : Noun<G>
 }
 
 export type Verb<G extends Graph<G>> = {
@@ -159,4 +123,49 @@ export type $Context<G extends Graph<G>> = G & {
   // 只: User<G>
   // 口?: Resource<G>
   // _?: Property<G>
+}
+
+
+type DefaultGraph = {
+  nouns: {
+    User: { is: 'Person' },
+    Tenant: { is: 'Organization' },
+    Admin: { is: 'Person' },
+  },
+  verbs: {
+    User: {
+      Create: { is: 'Create' },
+      Update: { is: 'Update' },
+      Delete: { is: 'Delete' },
+      Login: { is: 'Login' },
+      Logout: { is: 'Logout' },
+      Signup: { is: 'Signup' },
+    },
+    Tenant: {
+      Create: { is: 'Create' },
+      Update: { is: 'Update' },
+      Delete: { is: 'Delete' },
+    },
+    Admin: {
+      Create: { is: 'Create' },
+      Update: { is: 'Update' },
+      Delete: { is: 'Delete' },
+    }
+  },
+  actions: {},
+  triggers: {},
+  events: {},
+  machines: {},
+  plurals: {},
+  properties: {},
+  fields: {},
+  views: {},
+  app: {},
+  api: {},
+  site: {},
+  admin: {},
+  docs: {},
+  db: {},
+  brand: {},
+  story: {},
 }
