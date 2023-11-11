@@ -1,23 +1,31 @@
-import { describe, it, expect } from 'vitest'
 import { Schema } from './chain'
 
-// // Example Usage
-// const app = Schema();
 
-// app.Consumer.is.Person.buying.Car;
-// app.Dealer.is.AutoDealer;
-
-// console.log(app.toNouns());
-// // Expected Output: ['Consumer.is.Person.buying.Car', 'Dealer.is.AutoDealer']
-
-describe('Schema', () => {
+// Usage Example
+describe('CRM', () => {
   it('should work', () => {
-    const app = Schema();
+    const $ = Schema();
 
-    app.Consumer.is.Person.buying.Car()
-    app.Dealer.is.AutoDealer()
-    // app.Deal.is.SellAction.of.Car.to.Consumer()
+    $.Customer.is.Organization()
+    $.Contact.is.Person.in.Organization()
+    $.Deal.is.SellAction.of.Product.to.Customer()
+    $.Customer.is.Thing()
 
-    expect(app.toNouns()).toEqual(['Consumer.is.Person.buying.Car', 'Dealer.is.AutoDealer'])
+    expect($.getPaths()).toMatchInlineSnapshot(`
+      {
+        "Contact": {
+          "in": "Organization",
+          "is": "Person",
+        },
+        "Customer": {
+          "is": "Thing",
+        },
+        "Deal": {
+          "is": "SellAction",
+          "of": "Product",
+          "to": "Customer",
+        },
+      }
+    `)
   })
 })

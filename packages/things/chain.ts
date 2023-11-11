@@ -3,48 +3,57 @@ import { Thing as SchemaThing } from './schema'
 
 type PrepositionOrActivity = Prepositions | Activities;
 
-interface SchemaFinalizer {
-    toNouns: () => string[];
+type AlternatingChain = {
+    [K in PrepositionOrActivity | string]: ThingChain;
 }
 
-// A type that alternates between PrepositionOrActivity and Things
-type AlternatingChain = {
-    [K in PrepositionOrActivity]: ThingChain;
-} & SchemaFinalizer;
-
 type ThingChain = {
-    [K in Things]: AlternatingChain & (() => AlternatingChain);
+    [K in Things | string]: AlternatingChain & (() => AlternatingChain);
 };
 
 interface IsProxy {
     is: ThingChain;
 }
 
-type ChainProxy = {
-    [key: string]: IsProxy & (() => IsProxy);
-} & SchemaFinalizer;
+type ChainProxy = Record<string, IsProxy & (() => IsProxy)>;
 
-export function Schema(): ChainProxy {
-    let paths: string[] = [];
-    let currentPath: string[] = [];
+export function Schema(): ChainProxy & { getPaths: () => any } {
+    let paths: Record<string, any> = {};
+    let currentKey: string | null = null;
+    let currentObject: Record<string, string> = {};
+    let lastKey: string | null = null;
 
     const handler: ProxyHandler<any> = {
         get(target, prop: string) {
-            if (prop === 'toNouns') {
-                const pathString = currentPath.join('.');
-                currentPath = []; // Reset current path
-                return () => pathString ? [...paths, pathString] : [...paths];
+            if (prop === 'getPaths') {
+                if (currentKey !== null) {
+                    paths[currentKey] = { ...currentObject };
+                }
+                return () => ({ ...paths });
             }
 
-            currentPath.push(prop);
+            if (lastKey !== null) {
+                currentObject[lastKey] = prop;
+                lastKey = null;
+            } else {
+                if (currentKey === null) {
+                    currentKey = prop;
+                    currentObject = {};
+                } else {
+                    lastKey = prop;
+                }
+            }
+
             return new Proxy(() => {}, handler);
         },
         apply(target, thisArg, argumentsList) {
-            const pathString = currentPath.join('.');
-            paths.push(pathString);
-            currentPath = [];
+            if (currentKey !== null) {
+                paths[currentKey] = { ...currentObject };
+            }
+            currentKey = null;
+            lastKey = null;
             return new Proxy(() => {}, handler);
-        }
+        },
     };
 
     return new Proxy(() => {}, handler);
