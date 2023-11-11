@@ -16,10 +16,11 @@ export const GraphDL = createGraph({
     TypeScript: { isInstanceOf: 'SoftwareLanguage', with: 'Types', for: 'JavaScript' },
     Type: { is: 'Code', with: 'Properties', of: 'Noun' },
     User: { is: 'Person', with: 'Role', in: 'Tenant' },
+    Account: { is: 'Thing', with: 'User', in: 'Tenant' },
     Tenant: { is: 'Organization', with: 'Users' },
   },
   verbs: {
-
+    User: { Creates: { Account: { in: 'Tenant' } } },
   },
   story: {
     hero: { is: 'Developer', building: 'App' },

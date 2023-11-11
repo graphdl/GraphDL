@@ -24,12 +24,19 @@ export const things = listThings({
   Dealer: 'AutoDealer',
   Vehicle: 'Vehicle',
   Website: 'WebSite',
+  Idea: 'Intangible',
+
 })
 
 // export const definedThings = defineThings({
-//   Dealer: 'AutoDealer',
-//   // Dealer: { is: 'AutoDealer', selling: 'Vehicles', on: 'WebSite' },
+//   // Dealer: 'AutoDealer',
+//   Dealer: { is: 'AutoDealer', on: 'WebSite' },
 //   Vehicle: { is: 'Car' },
 // })
 
+
+type Domain = () => Record<string, { is: Things }>
+type Noun = {
+  is: Things
+}
 
