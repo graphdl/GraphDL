@@ -16,6 +16,7 @@ describe('Schema', () => {
 
     app.Consumer.is.Person.buying.Car()
     app.Dealer.is.AutoDealer()
+    // app.Deal.is.SellAction.of.Car.to.Consumer()
 
     expect(app.toNouns()).toEqual(['Consumer.is.Person.buying.Car', 'Dealer.is.AutoDealer'])
   })
