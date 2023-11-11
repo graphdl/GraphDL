@@ -1,19 +1,19 @@
 import { createGraph } from '../packages/core/index'
 
-export const GraphDL = createGraph({
+export const GraphDL =  {//createGraph({
   nouns: {
     Noun: { is: 'Thing', in: 'Graph' },
     Verb: { is: 'Action', by: 'Subject', to: 'Object', in: 'Graph' },
     Graph: { is: 'Collection', of: 'Nouns', with: 'Verbs' },
     Subject: { is: 'Noun', doing: 'Verb', to: 'Object' },
     Object: { is: 'Noun', with: 'Subject', doing: 'Verb', to: 'Object' },
-    Resource: { isInstanceOf: 'Noun', with: 'Properties', as: 'Data', in: 'Database' },
+    Resource: { is: 'InstanceOfNoun', with: 'Properties', as: 'Data', in: 'Database' },
     Action: { is: 'Action', by: 'Actor', to: 'Resource' },
-    Trigger: { isInstanceOf: 'Code' },
-    Event: { isInstanceOf: 'Action', with: 'Actor', doing: 'Action', to: 'Resource' },
+    Trigger: { is: 'InstanceOfCode' },
+    Event: { is: 'InstanceOfAction', with: 'Actor', doing: 'Action', to: 'Resource' },
     Code: { is: 'SoftwareSourceCode', in: ['JavaScript','TypeScript'] },
-    JavaScript: { isInstanceOf: 'SoftwareLanguage' },
-    TypeScript: { isInstanceOf: 'SoftwareLanguage', with: 'Types', for: 'JavaScript' },
+    JavaScript: { is: 'SoftwareLanguage' },
+    TypeScript: { is: 'SoftwareLanguage', with: 'Types', for: 'JavaScript' },
     Type: { is: 'Code', with: 'Properties', of: 'Noun' },
     User: { is: 'Person', with: 'Role', in: 'Tenant' },
     Account: { is: 'Thing', with: 'User', in: 'Tenant' },
@@ -45,4 +45,5 @@ export const GraphDL = createGraph({
     success: 'Launch your app and API in minutes, not months',
     transformation: { from: 'Stuck', to: 'Done' },
   },
-})
+}
+// )
