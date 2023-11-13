@@ -15,12 +15,23 @@ export type StatementObject = {
 } & ReturnStatement
 export type ReturnStatement = () => StatementObject
 
+// export const MakeStatement = 
 
-const crm: Statement = new Proxy({} as Statement, {
+const MakeStatement = (props: string[] = []): Statement => new Proxy({} as Statement, {
   get(target: Statement, prop: string) {
-    console.log(prop)
+    return AppendPreposition([...props, prop])
   }
 })
+const AppendPreposition = (props: string[] = []): StatementObject => new Proxy({} as StatementObject, {
+  get(target: StatementObject, prop: string) {
+    return AppendPreposition([...props, prop])
+  }
+})
+const Schema: Record<string, Statement> & { getSchema: () => Statement } = new Proxy({}, {
+  get(target: Record<string, Statement>, prop: string) {
+    return MakeStatement([prop])
+  }
+}) as Record<string, Statement> & { getSchema: () => Statement }
 
-crm.isWebApplication
-expect(crm.isSoftwareApplication.asService.forUseAction.ofOrganization()).toMatchInlineSnapshot()
+Schema.isWebApplication
+// expect(Schema.isSoftwareApplication.asService.forUseAction.ofOrganization()).toMatchInlineSnapshot()
