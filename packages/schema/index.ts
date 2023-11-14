@@ -15,15 +15,13 @@ export type Nouns = {
   [N in string]: {
     [I in IsThing]: PrepositionalPhrase
   } 
-} & {
-  finalize: () => object
-}
+} 
 
-export const Schema = (schemaState: any = {}): any => {
+export const Schema = (schemaState: any = {}): Nouns => {
   return new Proxy({}, {
       get(target, prop: string, receiver) {
           if (typeof prop !== 'string') return;
-          return createRecursiveProxy([], prop, schemaState);
+          return createRecursiveProxy([], prop, schemaState)
       }
   });
 }
@@ -46,6 +44,5 @@ it('should be chainable', () => {
     .AnotherThing.isSoftwareApplication()
     .Stores.isStore.withProduct.about3DModel()
     .Dealership.isAutoDealer()
-    .finalize()
   ).toMatchInlineSnapshot()
 })

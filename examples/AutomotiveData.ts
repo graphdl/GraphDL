@@ -1,4 +1,12 @@
 import { createGraph } from '../packages/core/index'
+import { Schema } from '../packages/schema/index'
+
+const data = Schema()
+  .Vehicle.isVehicle()
+  .Dealer.isAutoDealer()
+  .Auction.isAutomotiveBusiness()
+  .Consumer.isPerson()
+  
 
 // TODO: it would be nice to define the scope of Nouns here and force defition of these through a generic on `createGraph`
 export type AutomotiveData = 'Vehicle' | 'Make' | 'Model' | 'YMM' | 'Trim' | 'Style'

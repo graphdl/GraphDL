@@ -1,5 +1,15 @@
 import { listThings } from '../packages/things/index'
 import { createGraph } from '../packages/core/index'
+import { Schema } from '../packages/schema/index'
+
+const service = Schema()
+  .Service.isService.ofVehicle()
+  .ServiceQuote.isQuoteAction.ofService()
+  .ServiceOrder.isOrderAction.ofService()
+  .Repair.isService.byAutoRepair()
+  .Wash.isService.byAutoWash()
+  .Detail.isService.byAutoWash()
+  
 
 export const AutoServices = createGraph({
   nouns: {
