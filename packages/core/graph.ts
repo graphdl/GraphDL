@@ -1,4 +1,4 @@
-import { Things, SchemaActions, Prepositions, ThingProperties,  } from './schema'
+import { Things, OptionalThings, SchemaActions, Prepositions, ThingProperties,  } from './schema'
 import type { NounFields, NounProperties } from './properties'
 import { App, Docs, Site, Brand, NounViews, Story } from './ui'
 import { API, Data } from './api'
@@ -32,16 +32,17 @@ export type Graph<G extends Graph<G> = DefaultGraph> = {
   story: Partial<Story<G>>
 }
 // export type NounsOrThings<G extends Graph<G>> = Things | Nouns<G>
-export type Noun<G extends Graph<G>> = Things | keyof G['nouns'] // | Array<keyof G['nouns'] | Things>
+export type Noun<G extends Graph<G>> = Things | keyof G['nouns'] //| Array<keyof G['nouns'] | Things>
 export type NounModule<G extends Graph<G>> = {
-  [P in 'is' | Prepositions]: Things | keyof G['nouns'] // Noun<G>
+  [P in 'is' | Prepositions]: Noun<G>
+  // [P in 'is' | Prepositions]: Things | keyof G['nouns'] | Array<Things | keyof G['nouns']> // Noun<G>
 } & {
   is: Things //| keyof G['nouns']
 } 
   // [P in 'is' & (Prepositions | ThingProperties)]: PluralAndOptionalNouns<G> | PluralAndOptionalNouns<G>[]
 // }
 export type Nouns<G extends Graph<G>> = {
-  [N in string]: Things | ({ is: Things } | { [P in Prepositions]: Things }) 
+  [N in string]: Things | ({ is: OptionalThings | OptionalThings[] } | { [P in Prepositions]: OptionalThings | OptionalThings[] }) 
   // [N in string]: Things | NounModule<G>
   // [N in keyof G['nouns']]: NounModule<G> | Noun<G>
   // [N in keyof G['nouns']]: Things // Noun<G> | NounModule<G>

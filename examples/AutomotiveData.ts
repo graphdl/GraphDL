@@ -4,19 +4,19 @@ export const AutomotiveData = createGraph({
   nouns: {
     Vehicle: 'Vehicle',
     Dealer: 'AutoDealer',
-    Auction: 'Auction',
+    Auction: 'AutomotiveBusiness',
     Consumer: 'Person',
-    Listing: { is: 'OfferForPurchase', of: 'Vehicle', at: 'PriceSpecification', by: 'AutoDealer' },
+    Listing: { is: 'Offer', of: 'Vehicle', at: 'PriceSpecification', by: 'AutoDealer' },
     Deal: { is: 'SellAction', of: 'Vehicle', by: 'AutoDealer', to: 'Person', at: 'PriceSpecification' },
-    Buyer: { is: 'Person', with: ['MonetaryAmount?','LoanOrCredit?'] },
+    Buyer: { is: 'Person', with: ['MonetaryAmount?', 'LoanOrCredit?'] },
     Service: { is: 'Service', for: 'Vehicle' },
     ServiceQuote: { 
-      is: 'OfferForService', of: 'Service', at: 'PriceSpecification', 
-      by: ['AutoDealer','AutoRepair','AutoBodyShop','AutoPartsStore','TireShop','AutoRental','GasStation','AutoWash','AutoWax'] 
+      is: 'Offer', of: 'Service', at: 'PriceSpecification', 
+      by: ['AutoDealer','AutoRepair','AutoBodyShop','AutoPartsStore','TireShop','AutoRental','GasStation','AutoWash'] 
     },
     ServiceOrder: { 
       is: 'Order', of: 'Service', at: 'PriceSpecification', 
-      by: ['AutoDealer','AutoRepair','AutoBodyShop','AutoPartsStore','TireShop','AutoRental','GasStation','AutoWash','AutoWax'],
+      by: ['AutoDealer','AutoRepair','AutoBodyShop','AutoPartsStore','TireShop','AutoRental','GasStation','AutoWash'] 
     },
   },
   verbs: {

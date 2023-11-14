@@ -12,6 +12,10 @@ export const AutoServices = createGraph({
     Rental: { is: 'RentAction', of: 'Vehicle' },
     OrderStatus: { is: 'State', of: 'OrderAction' },
     Delivery: { is: 'TransferAction', of: 'Vehicle', to: 'Person' },
+    Provider: { is: 'AutomotiveBusiness', with: 'Service' },
+  },
+  verbs: {
+    Provider: { Delivers: 'Service' },
   }
 })
 
