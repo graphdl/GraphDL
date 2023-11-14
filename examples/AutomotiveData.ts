@@ -1,5 +1,8 @@
 import { createGraph } from '../packages/core/index'
 
+// TODO: it would be nice to define the scope of Nouns here and force defition of these through a generic on `createGraph`
+export type AutomotiveData = 'Vehicle' | 'Make' | 'Model' | 'YMM' | 'Trim' | 'Style'
+
 export const AutomotiveData = createGraph({
   nouns: {
     Vehicle: 'Vehicle',
