@@ -6,6 +6,7 @@ export const AutomotiveData = createGraph({
     Dealer: 'AutoDealer',
     Auction: 'AutomotiveBusiness',
     Consumer: 'Person',
+    Make: ['Brand','Organization'],
     Listing: { is: 'Offer', of: 'Vehicle', at: 'PriceSpecification', by: 'AutoDealer' },
     Deal: { is: 'SellAction', of: 'Vehicle', by: 'AutoDealer', to: 'Person', at: 'PriceSpecification' },
     Buyer: { is: 'Person', with: ['MonetaryAmount?', 'LoanOrCredit?'] },

@@ -42,7 +42,7 @@ export type NounModule<G extends Graph<G>> = {
   // [P in 'is' & (Prepositions | ThingProperties)]: PluralAndOptionalNouns<G> | PluralAndOptionalNouns<G>[]
 // }
 export type Nouns<G extends Graph<G>> = {
-  [N in string]: Things | ({ is: OptionalThings | OptionalThings[] } | { [P in Prepositions]: OptionalThings | OptionalThings[] }) 
+  [N in string]: Things | Things[] | ({ is: OptionalThings | OptionalThings[] } | { [P in Prepositions]: OptionalThings | OptionalThings[] }) 
   // [N in string]: Things | NounModule<G>
   // [N in keyof G['nouns']]: NounModule<G> | Noun<G>
   // [N in keyof G['nouns']]: Things // Noun<G> | NounModule<G>
