@@ -26,6 +26,11 @@ export const AutoServices = createGraph({
   },
   verbs: {
     Provider: { Delivers: 'Service' },
+  },
+  properties: {
+    Service: {
+      idea: 'Provider[]'
+    }
   }
 })
 
