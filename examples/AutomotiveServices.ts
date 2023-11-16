@@ -31,13 +31,15 @@ export const AutoServices = createGraph({
   },
   properties: {
     Service: {
+      name: 'String',
+      description: 'String',
       // provider: 'Provider巛services[]'
       // provider: '巛Provider.services[]'
       // provider: '[巛Provider.services]'
-      provider: 'Provider.services'
+      // provider: 'Provider.services'
     },
     Provider: {
-      services: 'Service.provider'
+      provider: 'Service.provider'
     }
   }
 })

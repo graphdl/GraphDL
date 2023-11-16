@@ -8,7 +8,8 @@ export type NounFields<G extends Graph<G>> = {
   [N in keyof G['nouns']]: Fields<G, N>
 }
 
-export type PropertyReference<G extends Graph<G>, N extends keyof G['nouns'], P extends keyof G['properties'][N]> = keyof G['nouns'] extends string ? (keyof G['nouns'] | `${keyof G['nouns']}.${keyof G['properties'][N] extends string ? keyof G['properties'][N] : never}` | `${keyof G['nouns']}[]`) : never
+export type PropertyReference<G extends Graph<G>, N extends keyof G['nouns'], P extends keyof G['properties'][N]> = 
+  keyof G['nouns'] extends string ? (keyof G['nouns'] | `${keyof G['nouns']}.${P extends string ? P : never}` | `${keyof G['nouns']}[]`) : never
 
 export type Properties<G extends Graph<G>, N extends keyof G['nouns']> = {
   [P in keyof G['properties'][N]]: Property<G,N,P>
