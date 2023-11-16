@@ -9,6 +9,7 @@ const service = Schema()
   .Repair.isService.byAutoRepair()
   .Wash.isService.byAutoWash()
   .Detail.isService.byAutoWash()
+  .Service.isService.ofVehicle.byAutomotiveBusiness()
   
 
 export const AutoServices = createGraph({
@@ -25,11 +26,18 @@ export const AutoServices = createGraph({
     Provider: { is: 'AutomotiveBusiness', with: 'Service' },
   },
   verbs: {
-    Provider: { Delivers: 'Service' },
+    Provider: { Delivers: 'Repair' },
+    ServiceQuote: { Creates: 'ServiceOrder' },
   },
   properties: {
     Service: {
-      idea: 'Provider[]'
+      // provider: 'Provider巛services[]'
+      // provider: '巛Provider.services[]'
+      // provider: '[巛Provider.services]'
+      provider: 'Provider.services'
+    },
+    Provider: {
+      services: 'Service.provider'
     }
   }
 })
