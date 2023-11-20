@@ -31,7 +31,7 @@ export type StatementObject = {
   [K in 'is' | BasePrepositions]?: Things
 } & ReturnStatement
 
-export type ReturnStatement = () => Nouns
+export type ReturnStatement = (props?: object) => Nouns
 
 
 

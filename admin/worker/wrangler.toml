@@ -1,0 +1,16 @@
+name = "graphdl-api"
+main = "worker.js"
+compatibility_date = "2023-10-01"
+workers_dev = false
+account_id = "a826340b3b93189c9ebb7c0eaeba3c46"
+routes = [
+  { pattern = "api.graphdl.org/*", zone_name = "graphdl.org" },
+]
+logpush = true
+usage_model = "unbound"
+
+tail_consumers = [{service = "tail", environment = "production"}]
+
+
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
