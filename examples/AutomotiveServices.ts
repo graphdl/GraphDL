@@ -32,11 +32,20 @@ export const AutoServices = createGraph({
   },
   // nouns,
   verbs: {
-    Provider: { Delivers: 'Service' },
+    Provider: { Delivers: 'Repair' },
+    ServiceQuote: { Creates: 'ServiceOrder' },
   },
   properties: {
     Service: {
-      provider: 'Reference',
+      name: 'String',
+      description: 'String',
+      // provider: 'Provider巛services[]'
+      // provider: '巛Provider.services[]'
+      // provider: '[巛Provider.services]'
+      // provider: 'Provider.services'
+    },
+    Provider: {
+      provider: 'Service.provider'
     }
   }
 })

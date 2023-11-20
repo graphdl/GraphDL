@@ -1,0 +1,5 @@
+{
+  "name": "@graphdl/payload",
+  "description": "Payload Plugin to materialize a GraphDL Schema as Payload Collections",
+  "type": "module"
+}
