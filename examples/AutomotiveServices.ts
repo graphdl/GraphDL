@@ -34,6 +34,7 @@ export const AutoServices = createGraph({
   verbs: {
     Provider: { Delivers: 'Repair' },
     ServiceQuote: { Creates: 'ServiceOrder' },
+    Buyer: { Buys: { Vehicle: { in: 'Deal, from: 'Seller, at: 'Price' }}},
   },
   properties: {
     Service: {
