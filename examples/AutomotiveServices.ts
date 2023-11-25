@@ -26,7 +26,7 @@ export const AutoServices = createGraph({
     Wash: { is: 'Service', by: 'AutoWash' },
     Detail: { is: 'Service', by: 'AutoWash' },
     Rental: { is: 'RentAction', of: 'Vehicle' },
-    OrderStatus: { is: 'State', of: 'OrderAction' },
+    OrderStatus: { is: 'OrderStatus', of: 'OrderAction' },
     Delivery: { is: 'TransferAction', of: 'Vehicle', to: 'Person' },
     Provider: { is: 'AutomotiveBusiness', with: 'Service' },
   },
@@ -34,7 +34,7 @@ export const AutoServices = createGraph({
   verbs: {
     Provider: { Delivers: 'Repair' },
     ServiceQuote: { Creates: 'ServiceOrder' },
-    Buyer: { Buys: { Vehicle: { in: 'Deal, from: 'Seller, at: 'Price' }}},
+    Buyer: { Buys: { Vehicle: { in: 'Deal', from: 'Seller', at: 'Price' }}},
   },
   properties: {
     Service: {
