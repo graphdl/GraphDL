@@ -30,12 +30,13 @@ export const AutoServices = createGraph({
     Delivery: { is: 'TransferAction', of: 'Vehicle', to: 'Person' },
     Provider: { is: 'AutomotiveBusiness', with: 'Service' },
     Buyer: { is: ['Person','Organization'] },
+    'Vehicle': { is: 'Car' },
   },
   // nouns,
   verbs: {
     Provider: { Delivers: 'Repair' },
     ServiceQuote: { Creates: 'ServiceOrder' },
-    Buyer: { Buys: { Vehicle: { in: 'Deal', from: 'Seller', at: 'Price' }}},
+    // Buyer: { Buys: { Vehicle: { in: 'Deal', from: 'Seller', at: 'Price' }}},
   },
   properties: {
     Service: {
