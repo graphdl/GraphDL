@@ -29,6 +29,7 @@ export const AutoServices = createGraph({
     OrderStatus: { is: 'OrderStatus', of: 'OrderAction' },
     Delivery: { is: 'TransferAction', of: 'Vehicle', to: 'Person' },
     Provider: { is: 'AutomotiveBusiness', with: 'Service' },
+    Buyer: { is: ['Person','Organization'] },
   },
   // nouns,
   verbs: {
